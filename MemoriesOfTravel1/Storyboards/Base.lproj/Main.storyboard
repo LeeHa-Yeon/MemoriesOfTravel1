@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -7,11 +7,16 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="나눔손글씨 반짝반짝 별.ttf">
+            <string>NanumBanJjagBanJjagByeor</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MemoriesOfTravel1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="MemoriesOfTravel1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -46,7 +51,7 @@
                                         <state key="normal" title="Login"/>
                                         <connections>
                                             <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5wi-Dp-iIO"/>
-                                            <segue destination="Jdr-d4-SLB" kind="show" id="98d-cm-UkU"/>
+                                            <segue destination="Jdr-d4-SLB" kind="presentation" modalPresentationStyle="overFullScreen" id="98d-cm-UkU"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQk-rk-ewY">
@@ -74,32 +79,80 @@
             </objects>
             <point key="canvasLocation" x="-539" y="947"/>
         </scene>
-        <!--내 정보-->
+        <!--My Profile View Controller-->
         <scene sceneID="H5d-GU-kcx">
             <objects>
                 <viewController id="qOa-hR-3NY" customClass="MyProfileViewController" customModule="MemoriesOfTravel1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c7u-h7-xlQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="8qD-np-YcV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="내 정보" image="person.fill" catalog="system" id="2LM-5l-c4m"/>
+                    <tabBarItem key="tabBarItem" title="" image="profile_not" selectedImage="profile" id="2LM-5l-c4m"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xkb-J4-wEx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1271" y="1634"/>
+            <point key="canvasLocation" x="293" y="1883"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="RY1-Kx-2AG">
+            <objects>
+                <viewController id="0mg-0e-TWO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yS8-Fk-Boh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homebg" translatesAutoresizingMaskIntoConstraints="NO" id="Pfj-if-W1M">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="여행의 기억을 선명하게" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="am1-AV-cLf">
+                                <rect key="frame" x="55" y="257" width="276" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="하연님 !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXI-YI-l9Q">
+                                <rect key="frame" x="55" y="180" width="94" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="남겨보세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FjM-Qi-sr7">
+                                <rect key="frame" x="55" y="334" width="121" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="c1B-CX-Mbf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Pfj-if-W1M" firstAttribute="trailing" secondItem="c1B-CX-Mbf" secondAttribute="trailing" id="AEJ-tM-CH8"/>
+                            <constraint firstItem="Pfj-if-W1M" firstAttribute="leading" secondItem="c1B-CX-Mbf" secondAttribute="leading" id="S3U-HZ-auW"/>
+                            <constraint firstItem="Pfj-if-W1M" firstAttribute="top" secondItem="c1B-CX-Mbf" secondAttribute="top" id="nd8-xB-xUL"/>
+                            <constraint firstItem="c1B-CX-Mbf" firstAttribute="bottom" secondItem="Pfj-if-W1M" secondAttribute="bottom" id="vT6-ei-Ghs"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="home_not" selectedImage="home" id="Ebl-r6-S8h"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G0e-Dg-7cf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1356" y="1607"/>
         </scene>
         <!--My Trip-->
         <scene sceneID="qk8-wY-UCl">
             <objects>
-                <viewController id="ESA-Dt-peV" customClass="MyTripListViewController" customModule="MemoriesOfTravel1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyTripListSB" id="ESA-Dt-peV" customClass="MyTripListViewController" customModule="MemoriesOfTravel1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qcg-CT-2rU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ePt-V6-OEV">
-                                <rect key="frame" x="0.0" y="56" width="414" height="703"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="mBN-SF-wQV">
@@ -136,10 +189,10 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Z65-iF-se2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="Hlq-87-MzD" kind="relationship" relationship="viewControllers" id="rTI-Dd-xg6"/>
+                        <segue destination="0mg-0e-TWO" kind="relationship" relationship="viewControllers" id="N8U-Nq-PNJ"/>
                         <segue destination="qOa-hR-3NY" kind="relationship" relationship="viewControllers" id="btw-iT-AaU"/>
                     </connections>
                 </tabBarController>
@@ -147,14 +200,14 @@
             </objects>
             <point key="canvasLocation" x="294" y="947"/>
         </scene>
-        <!--내 여행-->
+        <!--Navigation Controller-->
         <scene sceneID="mdg-za-15Y">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Hlq-87-MzD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="내 여행" image="airplane" catalog="system" id="LZM-hu-Lvf"/>
+                    <tabBarItem key="tabBarItem" title="" image="tripList_not" selectedImage="tripList" id="LZM-hu-Lvf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qRg-bV-cwj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -168,9 +221,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="airplane" catalog="system" width="128" height="115"/>
+        <image name="home" width="87" height="87"/>
+        <image name="home_not" width="32" height="32"/>
+        <image name="homebg" width="1026" height="1740"/>
         <image name="logo" width="2000" height="2000"/>
-        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="profile" width="76" height="75.333335876464844"/>
+        <image name="profile_not" width="32" height="31"/>
+        <image name="tripList" width="74.666664123535156" height="74"/>
+        <image name="tripList_not" width="29" height="29"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

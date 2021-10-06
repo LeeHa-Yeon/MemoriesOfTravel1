@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		9F34987E27019C7D00226BEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F34987D27019C7D00226BEE /* AppDelegate.swift */; };
 		9F34988027019C7D00226BEE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F34987F27019C7D00226BEE /* SceneDelegate.swift */; };
-		9F34988227019C7D00226BEE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F34988127019C7D00226BEE /* ViewController.swift */; };
+		9F34988227019C7D00226BEE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F34988127019C7D00226BEE /* LoginViewController.swift */; };
 		9F34988527019C7D00226BEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F34988327019C7D00226BEE /* Main.storyboard */; };
 		9F34988727019C7F00226BEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F34988627019C7F00226BEE /* Assets.xcassets */; };
 		9F34988A27019C7F00226BEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F34988827019C7F00226BEE /* LaunchScreen.storyboard */; };
 		9F7FB635270E06E80064106B /* MyTripListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7FB634270E06E80064106B /* MyTripListViewController.swift */; };
 		9F7FB639270E07490064106B /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7FB638270E07490064106B /* MyProfileViewController.swift */; };
+		9F7FB63F270E69A00064106B /* 나눔손글씨 반짝반짝 별.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F7FB63E270E69770064106B /* 나눔손글씨 반짝반짝 별.ttf */; };
 		AE8DFC030339C850530BB2C0 /* Pods_MemoriesOfTravel1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE552BA11EE0647613CF3E55 /* Pods_MemoriesOfTravel1.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,13 +24,14 @@
 		9F34987A27019C7D00226BEE /* MemoriesOfTravel1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoriesOfTravel1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F34987D27019C7D00226BEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F34987F27019C7D00226BEE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9F34988127019C7D00226BEE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9F34988127019C7D00226BEE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9F34988427019C7D00226BEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9F34988627019C7F00226BEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F34988927019C7F00226BEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F34988B27019C7F00226BEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F7FB634270E06E80064106B /* MyTripListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTripListViewController.swift; sourceTree = "<group>"; };
 		9F7FB638270E07490064106B /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
+		9F7FB63E270E69770064106B /* 나눔손글씨 반짝반짝 별.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "나눔손글씨 반짝반짝 별.ttf"; sourceTree = "<group>"; };
 		B13D43A79A311CCEBC4AD842 /* Pods-MemoriesOfTravel1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoriesOfTravel1.debug.xcconfig"; path = "Target Support Files/Pods-MemoriesOfTravel1/Pods-MemoriesOfTravel1.debug.xcconfig"; sourceTree = "<group>"; };
 		CE552BA11EE0647613CF3E55 /* Pods_MemoriesOfTravel1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MemoriesOfTravel1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -76,6 +78,7 @@
 		9F34987C27019C7D00226BEE /* MemoriesOfTravel1 */ = {
 			isa = PBXGroup;
 			children = (
+				9F7FB63C270E69640064106B /* Font */,
 				9F34988627019C7F00226BEE /* Assets.xcassets */,
 				9F34987D27019C7D00226BEE /* AppDelegate.swift */,
 				9F34987F27019C7D00226BEE /* SceneDelegate.swift */,
@@ -132,9 +135,17 @@
 		9F7FB637270E07080064106B /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				9F34988127019C7D00226BEE /* ViewController.swift */,
+				9F34988127019C7D00226BEE /* LoginViewController.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		9F7FB63C270E69640064106B /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				9F7FB63E270E69770064106B /* 나눔손글씨 반짝반짝 별.ttf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 		C07214D5EF53C8F01E94D3CD /* Frameworks */ = {
@@ -205,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F34988A27019C7F00226BEE /* LaunchScreen.storyboard in Resources */,
+				9F7FB63F270E69A00064106B /* 나눔손글씨 반짝반짝 별.ttf in Resources */,
 				9F34988727019C7F00226BEE /* Assets.xcassets in Resources */,
 				9F34988527019C7D00226BEE /* Main.storyboard in Resources */,
 			);
@@ -260,7 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F7FB639270E07490064106B /* MyProfileViewController.swift in Sources */,
-				9F34988227019C7D00226BEE /* ViewController.swift in Sources */,
+				9F34988227019C7D00226BEE /* LoginViewController.swift in Sources */,
 				9F34987E27019C7D00226BEE /* AppDelegate.swift in Sources */,
 				9F34988027019C7D00226BEE /* SceneDelegate.swift in Sources */,
 				9F7FB635270E06E80064106B /* MyTripListViewController.swift in Sources */,
