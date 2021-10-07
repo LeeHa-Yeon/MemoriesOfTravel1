@@ -7,6 +7,9 @@
 
 import UIKit
 import Firebase
+import FirebaseAuth
+import FirebaseDatabase
+import FirebaseStorage
 
 // 디비에 저장하기
 
@@ -44,7 +47,7 @@ class SignUpViewController: UIViewController {
     }
     @IBOutlet var nameTextField: UITextField! {
         didSet{
-            idTextField.delegate = self
+            nameTextField.delegate = self
         }
     }
     @IBAction func cancelSignup(_ sender: UIButton){
@@ -69,11 +72,22 @@ class SignUpViewController: UIViewController {
         guard let name = nameTextField.text else {
             return
         }
-        // 이게 아니라 디비에 저장해야됨
-        userInfomation.registUserId(id: id)
-        userInfomation.registUserPwd(password: password)
-        userInfomation.registUserProfile(profile: profile)
-        userInfomation.registUserName(name: name)
+        
+        Auth.auth().createUser(withEmail: id, password: password) { (authResult, error) in
+            
+            // 성공적이라면 디비에 저장해야됨
+            guard let user = authResult?.user else {
+                // 실패되었을 경우 알림창 뜨게 하기
+                let alert = UIAlertController(title:"다시 입력", message: "중복된 아이디입니다.", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "OK", style: .destructive, handler : nil)
+                alert.addAction(okAction)
+                self.present(alert, animated: false, completion: nil)
+                print("error -> ",error?.localizedDescription)
+                return
+            }
+            print("user ->  ",user)
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     
     // 이미지 등록하기

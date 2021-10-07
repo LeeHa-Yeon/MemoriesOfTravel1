@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class LoginViewController: UIViewController {
     
@@ -72,11 +74,7 @@ class LoginViewController: UIViewController {
 
 // Todo : 로그인 성공했을 경우 홈화면으로 이동, 해당 사용자 정보 디비에서 불러와 저장하기 , 실패했을 경우 경고창으로 알려줌
     @IBAction func moveToHome(_ sender: UIButton) {
-        
-//        if let HomeVC = UIStoryboard(name:"Main",bundle: nil).instantiateViewController(identifier: "HomeSB") as? HomeViewController {
-//            view.addSubview(HomeVC.view)
-//            HomeVC.didMove(toParent: self)
-//        }
+        login()
     }
 
     @IBAction func moveToSignUp(_ sender: UIButton){
@@ -84,6 +82,30 @@ class LoginViewController: UIViewController {
 //            view.addSubview(SignUpVC.view)
 //            SignUpVC.didMove(toParent: self)
 //        }
+    }
+    
+    func login(){
+        guard let id = idTextField.text else {
+            return
+        }
+        guard let password = pwdTextField.text else {
+            return
+        }
+        Auth.auth().signIn(withEmail: id, password: password) { (user,error) in
+            if user != nil {
+                print("Login Success")
+                if let HomeVC = self.storyboard?.instantiateViewController(identifier: "HomeSB") {
+                    self.present(HomeVC,animated: true, completion: nil)
+                }
+            }else {
+                // 실패되었을 경우 알림창 뜨게 하기
+                let alert = UIAlertController(title:"로그인 실패", message: "아이디와 비밀번호를 확인해주세요.", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "OK", style: .destructive, handler : nil)
+                alert.addAction(okAction)
+                self.present(alert, animated: false, completion: nil)
+                print("error -> ",error?.localizedDescription)
+            }
+        }
     }
     
     
