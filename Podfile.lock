@@ -43,6 +43,7 @@ PODS:
     - GoogleUtilities/Environment (~> 7.4)
     - GoogleUtilities/UserDefaults (~> 7.4)
     - PromisesObjC (< 3.0, >= 1.2)
+  - FSCalendar (2.8.2)
   - GoogleAppMeasurement (8.7.0):
     - GoogleAppMeasurement/AdIdSupport (= 8.7.0)
     - GoogleUtilities/AppDelegateSwizzler (~> 7.4)
@@ -80,6 +81,7 @@ PODS:
   - GoogleUtilities/UserDefaults (7.5.2):
     - GoogleUtilities/Logger
   - leveldb-library (1.22.1)
+  - MSPeekCollectionViewDelegateImplementation (3.2.0)
   - nanopb (2.30908.0):
     - nanopb/decode (= 2.30908.0)
     - nanopb/encode (= 2.30908.0)
@@ -92,6 +94,8 @@ DEPENDENCIES:
   - Alamofire
   - Firebase/Core
   - Firebase/Database
+  - FSCalendar
+  - MSPeekCollectionViewDelegateImplementation
   - NMapsMap
 
 SPEC REPOS:
@@ -103,10 +107,12 @@ SPEC REPOS:
     - FirebaseCoreDiagnostics
     - FirebaseDatabase
     - FirebaseInstallations
+    - FSCalendar
     - GoogleAppMeasurement
     - GoogleDataTransport
     - GoogleUtilities
     - leveldb-library
+    - MSPeekCollectionViewDelegateImplementation
     - nanopb
     - NMapsMap
     - PromisesObjC
@@ -119,14 +125,16 @@ SPEC CHECKSUMS:
   FirebaseCoreDiagnostics: b63732f581a1c6a453ec7241f9ab60b3a5bd3450
   FirebaseDatabase: afc82291f9ed94ff949cec1b9505e8c3b944bc0f
   FirebaseInstallations: ede6fb72bb6337914e5888b399271259d0c4910c
+  FSCalendar: e6a2eb9c571bf0719ed797ef807e08426753c241
   GoogleAppMeasurement: 2be61ce546ad074dbe4dd545f222ac6033bb1d9e
   GoogleDataTransport: 85fd18ff3019bb85d3f2c551d04c481dedf71fc9
   GoogleUtilities: 8de2a97a17e15b6b98e38e8770e2d129a57c0040
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
+  MSPeekCollectionViewDelegateImplementation: be35a217bd302976a9e4476151be992c1f150127
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   NMapsMap: 88b5bdac7087bfa99ab058ff5cdd95fb766e0e95
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
 
-PODFILE CHECKSUM: 62fb17d88bfcbe636c5fdf388d2937b07d2cbf83
+PODFILE CHECKSUM: 4d370271237b14d64a6465a3f7dabc8148865b78
 
 COCOAPODS: 1.10.1

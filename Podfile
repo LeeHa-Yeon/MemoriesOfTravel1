@@ -8,8 +8,13 @@ target 'MemoriesOfTravel1' do
   # Pods for MemoriesOfTravel1
   pod 'Firebase/Core'
   pod 'Firebase/Database'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Storage'
+  
   pod 'Alamofire'
   pod 'NMapsMap'
+  pod 'MSPeekCollectionViewDelegateImplementation'
+  pod 'FSCalendar'
 
 
 end
