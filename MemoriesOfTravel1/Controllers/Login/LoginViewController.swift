@@ -9,26 +9,8 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
-    @IBOutlet weak var logoImageView: UIImageView!
-    @IBOutlet weak var idTextField: UITextField! {
-        didSet{
-            idTextField.delegate = self
-        }
-    }
-    @IBOutlet weak var pwdTextField: UITextField! {
-        didSet{
-            pwdTextField.delegate = self
-//            pwdTextField.textContentType = .newPassword
-//            pwdTextField.isSecureTextEntry = true
-        }
-    }
-    @IBOutlet weak var bottomContainerMargin: NSLayoutConstraint!
-    
-    private var originalBottomMargin: CGFloat = 0
     let userInfomation: UserInfomation = UserInfomation.shared
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         originalBottomMargin = self.bottomContainerMargin.constant
@@ -42,6 +24,23 @@ class LoginViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var logoImageView: UIImageView!
+    @IBOutlet weak var idTextField: UITextField! {
+        didSet{
+            idTextField.delegate = self
+        }
+    }
+    @IBOutlet weak var pwdTextField: UITextField! {
+        didSet{
+            pwdTextField.delegate = self
+        }
+    }
+    
+    @IBOutlet weak var bottomContainerMargin: NSLayoutConstraint!
+    private var originalBottomMargin: CGFloat = 0
+
+    
+    // 키보드 구현
     private func addNotification(){
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -71,14 +70,15 @@ class LoginViewController: UIViewController {
         view.endEditing(true)
     }
 
-
+// Todo : 로그인 성공했을 경우 홈화면으로 이동, 해당 사용자 정보 디비에서 불러와 저장하기 , 실패했을 경우 경고창으로 알려줌
     @IBAction func moveToHome(_ sender: UIButton) {
+        
 //        if let HomeVC = UIStoryboard(name:"Main",bundle: nil).instantiateViewController(identifier: "HomeSB") as? HomeViewController {
 //            view.addSubview(HomeVC.view)
 //            HomeVC.didMove(toParent: self)
 //        }
     }
-    
+
     @IBAction func moveToSignUp(_ sender: UIButton){
 //        if let SignUpVC = UIStoryboard(name:"Main",bundle: nil).instantiateViewController(identifier: "SingUpSB") as? SignUpViewController {
 //            view.addSubview(SignUpVC.view)
