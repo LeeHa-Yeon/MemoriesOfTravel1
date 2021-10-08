@@ -12,14 +12,16 @@ struct User {
     private var id: String
     private var password: String
     private var name: String
+    private var tripCnt: Int
     //private var birth: String
     
-    init(id: String, password: String, name: String, profile: UIImage?){
+    init(id: String, password: String, name: String, profile: UIImage?,tripCnt: Int){
         self.id = id
         self.password = password
         self.name = name
         //self.birth = birth
         self.profile = profile
+        self.tripCnt = tripCnt
     }
     
     func getId() -> String {
@@ -32,6 +34,10 @@ struct User {
     
     func getName() -> String {
         return self.name
+    }
+    
+    func getTripCnt() -> Int {
+        return self.tripCnt
     }
     
 //    func getBirth() -> String {
@@ -61,6 +67,10 @@ struct User {
     
     mutating func setProfile(_ profile: UIImage?){
         self.profile = profile
+    }
+    
+    mutating func setTripCnt(_ tripCnt: Int){
+        self.tripCnt = tripCnt
     }
     
 }

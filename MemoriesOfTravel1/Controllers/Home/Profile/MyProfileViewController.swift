@@ -11,13 +11,27 @@ import FirebaseAuth
 
 class MyProfileViewController: UIViewController {
     
+    let myInformation: UserInfomation = UserInfomation.shared
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var idLabel: UILabel!
-    @IBOutlet weak var tripCntLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel! {
+        didSet{
+            nameLabel.text = myInformation.getUserName()
+        }
+    }
+    @IBOutlet weak var idLabel: UILabel! {
+        didSet{
+            idLabel.text = myInformation.getUserId()
+        }
+    }
+    @IBOutlet weak var tripCntLabel: UILabel! {
+        didSet {
+            tripCntLabel.text = String(myInformation.getUserTripCnt()) + "회"
+        }
+    }
     @IBOutlet weak var profileImageView: UIImageView!
     @IBAction func logoutButton(_ sender: UIButton!){
         do {

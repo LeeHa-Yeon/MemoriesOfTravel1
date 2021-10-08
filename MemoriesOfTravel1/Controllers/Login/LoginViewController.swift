@@ -11,7 +11,9 @@ import FirebaseAuth
 
 class LoginViewController: UIViewController {
     
-    let userInfomation: UserInfomation = UserInfomation.shared
+    let myInformation: UserInfomation = UserInfomation.shared
+    
+    var ref = Database.database().reference()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,8 +23,8 @@ class LoginViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        if userInfomation.getUserId() != "" {
-            idTextField.text = userInfomation.getUserId()
+        if myInformation.getUserId() != "" {
+            idTextField.text = myInformation.getUserId()
         }
     }
     
@@ -40,7 +42,7 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var bottomContainerMargin: NSLayoutConstraint!
     private var originalBottomMargin: CGFloat = 0
-
+    
     
     // 키보드 구현
     private func addNotification(){
@@ -50,15 +52,15 @@ class LoginViewController: UIViewController {
     
     @objc private func keyboardWillShow(_ notification: Notification) {
         if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
-          let keyboardHeight = keyboardFrame.cgRectValue.height
-          let animationDuration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as! TimeInterval
-          UIView.animate(withDuration: animationDuration){
-              self.bottomContainerMargin.constant = keyboardHeight - self.view.safeAreaInsets.bottom
-              self.view.layoutIfNeeded()
-          }
+            let keyboardHeight = keyboardFrame.cgRectValue.height
+            let animationDuration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as! TimeInterval
+            UIView.animate(withDuration: animationDuration){
+                self.bottomContainerMargin.constant = keyboardHeight - self.view.safeAreaInsets.bottom
+                self.view.layoutIfNeeded()
+            }
         }
     }
-      
+    
     @objc private func keyboardWillHide(_ notification: Notification) {
         let animvationDuration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as! TimeInterval
         
@@ -71,17 +73,17 @@ class LoginViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
         view.endEditing(true)
     }
-
-// Todo : 로그인 성공했을 경우 홈화면으로 이동, 해당 사용자 정보 디비에서 불러와 저장하기 , 실패했을 경우 경고창으로 알려줌
+    
+    // Todo : 로그인 성공했을 경우 홈화면으로 이동, 해당 사용자 정보 디비에서 불러와 저장하기 , 실패했을 경우 경고창으로 알려줌
     @IBAction func moveToHome(_ sender: UIButton) {
         login()
     }
-
+    
     @IBAction func moveToSignUp(_ sender: UIButton){
-//        if let SignUpVC = UIStoryboard(name:"Main",bundle: nil).instantiateViewController(identifier: "SingUpSB") as? SignUpViewController {
-//            view.addSubview(SignUpVC.view)
-//            SignUpVC.didMove(toParent: self)
-//        }
+        //        if let SignUpVC = UIStoryboard(name:"Main",bundle: nil).instantiateViewController(identifier: "SingUpSB") as? SignUpViewController {
+        //            view.addSubview(SignUpVC.view)
+        //            SignUpVC.didMove(toParent: self)
+        //        }
     }
     
     func login(){
@@ -94,6 +96,20 @@ class LoginViewController: UIViewController {
         Auth.auth().signIn(withEmail: id, password: password) { (user,error) in
             if user != nil {
                 print("Login Success")
+                self.ref.child("user").observeSingleEvent(of: .value, with: { (snapshot) in
+                    
+                    let values = snapshot.value
+                    let dic = values as! [String: [String:Any]]
+                    for index in dic.values{
+                        let a = index["userInfo"] as! [String:Any]
+                        if (a["아이디"] as! String == "\(id)"){
+                            self.myInformation.setUserId(id: a["아이디"] as! String)
+                            self.myInformation.setUserName(name: a["이름"] as! String)
+                            self.myInformation.setUserTripCnt(tripCnt: a["여행횟수"] as! Int)
+                        }
+                    }
+                })
+                
                 if let HomeVC = self.storyboard?.instantiateViewController(identifier: "HomeSB") {
                     self.present(HomeVC,animated: true, completion: nil)
                 }

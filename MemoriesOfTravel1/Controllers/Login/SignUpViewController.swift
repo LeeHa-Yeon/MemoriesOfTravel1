@@ -19,7 +19,8 @@ protocol SignupViewControllerDelegate {
 
 class SignUpViewController: UIViewController {
     
-    let userInfomation: UserInfomation = UserInfomation.shared
+//    let userInfomation: UserInfomation = UserInfomation.shared
+    var ref : DatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,6 +73,7 @@ class SignUpViewController: UIViewController {
         guard let name = nameTextField.text else {
             return
         }
+        var userInfoDict = [String: Any]()
         
         Auth.auth().createUser(withEmail: id, password: password) { (authResult, error) in
             
@@ -85,6 +87,14 @@ class SignUpViewController: UIViewController {
                 print("error -> ",error?.localizedDescription)
                 return
             }
+            userInfoDict["이름"] = name
+            userInfoDict["아이디"] = id
+            userInfoDict["비밀번호"] = password
+            userInfoDict["여행횟수"] = 0
+            self.ref = Database.database().reference()
+            let newUser = self.ref.child("user").child("\(user)").child("userInfo")
+            newUser.setValue(userInfoDict)
+            
             print("user ->  ",user)
             self.dismiss(animated: true, completion: nil)
         }
@@ -112,15 +122,15 @@ class SignUpViewController: UIViewController {
     
     @objc private func keyboardWillShow(_ notification: Notification) {
         if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
-          let keyboardHeight = keyboardFrame.cgRectValue.height
-          let animationDuration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as! TimeInterval
-          UIView.animate(withDuration: animationDuration){
-              self.bottomContainerMargin.constant = keyboardHeight - self.view.safeAreaInsets.bottom + 30
-              self.view.layoutIfNeeded()
-          }
+            let keyboardHeight = keyboardFrame.cgRectValue.height
+            let animationDuration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as! TimeInterval
+            UIView.animate(withDuration: animationDuration){
+                self.bottomContainerMargin.constant = keyboardHeight - self.view.safeAreaInsets.bottom + 30
+                self.view.layoutIfNeeded()
+            }
         }
     }
-      
+    
     @objc private func keyboardWillHide(_ notification: Notification) {
         let animvationDuration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as! TimeInterval
         

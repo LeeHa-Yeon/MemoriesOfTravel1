@@ -13,22 +13,26 @@ class UserInfomation{
     
     private init(){}
     
-    var userInfo: User = User(id: "", password: "", name: "", profile: nil)
+    var userInfo: User = User(id: "", password: "", name: "", profile: nil, tripCnt: 0)
     
-    func registUserId(id: String){
+    func setUserId(id: String){
         userInfo.setId(id)
     }
     
-    func registUserPwd(password: String){
+    func setUserPwd(password: String){
         userInfo.setPassword(password)
     }
     
-    func registUserProfile(profile: UIImage?){
+    func setUserProfile(profile: UIImage?){
         userInfo.setProfile(profile)
     }
     
-    func registUserName(name: String){
+    func setUserName(name: String){
         userInfo.setName(name)
+    }
+    
+    func setUserTripCnt(tripCnt: Int){
+        userInfo.setTripCnt(tripCnt)
     }
 
 //    func registUserBirth(birth: String){
@@ -49,6 +53,10 @@ class UserInfomation{
     
     func getUserProfile() -> UIImage {
         return userInfo.getProfile()!
+    }
+    
+    func getUserTripCnt() -> Int {
+        return userInfo.getTripCnt()
     }
     
     

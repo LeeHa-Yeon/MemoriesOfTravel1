@@ -9,12 +9,17 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    @IBOutlet weak var nameLable: UILabel!
-
+    let myInformation: UserInfomation = UserInfomation.shared
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameLable.text = "하연님 !"
-
     }
+    
+    @IBOutlet weak var nameLable: UILabel! {
+        didSet{
+            nameLable.text = myInformation.getUserName()+"님 !"
+        }
+    }
+
     
 }
