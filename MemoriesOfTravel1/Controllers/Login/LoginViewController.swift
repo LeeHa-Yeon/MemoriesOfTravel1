@@ -20,13 +20,12 @@ class LoginViewController: UIViewController {
         originalBottomMargin = self.bottomContainerMargin.constant
         addNotification()
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        if myInformation.getUserId() != "" {
-            idTextField.text = myInformation.getUserId()
-        }
+    override func viewWillDisappear(_ animated: Bool){
+        super.viewWillDisappear(true)
+        idTextField.text = ""
+        pwdTextField.text = ""
     }
+
     
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var idTextField: UITextField! {
@@ -80,10 +79,9 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func moveToSignUp(_ sender: UIButton){
-        //        if let SignUpVC = UIStoryboard(name:"Main",bundle: nil).instantiateViewController(identifier: "SingUpSB") as? SignUpViewController {
-        //            view.addSubview(SignUpVC.view)
-        //            SignUpVC.didMove(toParent: self)
-        //        }
+        if let SingUpVC = self.storyboard?.instantiateViewController(identifier: "SingUpSB") {
+            self.present(SingUpVC,animated: true, completion: nil)
+        }
     }
     
     func login(){
@@ -95,6 +93,7 @@ class LoginViewController: UIViewController {
         }
         Auth.auth().signIn(withEmail: id, password: password) { (user,error) in
             if user != nil {
+                
                 print("Login Success")
                 self.ref.child("user").observeSingleEvent(of: .value, with: { (snapshot) in
                     
@@ -113,6 +112,7 @@ class LoginViewController: UIViewController {
                 if let HomeVC = self.storyboard?.instantiateViewController(identifier: "HomeSB") {
                     self.present(HomeVC,animated: true, completion: nil)
                 }
+
             }else {
                 // 실패되었을 경우 알림창 뜨게 하기
                 let alert = UIAlertController(title:"로그인 실패", message: "아이디와 비밀번호를 확인해주세요.", preferredStyle: .alert)

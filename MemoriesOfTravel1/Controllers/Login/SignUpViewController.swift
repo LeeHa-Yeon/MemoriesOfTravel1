@@ -19,7 +19,6 @@ protocol SignupViewControllerDelegate {
 
 class SignUpViewController: UIViewController {
     
-//    let userInfomation: UserInfomation = UserInfomation.shared
     var ref : DatabaseReference!
     
     override func viewDidLoad() {

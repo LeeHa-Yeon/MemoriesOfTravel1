@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="나눔손글씨 반짝반짝 별.ttf">
+            <string>NanumBanJjagBanJjagByeor</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TripListCell" rowHeight="173" id="KGk-i7-Jjw" customClass="TripListCell" customModule="MemoriesOfTravel1" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="173"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="173"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="여행 전" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5oe-aI-dBR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="35"/>
+                        <color key="backgroundColor" red="0.55129970008935936" green="0.65086826831996103" blue="0.66666668653488159" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="uEQ-RJ-Xwl"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="30"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="pVA-5H-dff">
+                        <rect key="frame" x="15" y="50" width="290" height="108"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="j2y-kd-udw">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                    </collectionView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="5oe-aI-dBR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="7fe-py-UpF"/>
+                    <constraint firstAttribute="bottom" secondItem="pVA-5H-dff" secondAttribute="bottom" constant="15" id="7lU-Tb-Nuf"/>
+                    <constraint firstItem="pVA-5H-dff" firstAttribute="top" secondItem="5oe-aI-dBR" secondAttribute="bottom" constant="15" id="Svc-g5-Mw6"/>
+                    <constraint firstAttribute="trailing" secondItem="pVA-5H-dff" secondAttribute="trailing" constant="15" id="UhN-iJ-w8j"/>
+                    <constraint firstItem="pVA-5H-dff" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="YX7-hh-2Yf"/>
+                    <constraint firstItem="5oe-aI-dBR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="mpW-mJ-KBy"/>
+                    <constraint firstAttribute="trailing" secondItem="5oe-aI-dBR" secondAttribute="trailing" id="qTy-kP-e1V"/>
+                    <constraint firstItem="5oe-aI-dBR" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="xPE-m7-MS5"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="listSectionLabel" destination="5oe-aI-dBR" id="qbu-74-aze"/>
+                <outlet property="myTripCollectionView" destination="pVA-5H-dff" id="4uM-OJ-x7C"/>
+            </connections>
+            <point key="canvasLocation" x="27.536231884057973" y="148.99553571428569"/>
+        </tableViewCell>
+    </objects>
+</document>

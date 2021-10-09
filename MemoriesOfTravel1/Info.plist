@@ -4,6 +4,7 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>Dongle-Light.ttf</string>
 		<string>나눔손글씨 반짝반짝 별.ttf</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>

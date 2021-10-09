@@ -22,6 +22,12 @@
 		9F7FB64E270E8F7F0064106B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7FB64D270E8F7F0064106B /* User.swift */; };
 		9F7FB650270F1AC60064106B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7FB64F270F1AC60064106B /* ViewController.swift */; };
 		9F7FB652270F67620064106B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F7FB651270F67620064106B /* GoogleService-Info.plist */; };
+		9FF0FDFA2710EA4E00717411 /* TripListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF0FDF82710EA4E00717411 /* TripListCell.swift */; };
+		9FF0FDFB2710EA4E00717411 /* TripListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FF0FDF92710EA4E00717411 /* TripListCell.xib */; };
+		9FF0FDFF2710EEC400717411 /* MyTripCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF0FDFD2710EEC400717411 /* MyTripCell.swift */; };
+		9FF0FE002710EEC400717411 /* MyTripCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FF0FDFE2710EEC400717411 /* MyTripCell.xib */; };
+		9FF0FE062710FF2400717411 /* Dongle-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9FF0FE052710FF2400717411 /* Dongle-Light.ttf */; };
+		9FF7C5E1271113FD00E9501C /* RegisterTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF7C5E0271113FD00E9501C /* RegisterTripViewController.swift */; };
 		AE8DFC030339C850530BB2C0 /* Pods_MemoriesOfTravel1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE552BA11EE0647613CF3E55 /* Pods_MemoriesOfTravel1.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +50,12 @@
 		9F7FB64D270E8F7F0064106B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9F7FB64F270F1AC60064106B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9F7FB651270F67620064106B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9FF0FDF82710EA4E00717411 /* TripListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListCell.swift; sourceTree = "<group>"; };
+		9FF0FDF92710EA4E00717411 /* TripListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TripListCell.xib; sourceTree = "<group>"; };
+		9FF0FDFD2710EEC400717411 /* MyTripCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTripCell.swift; sourceTree = "<group>"; };
+		9FF0FDFE2710EEC400717411 /* MyTripCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTripCell.xib; sourceTree = "<group>"; };
+		9FF0FE052710FF2400717411 /* Dongle-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Dongle-Light.ttf"; path = "../../../../../Downloads/Dongle-Light.ttf"; sourceTree = "<group>"; };
+		9FF7C5E0271113FD00E9501C /* RegisterTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTripViewController.swift; sourceTree = "<group>"; };
 		B13D43A79A311CCEBC4AD842 /* Pods-MemoriesOfTravel1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoriesOfTravel1.debug.xcconfig"; path = "Target Support Files/Pods-MemoriesOfTravel1/Pods-MemoriesOfTravel1.debug.xcconfig"; sourceTree = "<group>"; };
 		CE552BA11EE0647613CF3E55 /* Pods_MemoriesOfTravel1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MemoriesOfTravel1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -99,6 +111,7 @@
 				9F34988B27019C7F00226BEE /* Info.plist */,
 				9F34989427019CA400226BEE /* Network */,
 				9F34989327019CA000226BEE /* Model */,
+				9FF0FDF62710E9DF00717411 /* Cell */,
 				9F34989227019C9400226BEE /* Controllers */,
 				9F34989127019C8A00226BEE /* Storyboards */,
 			);
@@ -161,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				9F7FB63E270E69770064106B /* 나눔손글씨 반짝반짝 별.ttf */,
+				9FF0FE052710FF2400717411 /* Dongle-Light.ttf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -169,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				9F7FB634270E06E80064106B /* MyTripListViewController.swift */,
+				9FF7C5E0271113FD00E9501C /* RegisterTripViewController.swift */,
 			);
 			path = MyTrip;
 			sourceTree = "<group>";
@@ -188,6 +203,25 @@
 				9F7FB64D270E8F7F0064106B /* User.swift */,
 			);
 			path = User;
+			sourceTree = "<group>";
+		};
+		9FF0FDF62710E9DF00717411 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9FF0FDF72710E9EC00717411 /* MyTrip */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		9FF0FDF72710E9EC00717411 /* MyTrip */ = {
+			isa = PBXGroup;
+			children = (
+				9FF0FDF82710EA4E00717411 /* TripListCell.swift */,
+				9FF0FDF92710EA4E00717411 /* TripListCell.xib */,
+				9FF0FDFD2710EEC400717411 /* MyTripCell.swift */,
+				9FF0FDFE2710EEC400717411 /* MyTripCell.xib */,
+			);
+			path = MyTrip;
 			sourceTree = "<group>";
 		};
 		C07214D5EF53C8F01E94D3CD /* Frameworks */ = {
@@ -257,9 +291,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FF0FDFB2710EA4E00717411 /* TripListCell.xib in Resources */,
 				9F34988A27019C7F00226BEE /* LaunchScreen.storyboard in Resources */,
 				9F7FB63F270E69A00064106B /* 나눔손글씨 반짝반짝 별.ttf in Resources */,
 				9F7FB652270F67620064106B /* GoogleService-Info.plist in Resources */,
+				9FF0FE002710EEC400717411 /* MyTripCell.xib in Resources */,
+				9FF0FE062710FF2400717411 /* Dongle-Light.ttf in Resources */,
 				9F34988727019C7F00226BEE /* Assets.xcassets in Resources */,
 				9F34988527019C7D00226BEE /* Main.storyboard in Resources */,
 			);
@@ -314,10 +351,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FF0FDFF2710EEC400717411 /* MyTripCell.swift in Sources */,
 				9F7FB650270F1AC60064106B /* ViewController.swift in Sources */,
 				9F7FB639270E07490064106B /* MyProfileViewController.swift in Sources */,
+				9FF0FDFA2710EA4E00717411 /* TripListCell.swift in Sources */,
 				9F7FB645270E71240064106B /* SignUpViewController.swift in Sources */,
 				9F34988227019C7D00226BEE /* LoginViewController.swift in Sources */,
+				9FF7C5E1271113FD00E9501C /* RegisterTripViewController.swift in Sources */,
 				9F34987E27019C7D00226BEE /* AppDelegate.swift in Sources */,
 				9F34988027019C7D00226BEE /* SceneDelegate.swift in Sources */,
 				9F7FB64E270E8F7F0064106B /* User.swift in Sources */,
