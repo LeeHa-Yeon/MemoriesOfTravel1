@@ -28,6 +28,12 @@
 		9FF0FE002710EEC400717411 /* MyTripCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FF0FDFE2710EEC400717411 /* MyTripCell.xib */; };
 		9FF0FE062710FF2400717411 /* Dongle-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9FF0FE052710FF2400717411 /* Dongle-Light.ttf */; };
 		9FF7C5E1271113FD00E9501C /* RegisterTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF7C5E0271113FD00E9501C /* RegisterTripViewController.swift */; };
+		9FF7C5E4271119DC00E9501C /* TripInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF7C5E3271119DC00E9501C /* TripInformation.swift */; };
+		9FF7C5E6271119E500E9501C /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF7C5E5271119E500E9501C /* Trip.swift */; };
+		9FF7C5EA27111E1800E9501C /* PickDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF7C5E927111E1800E9501C /* PickDateViewController.swift */; };
+		9FF7C5EC27111E9600E9501C /* SearchTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF7C5EB27111E9600E9501C /* SearchTripViewController.swift */; };
+		9FF7C5EE271128D400E9501C /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF7C5ED271128D400E9501C /* CalendarCell.swift */; };
+		9FF7C5F12711910B00E9501C /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF7C5F02711910B00E9501C /* ScheduleViewController.swift */; };
 		AE8DFC030339C850530BB2C0 /* Pods_MemoriesOfTravel1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE552BA11EE0647613CF3E55 /* Pods_MemoriesOfTravel1.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +62,12 @@
 		9FF0FDFE2710EEC400717411 /* MyTripCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTripCell.xib; sourceTree = "<group>"; };
 		9FF0FE052710FF2400717411 /* Dongle-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Dongle-Light.ttf"; path = "../../../../../Downloads/Dongle-Light.ttf"; sourceTree = "<group>"; };
 		9FF7C5E0271113FD00E9501C /* RegisterTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTripViewController.swift; sourceTree = "<group>"; };
+		9FF7C5E3271119DC00E9501C /* TripInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripInformation.swift; sourceTree = "<group>"; };
+		9FF7C5E5271119E500E9501C /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
+		9FF7C5E927111E1800E9501C /* PickDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickDateViewController.swift; sourceTree = "<group>"; };
+		9FF7C5EB27111E9600E9501C /* SearchTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTripViewController.swift; sourceTree = "<group>"; };
+		9FF7C5ED271128D400E9501C /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
+		9FF7C5F02711910B00E9501C /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		B13D43A79A311CCEBC4AD842 /* Pods-MemoriesOfTravel1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoriesOfTravel1.debug.xcconfig"; path = "Target Support Files/Pods-MemoriesOfTravel1/Pods-MemoriesOfTravel1.debug.xcconfig"; sourceTree = "<group>"; };
 		CE552BA11EE0647613CF3E55 /* Pods_MemoriesOfTravel1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MemoriesOfTravel1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -138,6 +150,7 @@
 		9F34989327019CA000226BEE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9FF7C5E2271119C400E9501C /* Trip */,
 				9F7FB64A270E8F530064106B /* User */,
 			);
 			path = Model;
@@ -182,8 +195,11 @@
 		9F7FB640270E6B3A0064106B /* MyTrip */ = {
 			isa = PBXGroup;
 			children = (
+				9FF7C5EF271190B600E9501C /* DetailControllers */,
 				9F7FB634270E06E80064106B /* MyTripListViewController.swift */,
 				9FF7C5E0271113FD00E9501C /* RegisterTripViewController.swift */,
+				9FF7C5E927111E1800E9501C /* PickDateViewController.swift */,
+				9FF7C5EB27111E9600E9501C /* SearchTripViewController.swift */,
 			);
 			path = MyTrip;
 			sourceTree = "<group>";
@@ -220,8 +236,26 @@
 				9FF0FDF92710EA4E00717411 /* TripListCell.xib */,
 				9FF0FDFD2710EEC400717411 /* MyTripCell.swift */,
 				9FF0FDFE2710EEC400717411 /* MyTripCell.xib */,
+				9FF7C5ED271128D400E9501C /* CalendarCell.swift */,
 			);
 			path = MyTrip;
+			sourceTree = "<group>";
+		};
+		9FF7C5E2271119C400E9501C /* Trip */ = {
+			isa = PBXGroup;
+			children = (
+				9FF7C5E3271119DC00E9501C /* TripInformation.swift */,
+				9FF7C5E5271119E500E9501C /* Trip.swift */,
+			);
+			path = Trip;
+			sourceTree = "<group>";
+		};
+		9FF7C5EF271190B600E9501C /* DetailControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9FF7C5F02711910B00E9501C /* ScheduleViewController.swift */,
+			);
+			path = DetailControllers;
 			sourceTree = "<group>";
 		};
 		C07214D5EF53C8F01E94D3CD /* Frameworks */ = {
@@ -351,15 +385,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FF7C5E6271119E500E9501C /* Trip.swift in Sources */,
 				9FF0FDFF2710EEC400717411 /* MyTripCell.swift in Sources */,
+				9FF7C5EA27111E1800E9501C /* PickDateViewController.swift in Sources */,
+				9FF7C5EC27111E9600E9501C /* SearchTripViewController.swift in Sources */,
 				9F7FB650270F1AC60064106B /* ViewController.swift in Sources */,
 				9F7FB639270E07490064106B /* MyProfileViewController.swift in Sources */,
 				9FF0FDFA2710EA4E00717411 /* TripListCell.swift in Sources */,
 				9F7FB645270E71240064106B /* SignUpViewController.swift in Sources */,
 				9F34988227019C7D00226BEE /* LoginViewController.swift in Sources */,
 				9FF7C5E1271113FD00E9501C /* RegisterTripViewController.swift in Sources */,
+				9FF7C5E4271119DC00E9501C /* TripInformation.swift in Sources */,
+				9FF7C5F12711910B00E9501C /* ScheduleViewController.swift in Sources */,
 				9F34987E27019C7D00226BEE /* AppDelegate.swift in Sources */,
 				9F34988027019C7D00226BEE /* SceneDelegate.swift in Sources */,
+				9FF7C5EE271128D400E9501C /* CalendarCell.swift in Sources */,
 				9F7FB64E270E8F7F0064106B /* User.swift in Sources */,
 				9F7FB64C270E8F650064106B /* UserInformation.swift in Sources */,
 				9F7FB635270E06E80064106B /* MyTripListViewController.swift in Sources */,
