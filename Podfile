@@ -10,6 +10,7 @@ target 'MemoriesOfTravel1' do
   pod 'Firebase/Database'
   pod 'Firebase/Auth'
   pod 'Firebase/Storage'
+  pod 'CodableFirebase'
   
   pod 'Alamofire'
   pod 'NMapsMap'

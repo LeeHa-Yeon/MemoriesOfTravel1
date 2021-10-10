@@ -19,6 +19,8 @@ class PickDateViewController: UIViewController {
     @IBAction func selectDate(_ sender: UIButton){
         registerTripData = formatter2.string(from: firstDate!) + "-" + formatter2.string(from: lastDate!)
         registerTripInfo.setTripDate(date: registerTripData)
+        registerTripInfo.setOriginDate(originDate: firstDate!)
+        registerTripInfo.setDateRange(dateRange: datesRange!.count)
         dismiss(animated: true, completion: nil)
     }
     @IBAction func cancle(_ sender: UIButton){
@@ -60,9 +62,9 @@ class PickDateViewController: UIViewController {
         calendar.pagingEnabled = false
         calendar.register(CalendarCell.self, forCellReuseIdentifier: "cell")
         calendar.allowsMultipleSelection = true
-//        calendar.layer.cornerRadius = 0
+        //        calendar.layer.cornerRadius = 0
     }
-
+    
 }
 
 class calendarView: UIView {
@@ -253,14 +255,15 @@ extension PickDateViewController:FSCalendarDelegate,FSCalendarDataSource,FSCalen
     }
     
     func calendar(_ calendar: FSCalendar, subtitleFor date: Date) -> String? {
-            
-            switch formatter.string(from: date) {
-            case formatter.string(from: Date()):
-                return "오늘"
-            default:
-                return nil
-            }
+        
+        switch formatter.string(from: date) {
+        case formatter.string(from: Date()):
+            return "오늘"
+        default:
+            return nil
         }
+    }
+    
     func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, subtitleDefaultColorFor date: Date) -> UIColor? {
         if formatter.string(from: date) == formatter.string(from: Date()) {
             return .systemPink

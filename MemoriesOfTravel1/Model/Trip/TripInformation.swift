@@ -13,7 +13,11 @@ class TripInformation{
     
     private init(){}
     
-    var userTrip: Trip = Trip(name: "", date: "", D_day: 0, image: nil)
+    var userTrip: Trip = Trip(name: "", date: "", D_day: 0, image: nil,originDate: Date(),dateRange: 0, myTripList: [String:[String:Any]]())
+    
+    func setMyTripList(myTripList: [String:[String:Any]]){
+        userTrip.setMyTripList(myTripList)
+    }
     
     func setTripName(name: String){
         userTrip.setName(name)
@@ -29,6 +33,29 @@ class TripInformation{
     
     func setTripDday(d_day: Int){
         userTrip.setDday(d_day)
+    }
+    
+    func setOriginDate(originDate: Date){
+        userTrip.setOriginDate(originDate)
+    }
+    
+    func setDateRange(dateRange: Int){
+        userTrip.setDateRange(dateRange)
+    }
+    
+
+    func getMyTripList() -> [String:[String:Any]] {
+        return userTrip.getMyTripList()
+    }
+
+    func getDateRange() -> Int {
+        return userTrip.getDateRange()
+    }
+    
+    
+
+    func getOriginDate() -> Date {
+        return userTrip.getOriginDate()
     }
     
 

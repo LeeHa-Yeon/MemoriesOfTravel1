@@ -12,13 +12,35 @@ struct Trip {
     private var name: String
     private var date: String
     private var D_day: Int
+    private var originDate: Date
+    private var dateRange: Int
+    private var myTripList: [String:[String:Any]]
 
     
-    init(name: String, date: String, D_day: Int, image: UIImage?){
+    init(name: String, date: String, D_day: Int, image: UIImage?,originDate: Date,dateRange: Int,myTripList: [String:[String:Any]]){
         self.image = image
         self.name = name
         self.date = date
         self.D_day = D_day
+        self.originDate = originDate
+        self.dateRange = dateRange
+        self.myTripList = myTripList
+    }
+    
+    mutating func setMyTripList(_ myTripList: [String:[String:Any]]){
+        self.myTripList = myTripList
+    }
+    
+    func getMyTripList() -> [String:[String:Any]] {
+        return self.myTripList
+    }
+
+    func getDateRange() -> Int {
+        return self.dateRange
+    }
+    
+    func getOriginDate() -> Date {
+        return self.originDate
     }
     
     func getName() -> String {
@@ -38,6 +60,11 @@ struct Trip {
         return self.image
     }
     
+    mutating func setDateRange(_ dateRange: Int){
+        self.dateRange = dateRange
+    }
+    
+    
     mutating func setName(_ name: String){
         self.name = name
     }
@@ -49,6 +76,10 @@ struct Trip {
     }
     mutating func setDate(_ date: String){
         self.date = date
+    }
+    
+    mutating func setOriginDate(_ originDate: Date){
+        self.originDate = originDate
     }
     
 }

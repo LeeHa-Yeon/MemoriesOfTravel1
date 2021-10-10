@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="나눔손글씨 반짝반짝 별.ttf">
+            <string>NanumBanJjagBanJjagByeor</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="286" id="KGk-i7-Jjw" customClass="DayCell" customModule="MemoriesOfTravel1" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="327" height="286"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="327" height="286"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="JWa-SZ-Fdz">
+                        <rect key="frame" x="73.5" y="232" width="180" height="41"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qcr-jr-ejy">
+                                <rect key="frame" x="0.0" y="0.0" width="65" height="41"/>
+                                <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="25"/>
+                                <state key="normal" title="일정추가"/>
+                                <connections>
+                                    <action selector="addNewPlace:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="RYV-wT-hL3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tMr-Zq-0Cd">
+                                <rect key="frame" x="115" y="0.0" width="65" height="41"/>
+                                <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="25"/>
+                                <state key="normal" title="메모추가"/>
+                                <connections>
+                                    <action selector="addNewMemo:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="nlr-1I-mDj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </stackView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Clw-3U-fZ0">
+                        <rect key="frame" x="0.0" y="0.0" width="327" height="40"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10월 6일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iRf-0v-QMX">
+                                <rect key="frame" x="30" y="0.0" width="71" height="34.5"/>
+                                <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weather" translatesAutoresizingMaskIntoConstraints="NO" id="BMs-Fh-q8W">
+                                <rect key="frame" x="211.5" y="0.0" width="50" height="36.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="OhL-es-Whl"/>
+                                    <constraint firstAttribute="width" secondItem="BMs-Fh-q8W" secondAttribute="height" multiplier="11:8" id="zwI-rj-4hU"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="▼" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7It-NY-sS7">
+                                <rect key="frame" x="276.5" y="5" width="20.5" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iRf-0v-QMX" firstAttribute="leading" secondItem="Clw-3U-fZ0" secondAttribute="leading" constant="30" id="9Fr-bg-s19"/>
+                            <constraint firstItem="BMs-Fh-q8W" firstAttribute="top" secondItem="Clw-3U-fZ0" secondAttribute="top" id="MG5-0e-AL0"/>
+                            <constraint firstAttribute="height" constant="40" id="SPr-qY-FFH"/>
+                            <constraint firstAttribute="trailing" secondItem="7It-NY-sS7" secondAttribute="trailing" constant="30" id="au2-VD-eWj"/>
+                            <constraint firstItem="7It-NY-sS7" firstAttribute="leading" secondItem="BMs-Fh-q8W" secondAttribute="trailing" constant="15" id="jzl-Sx-7U5"/>
+                            <constraint firstItem="iRf-0v-QMX" firstAttribute="top" secondItem="Clw-3U-fZ0" secondAttribute="top" id="lVu-cT-dXX"/>
+                            <constraint firstItem="7It-NY-sS7" firstAttribute="top" secondItem="Clw-3U-fZ0" secondAttribute="top" constant="5" id="uRu-08-ZAl"/>
+                        </constraints>
+                    </view>
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="fZp-pH-u5C">
+                        <rect key="frame" x="0.0" y="40" width="327" height="192"/>
+                        <color key="backgroundColor" red="0.88183138069648959" green="0.80835837147234091" blue="0.90095661599999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tableView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Clw-3U-fZ0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="EjZ-Po-Fbd"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="JWa-SZ-Fdz" secondAttribute="bottom" constant="2" id="F03-dg-9I6"/>
+                    <constraint firstItem="fZp-pH-u5C" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="I30-Ed-dz9"/>
+                    <constraint firstItem="JWa-SZ-Fdz" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Igd-YA-WNm"/>
+                    <constraint firstAttribute="trailing" secondItem="Clw-3U-fZ0" secondAttribute="trailing" id="PQ8-kh-oB0"/>
+                    <constraint firstItem="fZp-pH-u5C" firstAttribute="top" secondItem="Clw-3U-fZ0" secondAttribute="bottom" id="Q7X-U9-Zo4"/>
+                    <constraint firstItem="Clw-3U-fZ0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="QuU-Nb-GGj"/>
+                    <constraint firstItem="JWa-SZ-Fdz" firstAttribute="top" secondItem="fZp-pH-u5C" secondAttribute="bottom" id="TLY-2y-nfj"/>
+                    <constraint firstAttribute="trailing" secondItem="fZp-pH-u5C" secondAttribute="trailing" id="fap-pQ-msZ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="addMemoButton" destination="tMr-Zq-0Cd" id="PWW-cH-2Qp"/>
+                <outlet property="addPlaceButton" destination="Qcr-jr-ejy" id="Ao7-Om-4WO"/>
+                <outlet property="dateLabel" destination="iRf-0v-QMX" id="yqT-0A-rEb"/>
+                <outlet property="tableView" destination="fZp-pH-u5C" id="tnl-2M-9ZJ"/>
+                <outlet property="toggleLebel" destination="7It-NY-sS7" id="BZk-hy-J6f"/>
+                <outlet property="weatherImageView" destination="BMs-Fh-q8W" id="KNU-NP-uyO"/>
+            </connections>
+            <point key="canvasLocation" x="94.927536231884062" y="155.35714285714286"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="weather" width="222" height="166"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

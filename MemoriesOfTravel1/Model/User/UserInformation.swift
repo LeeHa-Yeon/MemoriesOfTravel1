@@ -13,7 +13,14 @@ class UserInfomation{
     
     private init(){}
     
-    var userInfo: User = User(id: "", password: "", name: "", profile: nil, tripCnt: 0)
+    var userInfo: User = User(id: "", password: "", name: "", profile: nil, tripCnt: 0, primaryKey:"")
+    
+    func setPrimaryKey(primaryKey:String){
+        userInfo.setPrimaryKey(primaryKey)
+    }
+    func getPrimaryKey() -> String {
+        return userInfo.getPrimaryKey()
+    }
     
     func setUserId(id: String){
         userInfo.setId(id)
@@ -35,10 +42,6 @@ class UserInfomation{
         userInfo.setTripCnt(tripCnt)
     }
 
-//    func registUserBirth(birth: String){
-//        userInfo.setBirth(birth)
-//    }
-    
     func getUserId() -> String {
         return userInfo.getId()
     }

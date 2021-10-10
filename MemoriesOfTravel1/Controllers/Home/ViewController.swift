@@ -10,7 +10,6 @@ import UIKit
 class ViewController: UITabBarController {
     
     let myInformation: UserInfomation = UserInfomation.shared
-
     override func viewDidLoad() {
         super.viewDidLoad()
         self.selectedIndex = 1

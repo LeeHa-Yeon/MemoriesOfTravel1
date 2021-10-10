@@ -6,15 +6,34 @@
 //
 
 import UIKit
+import Firebase
+
+protocol MyTripCellDelegate {
+    func moveToScheduleVC()
+}
 
 class MyTripListViewController: UIViewController {
     
     @IBOutlet weak var tripListTableView: UITableView!
+    var ref = Database.database().reference()
+    var myTripDict = [String: [String:Any]]()
+    let myInformation: UserInfomation = UserInfomation.shared
+    let aTest : aManager = aManager.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        loadingDate{ response in
+            self.myTripDict = response
+            print("bb",self.myTripDict)
+        }
+        print("bb2",self.myTripDict)
+        tripListTableView.reloadData()
+    }
+    
     private func setupTableView(){
         tripListTableView.delegate = self
         tripListTableView.dataSource = self
@@ -25,6 +44,14 @@ class MyTripListViewController: UIViewController {
     
     
     
+    func loadingDate(completion: @escaping (([String: [String:Any]])->(Void))){
+        self.ref.child("user").child("\(myInformation.getPrimaryKey())").child("myTripList").observeSingleEvent(of: .value, with: { (snapshot) in
+            let values = snapshot.value
+            let dic = values as! [String: [String:Any]]
+            completion(dic)
+        })
+    }
+
 }
 
 extension MyTripListViewController: UITableViewDataSource, UITableViewDelegate {
@@ -60,7 +87,8 @@ extension MyTripListViewController: UITableViewDataSource, UITableViewDelegate {
         switch indexPath.section {
         case 0 :
             if let cell = tripListTableView.dequeueReusableCell(withIdentifier: "TripListCell") as? TripListCell {
-                
+                cell.delegate = self
+                cell.myTripList = self.myTripDict
                 cell.listSectionLabel.text = "  여행 전"
                 return cell
             }
@@ -105,5 +133,16 @@ extension MyTripListViewController: UITableViewDataSource, UITableViewDelegate {
 
         return headerView
     }
-    
+}
+
+extension MyTripListViewController: MyTripCellDelegate{
+    func moveToScheduleVC() {
+        
+        guard let ScheduleVC = self.storyboard?.instantiateViewController(identifier: "ScheduleSB") as? ScheduleViewController else {
+            return
+        }
+        navigationController?.pushViewController(ScheduleVC, animated: true)
+        
+        
+    }
 }

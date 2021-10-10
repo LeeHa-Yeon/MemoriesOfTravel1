@@ -9,16 +9,22 @@ import UIKit
 import MSPeekCollectionViewDelegateImplementation
 
 class TripListCell: UITableViewCell {
+
+    
     @IBOutlet weak var listSectionLabel: UILabel!
     @IBOutlet weak var myTripCollectionView: UICollectionView!
     let behavior = MSCollectionViewPeekingBehavior()
+    var delegate: MyTripCellDelegate?
+    var myTripList = [String: [String:Any]]()
 
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setupCollectionView()
-        
-    }
 
+        print("=============================")
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
@@ -38,28 +44,31 @@ class TripListCell: UITableViewCell {
         myTripCollectionView.layer.borderWidth = 3.0
         
         myTripCollectionView.isPagingEnabled = true
-        
-        
     }
+    
+    
     
 }
 
 extension TripListCell : UICollectionViewDelegate, UICollectionViewDataSource {
-    
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        
+        return myTripList.count
     }
-    
-//    func numberOfSections(in collectionView: UICollectionView) -> Int {
-//        return 2
-//    }
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyTripCell", for: indexPath) as? MyTripCell {
+            cell.delegate = self.delegate
+            print("ㅊㅊㅊㅊ",myTripList)
+//            for index in myTripDict.values{
+//                print(index)
+//            }
+//            cell.tripNameLabel
+//            cell.tripDateLabel
+//            cell.tripImage
+//            cell.tripDdayLabel
             return cell
         }
         return UICollectionViewCell()
     }
-    
 }

@@ -53,7 +53,6 @@ class SignUpViewController: UIViewController {
     @IBAction func cancelSignup(_ sender: UIButton){
         dismiss(animated: true, completion: nil)
     }
-    
     @IBOutlet weak var registerDone: UIButton! {
         didSet{
             registerDone.isEnabled = false
@@ -72,31 +71,34 @@ class SignUpViewController: UIViewController {
         guard let name = nameTextField.text else {
             return
         }
-        var userInfoDict = [String: Any]()
         
         Auth.auth().createUser(withEmail: id, password: password) { (authResult, error) in
             
-            // 성공적이라면 디비에 저장해야됨
+            
             guard let user = authResult?.user else {
                 // 실패되었을 경우 알림창 뜨게 하기
                 let alert = UIAlertController(title:"다시 입력", message: "중복된 아이디입니다.", preferredStyle: .alert)
                 let okAction = UIAlertAction(title: "OK", style: .destructive, handler : nil)
                 alert.addAction(okAction)
                 self.present(alert, animated: false, completion: nil)
-                print("error -> ",error?.localizedDescription)
+                print("error -> ",error?.localizedDescription ?? "")
                 return
             }
-            userInfoDict["이름"] = name
-            userInfoDict["아이디"] = id
-            userInfoDict["비밀번호"] = password
-            userInfoDict["여행횟수"] = 0
-            self.ref = Database.database().reference()
-            let newUser = self.ref.child("user").child("\(user)").child("userInfo")
-            newUser.setValue(userInfoDict)
-            
-            print("user ->  ",user)
+            // 성공적이라면 디비에 저장해야됨
+            self.registerUserFB(primaryKey: "\(user)",name: name,id: id,password: password)
             self.dismiss(animated: true, completion: nil)
         }
+    }
+    
+    func registerUserFB(primaryKey: String,name: String, id: String, password: String){
+        var userInfoDict = [String: Any]()
+        userInfoDict["이름"] = name
+        userInfoDict["아이디"] = id
+        userInfoDict["비밀번호"] = password
+        userInfoDict["여행횟수"] = 0
+        self.ref = Database.database().reference()
+        let newUser = self.ref.child("user").child(primaryKey).child("userInfo")
+        newUser.setValue(userInfoDict)
     }
     
     // 이미지 등록하기

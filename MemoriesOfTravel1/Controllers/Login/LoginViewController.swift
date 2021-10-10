@@ -24,8 +24,8 @@ class LoginViewController: UIViewController {
         super.viewWillDisappear(true)
         idTextField.text = ""
         pwdTextField.text = ""
+        
     }
-
     
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var idTextField: UITextField! {
@@ -75,7 +75,13 @@ class LoginViewController: UIViewController {
     
     // Todo : 로그인 성공했을 경우 홈화면으로 이동, 해당 사용자 정보 디비에서 불러와 저장하기 , 실패했을 경우 경고창으로 알려줌
     @IBAction func moveToHome(_ sender: UIButton) {
-        login()
+        login{ response in
+            guard let HomeVC = self.storyboard?.instantiateViewController(identifier: "HomeSB") as? ViewController else {
+                return
+            }
+            self.loadingUserFB(userInfoDict: response)
+            self.present(HomeVC,animated: true, completion: nil)
+        }
     }
     
     @IBAction func moveToSignUp(_ sender: UIButton){
@@ -84,7 +90,7 @@ class LoginViewController: UIViewController {
         }
     }
     
-    func login(){
+    func login(completion: @escaping (([String:Any])->(Void))){
         guard let id = idTextField.text else {
             return
         }
@@ -92,26 +98,21 @@ class LoginViewController: UIViewController {
             return
         }
         Auth.auth().signIn(withEmail: id, password: password) { (user,error) in
+            // 로그인 성공 : "Login Success"
             if user != nil {
-                
-                print("Login Success")
                 self.ref.child("user").observeSingleEvent(of: .value, with: { (snapshot) in
-                    
-                    let values = snapshot.value
-                    let dic = values as! [String: [String:Any]]
-                    for index in dic.values{
-                        let a = index["userInfo"] as! [String:Any]
-                        if (a["아이디"] as! String == "\(id)"){
-                            self.myInformation.setUserId(id: a["아이디"] as! String)
-                            self.myInformation.setUserName(name: a["이름"] as! String)
-                            self.myInformation.setUserTripCnt(tripCnt: a["여행횟수"] as! Int)
+                    let dic = snapshot.value as! [String: [String:Any]]
+                    var findUserInfo : [String:Any] = [:]
+                    for (key,index) in dic{
+                        let usersInfo = index["userInfo"] as! [String:Any]
+                        // 로그인 유저를 데이터베이스에서 찾아서 findUserInfo 변수에 저장
+                        if (usersInfo["아이디"] as! String == "\(id)"){
+                            findUserInfo = usersInfo
+                            findUserInfo["primaryKey"] = key
                         }
                     }
+                    completion(findUserInfo)
                 })
-                
-                if let HomeVC = self.storyboard?.instantiateViewController(identifier: "HomeSB") {
-                    self.present(HomeVC,animated: true, completion: nil)
-                }
 
             }else {
                 // 실패되었을 경우 알림창 뜨게 하기
@@ -119,12 +120,18 @@ class LoginViewController: UIViewController {
                 let okAction = UIAlertAction(title: "OK", style: .destructive, handler : nil)
                 alert.addAction(okAction)
                 self.present(alert, animated: false, completion: nil)
-                print("error -> ",error?.localizedDescription)
+                print("error -> ",error?.localizedDescription ?? "")
             }
-        }
+        } // Auth end
+    } // login end
+    
+    func loadingUserFB(userInfoDict: [String: Any]){
+        myInformation.setPrimaryKey(primaryKey: userInfoDict["primaryKey"] as! String)
+        myInformation.setUserId(id: userInfoDict["아이디"] as! String)
+        myInformation.setUserName(name: userInfoDict["이름"] as! String)
+        myInformation.setUserPwd(password: userInfoDict["비밀번호"] as! String)
+        myInformation.setUserTripCnt(tripCnt: userInfoDict["여행횟수"] as! Int)
     }
-    
-    
 }
 
 extension LoginViewController: UITextFieldDelegate {

@@ -13,15 +13,24 @@ struct User {
     private var password: String
     private var name: String
     private var tripCnt: Int
-    //private var birth: String
+    private var primaryKey: String
     
-    init(id: String, password: String, name: String, profile: UIImage?,tripCnt: Int){
+    init(id: String, password: String, name: String, profile: UIImage?,tripCnt: Int,primaryKey: String){
         self.id = id
         self.password = password
         self.name = name
         //self.birth = birth
         self.profile = profile
         self.tripCnt = tripCnt
+        self.primaryKey = primaryKey
+    }
+    
+    func getPrimaryKey() -> String {
+        return self.primaryKey
+    }
+    
+    mutating func setPrimaryKey(_ primaryKey: String){
+        self.primaryKey = primaryKey
     }
     
     func getId() -> String {
@@ -40,10 +49,6 @@ struct User {
         return self.tripCnt
     }
     
-//    func getBirth() -> String {
-//        return self.birth
-//    }
-    
     func getProfile() ->
     UIImage? {
         return self.profile
@@ -60,10 +65,6 @@ struct User {
     mutating func setName(_ name: String){
         self.name = name
     }
-
-//    mutating func setBirth(_ birth: String){
-//        self.birth = birth
-//    }
     
     mutating func setProfile(_ profile: UIImage?){
         self.profile = profile
