@@ -83,6 +83,7 @@ class TripInformation{
         myAllTrip.setMyTripList(tripList)
     }
     
+    
     func createTripSheet(_ tripPK: String, _ tripName: String,_ tripFirstDay: String, _ tripDate: String,_ tripRange: Int, _ tripDday: Int, _ tripImage: String) -> [String:Any] {
         var newSheet = [String:Any]()
 //        print("나는 프라이머리키야 ^^ -->",tripPK)

@@ -58,19 +58,22 @@ extension TripListCell : UICollectionViewDelegate, UICollectionViewDataSource {
             var tripDateArr = [String]()
             var tripDdayArr = [String]()
             var tripImageArr = [String]()
-            for test in myTripList.values{
+            var tripPKArr = [String]()
+            for (key,index) in myTripList{
                 var toStringDday:Int = 0
-                toStringDday = test["디데이"] as! Int
-                tripNameArr.append((test["여행지"] as? String)!)
-                tripDateArr.append((test["날짜"] as? String)!)
+                toStringDday = index["디데이"] as! Int
+                tripPKArr.append(key)
+                tripNameArr.append((index["여행지"] as? String)!)
+                tripDateArr.append((index["날짜"] as? String)!)
                 tripDdayArr.append("D-"+String(toStringDday))
-                tripImageArr.append(test["여행사진"] as! String)
+                tripImageArr.append(index["여행사진"] as! String)
             }
             let tripImageName = UIImage(named: tripImageArr[indexPath.row])
             cell.tripNameLabel.text = tripNameArr[indexPath.row]
             cell.tripDateLabel.text = tripDateArr[indexPath.row]
             cell.tripDdayLabel.text = tripDdayArr[indexPath.row]
             cell.tripImage.setImage(tripImageName, for: .normal)
+            cell.tripPK = tripPKArr[indexPath.row]
             return cell
         }
         return UICollectionViewCell()

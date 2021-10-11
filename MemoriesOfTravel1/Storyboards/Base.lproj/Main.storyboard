@@ -26,7 +26,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="5tQ-31-sAf">
-                                <rect key="frame" x="64" y="145" width="300" height="607"/>
+                                <rect key="frame" x="64" y="146.33333333333331" width="300" height="605.66666666666674"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="uOs-F9-73T">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
@@ -36,34 +36,34 @@
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Kjc-Y2-xSv">
-                                        <rect key="frame" x="0.0" y="330" width="300" height="200"/>
+                                        <rect key="frame" x="0.0" y="330" width="300" height="198.66666666666663"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아이디" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zei-xM-oSO">
-                                                <rect key="frame" x="0.0" y="0.0" width="300" height="35"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="34.666666666666664"/>
                                                 <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="30"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VCE-qq-CZ4">
-                                                <rect key="frame" x="0.0" y="55" width="300" height="35"/>
+                                                <rect key="frame" x="0.0" y="54.666666666666686" width="300" height="34.666666666666657"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oqr-Ro-xEf">
-                                                <rect key="frame" x="0.0" y="110" width="300" height="35"/>
+                                                <rect key="frame" x="0.0" y="109.33333333333331" width="300" height="34.666666666666657"/>
                                                 <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="30"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BP3-dg-8iL">
-                                                <rect key="frame" x="0.0" y="165" width="300" height="35"/>
+                                                <rect key="frame" x="0.0" y="164.00000000000006" width="300" height="34.666666666666657"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="qVS-Jn-fm6">
-                                        <rect key="frame" x="0.0" y="560" width="300" height="47"/>
+                                        <rect key="frame" x="0.0" y="558.66666666666663" width="300" height="47"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qTH-FZ-Pbk">
                                                 <rect key="frame" x="0.0" y="0.0" width="125" height="47"/>
@@ -120,7 +120,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="5Ia-ev-sOn">
-                                <rect key="frame" x="89" y="232" width="250" height="510"/>
+                                <rect key="frame" x="89" y="234" width="250" height="508"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="newProfile" translatesAutoresizingMaskIntoConstraints="NO" id="S9s-2Z-rTg">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="200"/>
@@ -129,38 +129,38 @@
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YO8-VC-07y">
-                                        <rect key="frame" x="0.0" y="250" width="250" height="260"/>
+                                        <rect key="frame" x="0.0" y="250" width="250" height="258"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아이디" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Hf-qs-zER">
-                                                <rect key="frame" x="0.0" y="0.0" width="250" height="35"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="250" height="34.666666666666664"/>
                                                 <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="30"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LTt-ge-okm">
-                                                <rect key="frame" x="0.0" y="45" width="250" height="35"/>
+                                                <rect key="frame" x="0.0" y="44.666666666666629" width="250" height="34.666666666666657"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xbp-Tg-bv7">
-                                                <rect key="frame" x="0.0" y="90" width="250" height="35"/>
+                                                <rect key="frame" x="0.0" y="89.333333333333371" width="250" height="34.666666666666657"/>
                                                 <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="30"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3SL-8i-Byb">
-                                                <rect key="frame" x="0.0" y="135" width="250" height="35"/>
+                                                <rect key="frame" x="0.0" y="134" width="250" height="34.666666666666657"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yaW-du-IKM">
-                                                <rect key="frame" x="0.0" y="180" width="250" height="35"/>
+                                                <rect key="frame" x="0.0" y="178.66666666666663" width="250" height="34.666666666666657"/>
                                                 <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="30"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lk7-gg-y5T">
-                                                <rect key="frame" x="0.0" y="225" width="250" height="35"/>
+                                                <rect key="frame" x="0.0" y="223.33333333333337" width="250" height="34.666666666666686"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -239,38 +239,38 @@
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="newProfile" translatesAutoresizingMaskIntoConstraints="NO" id="cJ8-Ft-lJ0">
-                                <rect key="frame" x="114" y="147.33333333333331" width="200" height="200.33333333333331"/>
+                                <rect key="frame" x="114" y="146.66666666666663" width="200" height="200.33333333333337"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="cJ8-Ft-lJ0" secondAttribute="height" multiplier="678:679" id="6l7-bk-lhM"/>
                                     <constraint firstAttribute="width" constant="200" id="DzW-3s-NeD"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="당신의 여권" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tVh-Xm-hH9">
-                                <rect key="frame" x="99.000000000000014" y="59" width="230.33333333333337" height="58.333333333333343"/>
+                                <rect key="frame" x="130.66666666666669" y="59" width="166.66666666666669" height="57.666666666666657"/>
                                 <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="3de-FD-7H7">
-                                <rect key="frame" x="22" y="392.66666666666669" width="384.33333333333331" height="145.00000000000006"/>
+                                <rect key="frame" x="84" y="392" width="260" height="144"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="apq-qF-3oV">
-                                        <rect key="frame" x="0.0" y="0.0" width="120.66666666666667" height="145"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="90.333333333333329" height="144"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이름" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ThS-Au-5Q9">
-                                                <rect key="frame" x="0.0" y="0.0" width="120.66666666666667" height="35"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="90.333333333333329" height="34.666666666666664"/>
                                                 <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="30"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아이디 " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TaP-bP-vMm" userLabel="아이디">
-                                                <rect key="frame" x="0.0" y="55" width="120.66666666666667" height="35"/>
+                                                <rect key="frame" x="0.0" y="54.666666666666686" width="90.333333333333329" height="34.666666666666657"/>
                                                 <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="30"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="여행 횟수 " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Db-Fp-7Zy" userLabel="아이디">
-                                                <rect key="frame" x="0.0" y="110" width="120.66666666666667" height="35"/>
+                                                <rect key="frame" x="0.0" y="109.33333333333331" width="90.333333333333329" height="34.666666666666657"/>
                                                 <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="30"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -278,22 +278,22 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="dp0-Hh-0xD">
-                                        <rect key="frame" x="150.66666666666669" y="0.0" width="233.66666666666669" height="145"/>
+                                        <rect key="frame" x="120.33333333333336" y="0.0" width="139.66666666666663" height="144"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="하연" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N8L-dw-78r">
-                                                <rect key="frame" x="0.0" y="0.0" width="233.66666666666666" height="35"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="139.66666666666666" height="34.666666666666664"/>
                                                 <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="30"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sheril@naver.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYK-6y-rdQ" userLabel="아이디">
-                                                <rect key="frame" x="0.0" y="55" width="233.66666666666666" height="35"/>
+                                                <rect key="frame" x="0.0" y="54.666666666666686" width="139.66666666666666" height="34.666666666666657"/>
                                                 <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="30"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3회" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCR-BW-WEd" userLabel="아이디">
-                                                <rect key="frame" x="0.0" y="110" width="233.66666666666666" height="35"/>
+                                                <rect key="frame" x="0.0" y="109.33333333333331" width="139.66666666666666" height="34.666666666666657"/>
                                                 <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="30"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -303,7 +303,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ea-xn-Eb9">
-                                <rect key="frame" x="115" y="721" width="104" height="47"/>
+                                <rect key="frame" x="115" y="721" width="73" height="47"/>
                                 <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="30"/>
                                 <state key="normal" title="로그아웃"/>
                                 <connections>
@@ -351,19 +351,19 @@
                                 <rect key="frame" x="0.0" y="44" width="428" height="799"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="여행의 기억을 선명하게" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="am1-AV-cLf">
-                                <rect key="frame" x="55" y="257" width="368.33333333333331" height="47"/>
+                                <rect key="frame" x="55" y="257" width="275.33333333333331" height="47"/>
                                 <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="하연님 !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXI-YI-l9Q">
-                                <rect key="frame" x="54.999999999999993" y="180" width="125.33333333333331" height="47"/>
+                                <rect key="frame" x="55.000000000000007" y="180" width="93.666666666666686" height="47"/>
                                 <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="남겨보세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FjM-Qi-sr7">
-                                <rect key="frame" x="55" y="334" width="173" height="47"/>
+                                <rect key="frame" x="54.999999999999993" y="334" width="120.33333333333331" height="47"/>
                                 <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -399,7 +399,7 @@
         <!--부산 여행-->
         <scene sceneID="ZOU-OP-ppm">
             <objects>
-                <viewController storyboardIdentifier="ScheduleSB" id="cFI-cP-atl" customClass="ScheduleViewController" customModule="MemoriesOfTravel1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailSB" id="cFI-cP-atl" customClass="DetailTripViewController" customModule="MemoriesOfTravel1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="USV-kM-0eh">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -408,7 +408,7 @@
                                 <rect key="frame" x="0.0" y="88" width="428" height="120"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="여행기간" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rli-Io-GpI">
-                                        <rect key="frame" x="45" y="30" width="104" height="35"/>
+                                        <rect key="frame" x="45" y="29.999999999999996" width="80" height="34.666666666666657"/>
                                         <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="30"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -416,7 +416,7 @@
                                         <size key="shadowOffset" width="0.0" height="0.0"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2021.10.06 - 10.08" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TlG-yQ-U4f">
-                                        <rect key="frame" x="44.999999999999986" y="61" width="253.66666666666663" height="36"/>
+                                        <rect key="frame" x="45" y="61" width="143.66666666666666" height="35.666666666666657"/>
                                         <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -447,6 +447,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="159" height="182"/>
                                                         <state key="normal" title="세부일정" image="세부일정"/>
                                                         <connections>
+                                                            <action selector="moveScheduleView:" destination="cFI-cP-atl" eventType="touchUpInside" id="Geo-zy-1Ad"/>
                                                             <segue destination="bw1-Tx-tD3" kind="presentation" modalPresentationStyle="fullScreen" id="Flo-4S-hq3"/>
                                                         </connections>
                                                     </button>
@@ -467,6 +468,9 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f0K-rW-MLa">
                                                         <rect key="frame" x="0.0" y="0.0" width="159" height="182"/>
                                                         <state key="normal" image="정산"/>
+                                                        <connections>
+                                                            <action selector="moveCalculateView:" destination="cFI-cP-atl" eventType="touchUpInside" id="R0H-mX-Sf0"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가계부" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j0f-Wb-gFT">
                                                         <rect key="frame" x="0.0" y="182" width="159" height="50"/>
@@ -490,6 +494,9 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Df-le-rRS">
                                                         <rect key="frame" x="0.0" y="0.0" width="159" height="182"/>
                                                         <state key="normal" title="Button" image="체크"/>
+                                                        <connections>
+                                                            <action selector="moveCheckListView:" destination="cFI-cP-atl" eventType="touchUpInside" id="523-Yv-d0V"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="체크리스트" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qk2-ET-JJ2">
                                                         <rect key="frame" x="0.0" y="182" width="159" height="50"/>
@@ -508,6 +515,9 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Md0-A0-K6M">
                                                         <rect key="frame" x="0.0" y="0.0" width="159" height="182"/>
                                                         <state key="normal" image="앨범"/>
+                                                        <connections>
+                                                            <action selector="moveAlbumView:" destination="cFI-cP-atl" eventType="touchUpInside" id="wuT-Z5-4A0"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="추억앨범" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hbs-JV-Bd3">
                                                         <rect key="frame" x="0.0" y="182" width="159" height="50"/>
@@ -538,6 +548,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="부산 여행" id="BS0-SV-U8L"/>
+                    <connections>
+                        <outlet property="tripDateLabel" destination="TlG-yQ-U4f" id="pwf-Ky-EG1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GE8-yG-H8b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -636,18 +649,18 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="여행을 계획해보세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P58-nb-7O2">
-                                        <rect key="frame" x="70.333333333333343" y="70" width="322.66666666666663" height="47"/>
+                                        <rect key="frame" x="160" y="70" width="233" height="47"/>
                                         <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="40"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="일정을 추가하세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qUE-Tj-zrA">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="일정을 추가하세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qUE-Tj-zrA">
                                         <rect key="frame" x="210" y="122" width="163" height="35"/>
                                         <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="30"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HHR-P3-mtD">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HHR-P3-mtD">
                                         <rect key="frame" x="138" y="123" width="43" height="54"/>
                                         <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="36"/>
                                         <state key="normal" title="Click">
@@ -705,16 +718,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="3rF-BN-kJT">
-                                <rect key="frame" x="189" y="282.33333333333326" width="200" height="261.66666666666674"/>
+                                <rect key="frame" x="189" y="277.66666666666669" width="200" height="271.00000000000006"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="여행지" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X16-hJ-Bxv">
-                                        <rect key="frame" x="0.0" y="0.0" width="200" height="46.666666666666664"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="49"/>
                                         <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="40"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bo9-VJ-h51">
-                                        <rect key="frame" x="0.0" y="71.666666666666686" width="200" height="46.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="74" width="200" height="49"/>
                                         <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="25"/>
                                         <state key="normal">
                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -724,13 +737,13 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="날짜" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gDy-DO-l3u">
-                                        <rect key="frame" x="0.0" y="143.33333333333337" width="200" height="46.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="148" width="200" height="49"/>
                                         <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="40"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yfk-8n-GN7">
-                                        <rect key="frame" x="0.0" y="215" width="200" height="46.666666666666686"/>
+                                        <rect key="frame" x="0.0" y="222" width="200" height="49"/>
                                         <fontDescription key="fontDescription" name="Dongle-Light" family="Dongle" pointSize="25"/>
                                         <state key="normal">
                                             <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -745,7 +758,7 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="여행 등록" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7VN-Po-fzJ">
-                                <rect key="frame" x="120.66666666666669" y="158" width="187" height="59.333333333333343"/>
+                                <rect key="frame" x="150.33333333333334" y="158" width="127.66666666666666" height="58.666666666666657"/>
                                 <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -759,7 +772,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="tDR-Xx-Yrq">
-                                <rect key="frame" x="114" y="674" width="200" height="110"/>
+                                <rect key="frame" x="114" y="678.66666666666663" width="200" height="110"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Cdy-f3-BDa">
                                         <rect key="frame" x="0.0" y="0.0" width="70" height="110"/>
@@ -816,34 +829,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="날짜지정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xAX-38-8ej">
-                                <rect key="frame" x="127.66666666666669" y="64" width="173" height="59.333333333333343"/>
+                                <rect key="frame" x="143.33333333333337" y="64" width="141.66666666666663" height="58.666666666666657"/>
                                 <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cMO-ND-uAC" customClass="FSCalendar">
-                                <rect key="frame" x="0.0" y="193.33333333333337" width="428" height="500"/>
+                                <rect key="frame" x="0.0" y="192.33333333333337" width="428" height="500"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="500" id="ZOF-oE-YK9"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="여행 날짜를 지정해보세요 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gA6-1n-y4H">
-                                <rect key="frame" x="58.666666666666657" y="128.33333333333334" width="310.66666666666674" height="35"/>
+                                <rect key="frame" x="96" y="127.66666666666667" width="236" height="34.666666666666671"/>
                                 <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="승무원1" translatesAutoresizingMaskIntoConstraints="NO" id="IrL-BQ-nip">
-                                <rect key="frame" x="32" y="703.33333333333337" width="90" height="90"/>
+                                <rect key="frame" x="32" y="702.33333333333337" width="90" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="IrL-BQ-nip" secondAttribute="height" multiplier="1:1" id="Dc4-PH-q1A"/>
                                     <constraint firstAttribute="height" constant="90" id="SD8-vQ-YPd"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0lt-J9-K9T">
-                                <rect key="frame" x="335" y="713.33333333333337" width="63" height="59"/>
+                                <rect key="frame" x="361" y="712.33333333333337" width="37" height="59"/>
                                 <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="40"/>
                                 <state key="normal" title="Yes">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -854,10 +867,10 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="U6t-xX-hGa">
-                                <rect key="frame" x="142" y="723.33333333333337" width="185" height="51.333333333333371"/>
+                                <rect key="frame" x="142" y="722.33333333333337" width="156.33333333333337" height="50.666666666666629"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="여행 시작일과" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ht-qJ-efu">
-                                        <rect key="frame" x="0.0" y="0.0" width="185" height="25.666666666666668"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="156.33333333333334" height="25.333333333333332"/>
                                         <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="22"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -865,7 +878,7 @@
                                         <size key="shadowOffset" width="0.0" height="0.0"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마지막일을 선택해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t29-lF-qKn">
-                                        <rect key="frame" x="0.0" y="25.666666666666629" width="185" height="25.666666666666671"/>
+                                        <rect key="frame" x="0.0" y="25.333333333333258" width="156.33333333333334" height="25.333333333333329"/>
                                         <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="22"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -875,7 +888,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lm3-XC-aqN">
-                                <rect key="frame" x="40" y="74" width="52" height="47"/>
+                                <rect key="frame" x="40" y="74" width="32" height="47"/>
                                 <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="30"/>
                                 <state key="normal" title="뒤로"/>
                                 <connections>
@@ -1127,14 +1140,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="카테고리 선정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8U0-59-x2w">
-                                <rect key="frame" x="77.333333333333343" y="94" width="273.66666666666663" height="58.666666666666657"/>
+                                <rect key="frame" x="114" y="94" width="200" height="58.666666666666657"/>
                                 <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="하나만 선정해주세요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JOE-9k-x6g">
-                                <rect key="frame" x="89.333333333333329" y="712.66666666666663" width="249.66666666666669" height="35"/>
+                                <rect key="frame" x="122.33333333333333" y="712.66666666666663" width="183.33333333333337" height="35"/>
                                 <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1166,7 +1179,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="카테고리이름" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HiV-lP-81D">
-                                                    <rect key="frame" x="9.6666666666666714" y="110" width="156" height="35"/>
+                                                    <rect key="frame" x="32.333333333333336" y="110" width="110.66666666666666" height="35"/>
                                                     <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="30"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -1189,7 +1202,7 @@
                                 </cells>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jEd-m3-jSG">
-                                <rect key="frame" x="170.66666666666666" y="755.66666666666663" width="86.999999999999972" height="71"/>
+                                <rect key="frame" x="188" y="755.66666666666663" width="52" height="70"/>
                                 <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="50"/>
                                 <state key="normal" title="등록"/>
                             </button>

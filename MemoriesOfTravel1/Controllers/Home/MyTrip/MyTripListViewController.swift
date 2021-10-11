@@ -9,7 +9,7 @@ import UIKit
 import Firebase
 
 protocol MyTripCellDelegate {
-    func moveToScheduleVC()
+    func moveToDetailVC()
 }
 
 class MyTripListViewController: UIViewController {
@@ -40,6 +40,7 @@ class MyTripListViewController: UIViewController {
         
         let tripListCellNib = UINib(nibName: "TripListCell", bundle: nil)
         self.tripListTableView.register(tripListCellNib, forCellReuseIdentifier: "TripListCell")
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "나눔손글씨 반짝반짝 별", size: 40)!]
     }
 
 }
@@ -127,12 +128,12 @@ extension MyTripListViewController: UITableViewDataSource, UITableViewDelegate {
 }
 
 extension MyTripListViewController: MyTripCellDelegate{
-    func moveToScheduleVC() {
+    func moveToDetailVC() {
         
-        guard let ScheduleVC = self.storyboard?.instantiateViewController(identifier: "ScheduleSB") as? ScheduleViewController else {
+        guard let DetailVC = self.storyboard?.instantiateViewController(identifier: "DetailSB") as? DetailTripViewController else {
             return
         }
-        navigationController?.pushViewController(ScheduleVC, animated: true)
+        navigationController?.pushViewController(DetailVC, animated: true)
         
         
     }
