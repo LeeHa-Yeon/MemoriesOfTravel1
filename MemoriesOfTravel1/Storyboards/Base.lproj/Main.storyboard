@@ -576,8 +576,8 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="Uxr-qi-aBu"/>
                                 </constraints>
                                 <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
+                                    <segment title="일정"/>
+                                    <segment title="지도"/>
                                 </segments>
                                 <connections>
                                     <action selector="switchViews:" destination="6Yj-z7-1Z2" eventType="valueChanged" id="b8O-Kd-gdx"/>
@@ -1106,7 +1106,7 @@
         <!--Day View Controller-->
         <scene sceneID="Tb9-PV-p8f">
             <objects>
-                <viewController storyboardIdentifier="DayViewController" id="Cjw-p7-XdG" customClass="DayViewController" customModule="MemoriesOfTravel1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DaySB" id="Cjw-p7-XdG" customClass="DayViewController" customModule="MemoriesOfTravel1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="554-Y7-ott">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="713"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1116,6 +1116,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="R92-6T-iRq"/>
                         <constraints>
                             <constraint firstAttribute="bottomMargin" secondItem="Z69-h7-yF4" secondAttribute="bottom" id="Rpy-cT-Vbf"/>
                             <constraint firstItem="Z69-h7-yF4" firstAttribute="top" secondItem="554-Y7-ott" secondAttribute="topMargin" id="XcQ-ih-8sE"/>
@@ -1130,6 +1131,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mz9-6l-cgV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5634" y="170"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="vsE-Aq-qVv">
+            <objects>
+                <viewController id="LDn-Ng-LG4" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hfL-sa-mF5">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="IVN-cY-8mQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0IE-Mk-IxU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6707" y="426"/>
         </scene>
         <!--Category View Controller-->
         <scene sceneID="G02-HZ-Cgx">
@@ -1227,18 +1243,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jz6-Sp-COG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6809" y="-437"/>
+            <point key="canvasLocation" x="7538" y="426"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="XUb-9M-zF7">
             <objects>
-                <viewController storyboardIdentifier="MapViewController" id="h8n-qk-WwC" customClass="MapViewController" customModule="MemoriesOfTravel1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapSB" id="h8n-qk-WwC" customClass="MapViewController" customModule="MemoriesOfTravel1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="N4N-lg-PR8">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="713"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mm3-0w-tYK">
-                                <rect key="frame" x="20" y="44" width="388" height="669"/>
+                                <rect key="frame" x="20" y="44" width="388" height="619"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomCell2" id="bDb-hX-zuT" customClass="CustomTableViewCell2" customModule="MemoriesOfTravel1" customModuleProvider="target">
@@ -1253,15 +1269,16 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="Lw3-HI-vfA"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="mm3-0w-tYK" secondAttribute="trailing" id="9qf-Sd-yhS"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="mm3-0w-tYK" secondAttribute="bottom" id="QhQ-4D-OZJ"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="mm3-0w-tYK" secondAttribute="bottom" constant="50" id="QhQ-4D-OZJ"/>
                             <constraint firstItem="mm3-0w-tYK" firstAttribute="top" secondItem="N4N-lg-PR8" secondAttribute="topMargin" id="RQ6-qQ-m6D"/>
                             <constraint firstItem="mm3-0w-tYK" firstAttribute="leading" secondItem="N4N-lg-PR8" secondAttribute="leadingMargin" id="sUa-OD-uRV"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="customTableView2" destination="mm3-0w-tYK" id="tPh-2l-Rbv"/>
+                        <outlet property="customTableView" destination="mm3-0w-tYK" id="bQK-aB-xnE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oUm-wu-ki0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

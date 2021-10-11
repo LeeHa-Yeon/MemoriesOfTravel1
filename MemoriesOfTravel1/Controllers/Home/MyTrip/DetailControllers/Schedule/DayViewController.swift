@@ -9,74 +9,96 @@ import UIKit
 
 class DayViewController: UIViewController {
     
+    let selectTripInfo: TripInformation = TripInformation.shared
     @IBOutlet weak var customTableView: UITableView!
+    var selectIndex: IndexPath = [100,0]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
     }
-    
-    var answerFilterDatasource = ExpendingTableViewCellContent2()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        //        customTableView.rowHeight = UITableView.automaticDimension
+    }
     
     private func setupTableView(){
         customTableView.delegate = self
         customTableView.dataSource = self
         customTableView.separatorStyle = .none
-        customTableView.rowHeight = UITableView.automaticDimension
         let dayCellNib = UINib(nibName: "DayCell", bundle: nil)
         self.customTableView.register(dayCellNib, forCellReuseIdentifier: "DayCell")
         
     }
     
+    var isExpending = ExpendingTableCellContent()
+    
+    fileprivate let formatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MM월 dd일"
+        return formatter
+    }()
+    
 }
 
 extension DayViewController: UITableViewDelegate, UITableViewDataSource {
     
-    // 셀을 선택했을 경우
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let cell = customTableView.cellForRow(at: indexPath) as? DayCell else {return}
-        guard let index = customTableView.indexPath(for: cell) else { return }
-        if index.section == indexPath.section {
-            print(indexPath.row)
-            let content = answerFilterDatasource
-            content.expanded = !content.expanded
-            customTableView.reloadRows(at: [indexPath], with: .automatic)
-        }
-        
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if answerFilterDatasource.expanded {
-            return 300
-        }else {
-            return 40        }
-    }
-    
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return selectTripInfo.getTripRange()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
     
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        for i in 0..<selectTripInfo.getTripRange() {
+            if section == i {
+                return "Day \(i+1)"
+            }
+        }
+        return nil
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = customTableView.dequeueReusableCell(withIdentifier: "DayCell", for: indexPath) as? DayCell else {
             return UITableViewCell()
         }
-        cell.settingData(isClicked: answerFilterDatasource)
+        cell.settingData(isClicked: isExpending)
+        cell.dateLabel.text = formatter.string(from: selectTripInfo.getTripFirstDay()+TimeInterval(86400*(indexPath.section)))
         return cell
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Day 1"
+    // 셀을 선택했을 경우
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectIndex = indexPath
+        guard let cell = customTableView.cellForRow(at: indexPath) as? DayCell else {return}
+        guard let index = customTableView.indexPath(for: cell) else { return }
+        if selectIndex == index {
+            let content = isExpending
+            content.expanded = !content.expanded
+            customTableView.reloadRows(at: [indexPath], with: .automatic)
+        }
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        guard let cell = customTableView.cellForRow(at: indexPath) as? DayCell else { return 45 }
+        guard let index = customTableView.indexPath(for: cell) else { return 45 }
+        if selectIndex == index {
+            if isExpending.expanded {
+                return 300
+            }else {
+                return 45
+            }
+        }
+        return 45
+    }
+    
 }
 
-class ExpendingTableViewCellContent2 {
+class ExpendingTableCellContent {
     var expanded: Bool
     init(){
         self.expanded = false
     }
 }
-

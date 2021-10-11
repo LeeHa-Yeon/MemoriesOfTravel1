@@ -85,6 +85,7 @@ class calendarView: UIView {
 
 extension PickDateViewController {
     func configureVisibleCells() {
+        print("안녕하세요",self.calendar.visibleCells())
         self.calendar.visibleCells().forEach { (cell) in
             let date = self.calendar.date(for: cell)
             let position = self.calendar.monthPosition(for: cell)

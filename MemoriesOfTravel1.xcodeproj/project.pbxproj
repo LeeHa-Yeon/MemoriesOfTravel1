@@ -43,6 +43,8 @@
 		9FF7C60627127BCF00E9501C /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF7C60527127BCF00E9501C /* CategoryViewController.swift */; };
 		9FF7C615271398B500E9501C /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF7C614271398B400E9501C /* Trip.swift */; };
 		9FF7C6172713E62400E9501C /* DetailTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF7C6162713E62400E9501C /* DetailTripViewController.swift */; };
+		9FF7C61A27144B7F00E9501C /* MapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF7C61827144B7F00E9501C /* MapCell.swift */; };
+		9FF7C61B27144B7F00E9501C /* MapCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FF7C61927144B7F00E9501C /* MapCell.xib */; };
 		AE8DFC030339C850530BB2C0 /* Pods_MemoriesOfTravel1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE552BA11EE0647613CF3E55 /* Pods_MemoriesOfTravel1.framework */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +88,8 @@
 		9FF7C60527127BCF00E9501C /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		9FF7C614271398B400E9501C /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		9FF7C6162713E62400E9501C /* DetailTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTripViewController.swift; sourceTree = "<group>"; };
+		9FF7C61827144B7F00E9501C /* MapCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCell.swift; sourceTree = "<group>"; };
+		9FF7C61927144B7F00E9501C /* MapCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapCell.xib; sourceTree = "<group>"; };
 		B13D43A79A311CCEBC4AD842 /* Pods-MemoriesOfTravel1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoriesOfTravel1.debug.xcconfig"; path = "Target Support Files/Pods-MemoriesOfTravel1/Pods-MemoriesOfTravel1.debug.xcconfig"; sourceTree = "<group>"; };
 		CE552BA11EE0647613CF3E55 /* Pods_MemoriesOfTravel1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MemoriesOfTravel1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -289,6 +293,8 @@
 				9FF7C5FA2711963F00E9501C /* DayCell.xib */,
 				9FF7C5FD2711966500E9501C /* ContentCell.swift */,
 				9FF7C5FE2711966500E9501C /* ContentCell.xib */,
+				9FF7C61827144B7F00E9501C /* MapCell.swift */,
+				9FF7C61927144B7F00E9501C /* MapCell.xib */,
 			);
 			path = Schedule;
 			sourceTree = "<group>";
@@ -397,6 +403,7 @@
 				9FF7C5FC2711963F00E9501C /* DayCell.xib in Resources */,
 				9F34988A27019C7F00226BEE /* LaunchScreen.storyboard in Resources */,
 				9F7FB63F270E69A00064106B /* 나눔손글씨 반짝반짝 별.ttf in Resources */,
+				9FF7C61B27144B7F00E9501C /* MapCell.xib in Resources */,
 				9F7FB652270F67620064106B /* GoogleService-Info.plist in Resources */,
 				9FF0FE002710EEC400717411 /* MyTripCell.xib in Resources */,
 				9FF0FE062710FF2400717411 /* Dongle-Light.ttf in Resources */,
@@ -474,6 +481,7 @@
 				9FF7C5F12711910B00E9501C /* ScheduleViewController.swift in Sources */,
 				9F34987E27019C7D00226BEE /* AppDelegate.swift in Sources */,
 				9F34988027019C7D00226BEE /* SceneDelegate.swift in Sources */,
+				9FF7C61A27144B7F00E9501C /* MapCell.swift in Sources */,
 				9FF7C5EE271128D400E9501C /* CalendarCell.swift in Sources */,
 				9F7FB64E270E8F7F0064106B /* User.swift in Sources */,
 				9F7FB64C270E8F650064106B /* UserInformation.swift in Sources */,

@@ -15,7 +15,6 @@ class DayCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var weatherImageView: UIImageView!
     @IBOutlet weak var toggleLebel: UILabel!
-    
     @IBOutlet weak var addPlaceButton: UIButton!
     @IBOutlet weak var addMemoButton: UIButton!
     @IBAction func addNewPlace(_ sender: UIButton){
@@ -42,13 +41,13 @@ class DayCell: UITableViewCell {
 
     }
     
-    func settingData(isClicked: ExpendingTableViewCellContent2) {
+    func settingData(isClicked: ExpendingTableCellContent) {
         if isClicked.expanded {
-            self.toggleLebel.text = "▽"
+            self.toggleLebel.text = "▲"
             self.addMemoButton.isHidden = false
             self.addPlaceButton.isHidden = false
         } else {
-            self.toggleLebel.text = "△"
+            self.toggleLebel.text = "▽"
             self.addMemoButton.isHidden = true
             self.addPlaceButton.isHidden = true
         }
@@ -63,16 +62,11 @@ extension DayCell : UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "ContentCell", for: indexPath) as? ContentCell {
-            cell.placeName.text = placeArr[indexPath.row]
-            return cell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ContentCell", for: indexPath) as? ContentCell else {
+            return UITableViewCell()
         }
-        return UITableViewCell()
+        cell.placeName.text = placeArr[indexPath.row]
+        return cell
     }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
-    }
-
     
 }
