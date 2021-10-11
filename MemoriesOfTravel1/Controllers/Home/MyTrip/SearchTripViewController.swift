@@ -10,35 +10,23 @@ import UIKit
 class SearchTripViewController: UIViewController {
     
     let registerTripInfo: TripInformation = TripInformation.shared
+    var registerTripName: String = ""
     
     @IBOutlet weak var tableView: UITableView!
-    
-    var registerTripName: String = ""
-    var filteredArr: [String] = []
-    
     var Korean_cities = ["국내","서울","경기","인천","가평","강원,강릉","경주","부산","여수","전주","제주","춘천","테안","통영,거제,남해","대구","포항"]
+    var filteredArr: [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupSearchController()
         self.setupTableView()
+    }
+    
+    func setupTableView() {
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "나눔손글씨 반짝반짝 별", size: 40)!]
         self.navigationController?.navigationBar.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        
-    }
-    
-    @IBAction func cancle(_ sender: UIButton){
-        dismiss(animated: true, completion: nil)
-    }
-    @IBAction func selectTrip(_ sender: UIButton){
-        registerTripInfo.setTripName(name: registerTripName)
-    }
-    
-    var isFiltering: Bool {
-        let searchController = self.navigationItem.searchController
-        let isActive = searchController?.isActive ?? false
-        let isSearchBarHasText = searchController?.searchBar.text?.isEmpty == false
-        return isActive && isSearchBarHasText
     }
     
     func setupSearchController() {
@@ -53,9 +41,20 @@ class SearchTripViewController: UIViewController {
         self.navigationItem.hidesSearchBarWhenScrolling = false
     }
     
-    func setupTableView() {
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
+    var isFiltering: Bool {
+        let searchController = self.navigationItem.searchController
+        let isActive = searchController?.isActive ?? false
+        let isSearchBarHasText = searchController?.searchBar.text?.isEmpty == false
+        return isActive && isSearchBarHasText
+    }
+    
+    @IBAction func cancle(_ sender: UIButton){
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func selectTrip(_ sender: UIButton){
+        registerTripInfo.setTripName(tripName: registerTripName)
+        registerTripInfo.setTripImage(tripImage: registerTripName+".jpg")
     }
 
 }
@@ -108,7 +107,6 @@ extension SearchTripViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         guard let text = searchController.searchBar.text?.lowercased() else { return }
         self.filteredArr = self.Korean_cities.filter { $0.localizedCaseInsensitiveContains(text) }
-        
         self.tableView.reloadData()
     }
 }

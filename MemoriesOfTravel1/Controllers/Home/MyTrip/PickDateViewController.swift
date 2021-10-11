@@ -9,23 +9,18 @@ import UIKit
 import FSCalendar
 
 class PickDateViewController: UIViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupCalendar()
+    }
+    
     let registerTripInfo: TripInformation = TripInformation.shared
-    
     var registerTripData: String = ""
-    
+        
     @IBOutlet var calendar: FSCalendar!
     @IBOutlet weak var firstDateLabel: UILabel!
     @IBOutlet weak var lastDateLabel: UILabel!
-    @IBAction func selectDate(_ sender: UIButton){
-        registerTripData = formatter2.string(from: firstDate!) + "-" + formatter2.string(from: lastDate!)
-        registerTripInfo.setTripDate(date: registerTripData)
-        registerTripInfo.setOriginDate(originDate: firstDate!)
-        registerTripInfo.setDateRange(dateRange: datesRange!.count)
-        dismiss(animated: true, completion: nil)
-    }
-    @IBAction func cancle(_ sender: UIButton){
-        dismiss(animated: true, completion: nil)
-    }
     
     var firstDate: Date?
     var lastDate: Date?
@@ -47,11 +42,6 @@ class PickDateViewController: UIViewController {
         return formatter2
     }()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setupCalendar()
-    }
-    
     private func setupCalendar(){
         calendar.appearance.headerDateFormat = "YYYY년 M월"
         calendar.locale = Locale(identifier: "ko_KR")
@@ -63,6 +53,20 @@ class PickDateViewController: UIViewController {
         calendar.register(CalendarCell.self, forCellReuseIdentifier: "cell")
         calendar.allowsMultipleSelection = true
         //        calendar.layer.cornerRadius = 0
+    }
+
+    @IBAction func cancle(_ sender: UIButton){
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func selectDate(_ sender: UIButton){
+        let day = Int(firstDate!-Date())/(24*60*60)
+        registerTripData = formatter2.string(from: firstDate!) + "-" + formatter2.string(from: lastDate!)
+        registerTripInfo.setTripDate(tripDate: registerTripData)
+        registerTripInfo.setTripFirstDay(tripFirstDay: firstDate!)
+        registerTripInfo.setTripRange(tripRange: datesRange!.count)
+        registerTripInfo.setTripDday(tripDday: day + 1)
+        dismiss(animated: true, completion: nil)
     }
     
 }
@@ -169,6 +173,8 @@ extension PickDateViewController:FSCalendarDelegate,FSCalendarDataSource,FSCalen
                 firstDate = date
                 datesRange = [firstDate!]
                 configureVisibleCells()
+                firstDateLabel.text = "여행 시작일이 "+formatter.string(from: firstDate!)
+                lastDateLabel.text = "마지막일은 ..."
                 return
             }
             
@@ -274,7 +280,6 @@ extension PickDateViewController:FSCalendarDelegate,FSCalendarDataSource,FSCalen
     
 }
 extension Date {
-    
     public var removeTimeStamp : Date? {
         guard let date = Calendar.current.date(from: Calendar.current.dateComponents([.year, .month, .day], from: self)) else {
             return nil
@@ -282,3 +287,4 @@ extension Date {
         return date
     }
 }
+

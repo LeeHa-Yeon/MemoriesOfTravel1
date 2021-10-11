@@ -2,84 +2,88 @@
 //  Trip.swift
 //  MemoriesOfTravel1
 //
-//  Created by 이하연 on 2021/10/09.
+//  Created by 이하연 on 2021/10/11.
 //
 
+import Foundation
 import UIKit
 
-struct Trip {
-    private var image: UIImage?
-    private var name: String
-    private var date: String
-    private var D_day: Int
-    private var originDate: Date
-    private var dateRange: Int
-    private var myTripList: [String:[String:Any]]
+class Trip {
+    // 여행지, 날짜 ,여행기간, 디데이,여행사진, 여행첫날
+    private var tripPK: String
+    private var tripName: String
+    private var tripFirstDay: Date
+    private var tripDate: String
+    private var tripRange: Int
+    private var tripDday: Int
+    private var tripImage: String
+    
+    
+    init(){
+        self.tripPK = ""
+        self.tripName = ""
+        self.tripFirstDay  = Date()
+        self.tripDate  = ""
+        self.tripRange  = 0
+        self.tripDday  = 0
+        self.tripImage  = ""
+        
+    }
+    
+    func getTripPK() -> String {
+        return self.tripPK
+    }
+    
+    func setTripPK(_ tripPK: String){
+        self.tripPK = tripPK
+    }
+    
+    func getTripName() -> String {
+        return self.tripName
+    }
+    
+    func setTripName(_ tripName: String){
+        self.tripName = tripName
+    }
+    
+    func getTripFirstDay() -> Date {
+        return self.tripFirstDay
+    }
+    
+    func setTripFirstDay(_ tripFirstDay: Date){
+        self.tripFirstDay = tripFirstDay
+    }
+    
+    func getTripDate() -> String {
+        return self.tripDate
+    }
+    
+    func setTripDate(_ tripDate: String){
+        self.tripDate = tripDate
+    }
+    
+    func getTripRange() -> Int {
+        return self.tripRange
+    }
+    
+    func setTripRange(_ tripRange: Int){
+        self.tripRange = tripRange
+    }
+    
+    func getTripDday() -> Int {
+        return self.tripDday
+    }
+    
+    func setTripDday(_ tripDday: Int) {
+        self.tripDday = tripDday
+    }
+    
+    func getTripImage() -> String {
+        return self.tripImage
+    }
+    
+    func setTripImage(_ tripImage : String){
+        self.tripImage = tripImage
+    }
 
-    
-    init(name: String, date: String, D_day: Int, image: UIImage?,originDate: Date,dateRange: Int,myTripList: [String:[String:Any]]){
-        self.image = image
-        self.name = name
-        self.date = date
-        self.D_day = D_day
-        self.originDate = originDate
-        self.dateRange = dateRange
-        self.myTripList = myTripList
-    }
-    
-    mutating func setMyTripList(_ myTripList: [String:[String:Any]]){
-        self.myTripList = myTripList
-    }
-    
-    func getMyTripList() -> [String:[String:Any]] {
-        return self.myTripList
-    }
-
-    func getDateRange() -> Int {
-        return self.dateRange
-    }
-    
-    func getOriginDate() -> Date {
-        return self.originDate
-    }
-    
-    func getName() -> String {
-        return self.name
-    }
-    
-    func getDate() -> String {
-        return self.date
-    }
-    
-    func getDday() -> Int {
-        return self.D_day
-    }
-
-    func getImage() ->
-    UIImage? {
-        return self.image
-    }
-    
-    mutating func setDateRange(_ dateRange: Int){
-        self.dateRange = dateRange
-    }
-    
-    
-    mutating func setName(_ name: String){
-        self.name = name
-    }
-    mutating func setDday(_ Dday: Int){
-        self.D_day = Dday
-    }
-    mutating func setImage(_ image: UIImage?){
-        self.image = image
-    }
-    mutating func setDate(_ date: String){
-        self.date = date
-    }
-    
-    mutating func setOriginDate(_ originDate: Date){
-        self.originDate = originDate
-    }
-    
 }

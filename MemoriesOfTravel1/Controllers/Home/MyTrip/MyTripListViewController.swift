@@ -13,43 +13,33 @@ protocol MyTripCellDelegate {
 }
 
 class MyTripListViewController: UIViewController {
+    let myInformation: UserInfomation = UserInfomation.shared
+    let myTripInformation: TripInformation = TripInformation.shared
+    var loadingTripList = [String: [String:Any]]()
     
     @IBOutlet weak var tripListTableView: UITableView!
-    var ref = Database.database().reference()
-    var myTripDict = [String: [String:Any]]()
-    let myInformation: UserInfomation = UserInfomation.shared
-    let aTest : aManager = aManager.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-    }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        loadingDate{ response in
-            self.myTripDict = response
-            print("bb",self.myTripDict)
-        }
-        print("bb2",self.myTripDict)
-        tripListTableView.reloadData()
+        loadingTripList = myTripInformation.getMyTripList()
+//        print("나는 마이트립리스트 뷰 컨트롤러", myTripInformation.getMyTripList())
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        loadingTripList = myTripInformation.getMyTripList()
+        print("나는 마이트립VC loading-->",loadingTripList.keys)
+        tripListTableView.reloadData()
+    }
+
+    // 테이블에 관련된 것!
     private func setupTableView(){
         tripListTableView.delegate = self
         tripListTableView.dataSource = self
         
         let tripListCellNib = UINib(nibName: "TripListCell", bundle: nil)
         self.tripListTableView.register(tripListCellNib, forCellReuseIdentifier: "TripListCell")
-    }
-    
-    
-    
-    func loadingDate(completion: @escaping (([String: [String:Any]])->(Void))){
-        self.ref.child("user").child("\(myInformation.getPrimaryKey())").child("myTripList").observeSingleEvent(of: .value, with: { (snapshot) in
-            let values = snapshot.value
-            let dic = values as! [String: [String:Any]]
-            completion(dic)
-        })
     }
 
 }
@@ -88,7 +78,8 @@ extension MyTripListViewController: UITableViewDataSource, UITableViewDelegate {
         case 0 :
             if let cell = tripListTableView.dequeueReusableCell(withIdentifier: "TripListCell") as? TripListCell {
                 cell.delegate = self
-                cell.myTripList = self.myTripDict
+                cell.myTripList = loadingTripList
+                cell.myTripCollectionView.reloadData()
                 cell.listSectionLabel.text = "  여행 전"
                 return cell
             }

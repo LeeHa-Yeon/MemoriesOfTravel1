@@ -30,7 +30,7 @@
                             <constraint firstAttribute="width" constant="130" id="9IV-gw-vhR"/>
                             <constraint firstAttribute="width" secondItem="S6b-y3-msW" secondAttribute="height" multiplier="1:1" id="vWM-bZ-Hpw"/>
                         </constraints>
-                        <state key="normal" image="부산"/>
+                        <state key="normal" image="경주"/>
                         <connections>
                             <action selector="moveDetailView:" destination="gTV-IL-0wX" eventType="touchUpInside" id="Wx1-z4-h05"/>
                         </connections>
@@ -78,6 +78,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="부산" width="1030" height="1040"/>
+        <image name="경주" width="514" height="488"/>
     </resources>
 </document>
