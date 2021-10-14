@@ -22,6 +22,10 @@
 		9F7FB64E270E8F7F0064106B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7FB64D270E8F7F0064106B /* User.swift */; };
 		9F7FB650270F1AC60064106B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7FB64F270F1AC60064106B /* ViewController.swift */; };
 		9F7FB652270F67620064106B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9F7FB651270F67620064106B /* GoogleService-Info.plist */; };
+		9FC0C13127185CFA001F69FD /* SearchPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0C13027185CFA001F69FD /* SearchPlaceViewController.swift */; };
+		9FC0C13427186365001F69FD /* SearchAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0C13327186365001F69FD /* SearchAPIManager.swift */; };
+		9FC0C13627186549001F69FD /* PlaceRequestParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0C13527186549001F69FD /* PlaceRequestParameter.swift */; };
+		9FC0C13827186562001F69FD /* PlaceResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0C13727186562001F69FD /* PlaceResponseData.swift */; };
 		9FF0FDFA2710EA4E00717411 /* TripListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF0FDF82710EA4E00717411 /* TripListCell.swift */; };
 		9FF0FDFB2710EA4E00717411 /* TripListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FF0FDF92710EA4E00717411 /* TripListCell.xib */; };
 		9FF0FDFF2710EEC400717411 /* MyTripCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF0FDFD2710EEC400717411 /* MyTripCell.swift */; };
@@ -67,6 +71,10 @@
 		9F7FB64D270E8F7F0064106B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9F7FB64F270F1AC60064106B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9F7FB651270F67620064106B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9FC0C13027185CFA001F69FD /* SearchPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlaceViewController.swift; sourceTree = "<group>"; };
+		9FC0C13327186365001F69FD /* SearchAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAPIManager.swift; sourceTree = "<group>"; };
+		9FC0C13527186549001F69FD /* PlaceRequestParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceRequestParameter.swift; sourceTree = "<group>"; };
+		9FC0C13727186562001F69FD /* PlaceResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceResponseData.swift; sourceTree = "<group>"; };
 		9FF0FDF82710EA4E00717411 /* TripListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListCell.swift; sourceTree = "<group>"; };
 		9FF0FDF92710EA4E00717411 /* TripListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TripListCell.xib; sourceTree = "<group>"; };
 		9FF0FDFD2710EEC400717411 /* MyTripCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTripCell.swift; sourceTree = "<group>"; };
@@ -172,6 +180,7 @@
 		9F34989327019CA000226BEE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9FC0C13227186223001F69FD /* Place */,
 				9FF7C5E2271119C400E9501C /* Trip */,
 				9F7FB64A270E8F530064106B /* User */,
 			);
@@ -181,6 +190,7 @@
 		9F34989427019CA400226BEE /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				9FC0C13327186365001F69FD /* SearchAPIManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -241,6 +251,15 @@
 				9F7FB64D270E8F7F0064106B /* User.swift */,
 			);
 			path = User;
+			sourceTree = "<group>";
+		};
+		9FC0C13227186223001F69FD /* Place */ = {
+			isa = PBXGroup;
+			children = (
+				9FC0C13527186549001F69FD /* PlaceRequestParameter.swift */,
+				9FC0C13727186562001F69FD /* PlaceResponseData.swift */,
+			);
+			path = Place;
 			sourceTree = "<group>";
 		};
 		9FF0FDF62710E9DF00717411 /* Cell */ = {
@@ -306,6 +325,7 @@
 				9FF7C5F42711926E00E9501C /* DayViewController.swift */,
 				9FF7C5F22711926400E9501C /* MapViewController.swift */,
 				9FF7C60527127BCF00E9501C /* CategoryViewController.swift */,
+				9FC0C13027185CFA001F69FD /* SearchPlaceViewController.swift */,
 			);
 			path = Schedule;
 			sourceTree = "<group>";
@@ -462,6 +482,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FF7C5E6271119E500E9501C /* TripList.swift in Sources */,
+				9FC0C13427186365001F69FD /* SearchAPIManager.swift in Sources */,
 				9FF0FDFF2710EEC400717411 /* MyTripCell.swift in Sources */,
 				9FF7C5EA27111E1800E9501C /* PickDateViewController.swift in Sources */,
 				9FF7C5F32711926400E9501C /* MapViewController.swift in Sources */,
@@ -481,10 +502,13 @@
 				9FF7C5F12711910B00E9501C /* ScheduleViewController.swift in Sources */,
 				9F34987E27019C7D00226BEE /* AppDelegate.swift in Sources */,
 				9F34988027019C7D00226BEE /* SceneDelegate.swift in Sources */,
+				9FC0C13827186562001F69FD /* PlaceResponseData.swift in Sources */,
 				9FF7C61A27144B7F00E9501C /* MapCell.swift in Sources */,
 				9FF7C5EE271128D400E9501C /* CalendarCell.swift in Sources */,
 				9F7FB64E270E8F7F0064106B /* User.swift in Sources */,
 				9F7FB64C270E8F650064106B /* UserInformation.swift in Sources */,
+				9FC0C13627186549001F69FD /* PlaceRequestParameter.swift in Sources */,
+				9FC0C13127185CFA001F69FD /* SearchPlaceViewController.swift in Sources */,
 				9FF7C5FF2711966500E9501C /* ContentCell.swift in Sources */,
 				9F7FB635270E06E80064106B /* MyTripListViewController.swift in Sources */,
 				9F7FB642270E6B5A0064106B /* HomeViewController.swift in Sources */,
