@@ -10,6 +10,7 @@ import UIKit
 class DayCell: UITableViewCell {
 
     var placeArr = ["베니키아","랑데자뷰","대림창고"]
+    var delegate: moveVCProtocol?
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var dateLabel: UILabel!
@@ -18,8 +19,7 @@ class DayCell: UITableViewCell {
     @IBOutlet weak var addPlaceButton: UIButton!
     @IBOutlet weak var addMemoButton: UIButton!
     @IBAction func addNewPlace(_ sender: UIButton){
-        placeArr.append("d")
-        tableView.reloadData()
+        delegate?.moveToSearchPlace()
     }
     @IBAction func addNewMemo(_ sender: UIButton){
         placeArr.append("e")

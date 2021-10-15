@@ -9,15 +9,24 @@ import UIKit
 
 class CategoryViewController: UIViewController {
     
+    let placeInfo = PlaceInformation.shared
+    
     @IBOutlet weak var collectionView: UICollectionView!
     let categoryName: [String] = ["숙소","차량","먹거리","카페","놀거리","기타"]
-
+    
+    @IBAction func moveToResult(_ sender: UIButton){
+        guard let ResultVC = self.storyboard?.instantiateViewController(identifier: "ResultSB") as? ResultViewController else {
+            return
+        }
+        navigationController?.pushViewController(ResultVC, animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
         collectionView.delegate = self
     }
-
+    
 }
 
 extension CategoryViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -34,26 +43,26 @@ extension CategoryViewController: UICollectionViewDelegate, UICollectionViewData
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        placeInfo.setCategory(category: categoryName[indexPath.row])
         print("-----------> \(categoryName[indexPath.row])")
-
+        
     }
     func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-           guard let cell = collectionView.cellForItem(at: indexPath) as? CategoryCell else {
-               return true
-           }
-           if cell.isSelected {
+        guard let cell = collectionView.cellForItem(at: indexPath) as? CategoryCell else {
+            return true
+        }
+        if cell.isSelected {
             cell.layer.borderWidth = 1.5
             cell.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-               collectionView.deselectItem(at: indexPath, animated: true)
-               return false
-           } else {
+            collectionView.deselectItem(at: indexPath, animated: true)
+            return false
+        } else {
             cell.layer.borderWidth = 1.5
             cell.layer.borderColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
-               return true
-           }
-       }
-
+            return true
+        }
+    }
+    
     
 }
 
@@ -62,8 +71,8 @@ extension CategoryViewController: UICollectionViewDelegateFlowLayout{
         let margin: CGFloat = 20
         let width: CGFloat = (self.view.bounds.width-(margin))/2
         let height: CGFloat = width - 50
-
-
+        
+        
         return CGSize(width: width, height: height)
     }
     

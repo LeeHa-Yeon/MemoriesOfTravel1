@@ -9,31 +9,52 @@ import UIKit
 
 class SearchPlaceViewController: UIViewController, UISearchResultsUpdating{
     
-    @IBOutlet weak var tableView: UITableView!
-    let manager = SearchAPIManager.shared
-    var clickIdx: Int = 0
-    var sendUrl = String()
+    let kakaoAPI = SearchAPIManager.shared
+    let placeInfo = PlaceInformation.shared
     
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var nextButton: UIButton!
+    
+    @IBAction func moveToCategory(_ sender: UIButton){
+        guard let CategoryVC = self.storyboard?.instantiateViewController(identifier: "CategorySB") as? CategoryViewController else {
+            return
+        }
+        navigationController?.pushViewController(CategoryVC, animated: true)
+
+    }
+
     var documents: [Document] = [Document]()
-    var testParameter = PlaceRequestParameter(query: "서울")
+    var placeQuery = PlaceRequestParameter(query: "")
 
     let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Search"
-        searchController.searchResultsUpdater = self
-        navigationItem.searchController = searchController
+        setupSearch()
+        setupTableView()
+    }
+    
+    
+    private func setupTableView(){
         tableView.dataSource = self
         tableView.delegate  = self
+        nextButton.layer.cornerRadius = 20
     }
+    
+    private func setupSearch(){
+        title = "장소 검색"
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "나눔손글씨 반짝반짝 별", size: 40)!]
+        searchController.searchResultsUpdater = self
+        navigationItem.searchController = searchController
+    }
+    
     
     func updateSearchResults(for searchController: UISearchController) {
         guard let searchWord = searchController.searchBar.text, searchWord.isEmpty == false else{
             return
         }
-        self.testParameter.setQuery(query: searchWord)
-        manager.requestSearchPlace2(parameter: testParameter) { response in
+        self.placeQuery.setQuery(query: searchWord)
+        kakaoAPI.requestSearchPlace(parameter: placeQuery) { response in
             DispatchQueue.main.async {
                 self.documents = response.documents
                 self.tableView.reloadData()
@@ -55,13 +76,18 @@ extension SearchPlaceViewController : UITableViewDelegate, UITableViewDataSource
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "placeCell", for: indexPath) as? PlaceCell else{
             return UITableViewCell()
         }
-        let a = documents[indexPath.row].place_name
-        cell.resultPlaceLabel.text = a
+        let placeName = documents[indexPath.row].place_name
+        cell.resultPlaceLabel.text = placeName
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        clickIdx = indexPath.row
-        print("-----------> \(indexPath.row)")
+        guard let cell = tableView.cellForRow(at: indexPath) as? PlaceCell else {return}
+        guard let index = tableView.indexPath(for: cell) else { return }
+        placeInfo.setPlaceName(placeName: documents[index.row].place_name)
+        placeInfo.setX(x: documents[index.row].x)
+        placeInfo.setY(y:documents[index.row].y)
+        
+        print("-----------> \(index.row)")
     }
     
     

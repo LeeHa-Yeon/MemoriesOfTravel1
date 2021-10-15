@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol moveVCProtocol {
+    func moveToSearchPlace()
+}
+
 class DayViewController: UIViewController {
     
     let selectTripInfo: TripInformation = TripInformation.shared
@@ -100,5 +104,15 @@ class ExpendingTableCellContent {
     var expanded: Bool
     init(){
         self.expanded = false
+    }
+}
+
+
+extension DayViewController: moveVCProtocol {
+    func moveToSearchPlace() {
+        guard let SaerchPlaceVC = self.storyboard?.instantiateViewController(identifier: "SearchPlaceSB") as? SearchPlaceViewController else {
+            return
+        }
+        navigationController?.pushViewController(SaerchPlaceVC, animated: true)
     }
 }

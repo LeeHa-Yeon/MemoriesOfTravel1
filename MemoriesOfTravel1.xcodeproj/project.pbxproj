@@ -26,6 +26,9 @@
 		9FC0C13427186365001F69FD /* SearchAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0C13327186365001F69FD /* SearchAPIManager.swift */; };
 		9FC0C13627186549001F69FD /* PlaceRequestParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0C13527186549001F69FD /* PlaceRequestParameter.swift */; };
 		9FC0C13827186562001F69FD /* PlaceResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0C13727186562001F69FD /* PlaceResponseData.swift */; };
+		9FC0C13A27198728001F69FD /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0C13927198728001F69FD /* Place.swift */; };
+		9FC0C13C2719890B001F69FD /* PlaceInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0C13B2719890B001F69FD /* PlaceInformation.swift */; };
+		9FC0C13E27198C22001F69FD /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0C13D27198C22001F69FD /* ResultViewController.swift */; };
 		9FF0FDFA2710EA4E00717411 /* TripListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF0FDF82710EA4E00717411 /* TripListCell.swift */; };
 		9FF0FDFB2710EA4E00717411 /* TripListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FF0FDF92710EA4E00717411 /* TripListCell.xib */; };
 		9FF0FDFF2710EEC400717411 /* MyTripCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF0FDFD2710EEC400717411 /* MyTripCell.swift */; };
@@ -75,6 +78,9 @@
 		9FC0C13327186365001F69FD /* SearchAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAPIManager.swift; sourceTree = "<group>"; };
 		9FC0C13527186549001F69FD /* PlaceRequestParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceRequestParameter.swift; sourceTree = "<group>"; };
 		9FC0C13727186562001F69FD /* PlaceResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceResponseData.swift; sourceTree = "<group>"; };
+		9FC0C13927198728001F69FD /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		9FC0C13B2719890B001F69FD /* PlaceInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInformation.swift; sourceTree = "<group>"; };
+		9FC0C13D27198C22001F69FD /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		9FF0FDF82710EA4E00717411 /* TripListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListCell.swift; sourceTree = "<group>"; };
 		9FF0FDF92710EA4E00717411 /* TripListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TripListCell.xib; sourceTree = "<group>"; };
 		9FF0FDFD2710EEC400717411 /* MyTripCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTripCell.swift; sourceTree = "<group>"; };
@@ -258,6 +264,8 @@
 			children = (
 				9FC0C13527186549001F69FD /* PlaceRequestParameter.swift */,
 				9FC0C13727186562001F69FD /* PlaceResponseData.swift */,
+				9FC0C13B2719890B001F69FD /* PlaceInformation.swift */,
+				9FC0C13927198728001F69FD /* Place.swift */,
 			);
 			path = Place;
 			sourceTree = "<group>";
@@ -326,6 +334,7 @@
 				9FF7C5F22711926400E9501C /* MapViewController.swift */,
 				9FF7C60527127BCF00E9501C /* CategoryViewController.swift */,
 				9FC0C13027185CFA001F69FD /* SearchPlaceViewController.swift */,
+				9FC0C13D27198C22001F69FD /* ResultViewController.swift */,
 			);
 			path = Schedule;
 			sourceTree = "<group>";
@@ -492,6 +501,7 @@
 				9FF7C5F52711926E00E9501C /* DayViewController.swift in Sources */,
 				9F7FB650270F1AC60064106B /* ViewController.swift in Sources */,
 				9F7FB639270E07490064106B /* MyProfileViewController.swift in Sources */,
+				9FC0C13A27198728001F69FD /* Place.swift in Sources */,
 				9FF0FDFA2710EA4E00717411 /* TripListCell.swift in Sources */,
 				9F7FB645270E71240064106B /* SignUpViewController.swift in Sources */,
 				9FF7C615271398B500E9501C /* Trip.swift in Sources */,
@@ -502,8 +512,10 @@
 				9FF7C5F12711910B00E9501C /* ScheduleViewController.swift in Sources */,
 				9F34987E27019C7D00226BEE /* AppDelegate.swift in Sources */,
 				9F34988027019C7D00226BEE /* SceneDelegate.swift in Sources */,
+				9FC0C13C2719890B001F69FD /* PlaceInformation.swift in Sources */,
 				9FC0C13827186562001F69FD /* PlaceResponseData.swift in Sources */,
 				9FF7C61A27144B7F00E9501C /* MapCell.swift in Sources */,
+				9FC0C13E27198C22001F69FD /* ResultViewController.swift in Sources */,
 				9FF7C5EE271128D400E9501C /* CalendarCell.swift in Sources */,
 				9F7FB64E270E8F7F0064106B /* User.swift in Sources */,
 				9F7FB64C270E8F650064106B /* UserInformation.swift in Sources */,
