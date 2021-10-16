@@ -570,6 +570,12 @@
                                     <segue destination="h8n-qk-WwC" kind="embed" id="QNX-sE-yTF"/>
                                 </connections>
                             </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rC8-RG-mgD">
+                                <rect key="frame" x="0.0" y="179" width="428" height="713"/>
+                                <connections>
+                                    <segue destination="tNU-K5-4VH" kind="embed" id="C1Q-1X-TbH"/>
+                                </connections>
+                            </containerView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="RLk-WP-2n1">
                                 <rect key="frame" x="64" y="118" width="300" height="32"/>
                                 <constraints>
@@ -596,8 +602,12 @@
                             <constraint firstItem="S40-3M-mOl" firstAttribute="leading" secondItem="akC-eZ-ZpA" secondAttribute="leading" id="1rG-gT-aJu"/>
                             <constraint firstItem="RLk-WP-2n1" firstAttribute="top" secondItem="akC-eZ-ZpA" secondAttribute="top" constant="30" id="3PH-Hr-kp7"/>
                             <constraint firstItem="cT8-8f-iEz" firstAttribute="top" secondItem="RLk-WP-2n1" secondAttribute="bottom" constant="30" id="ArV-Vg-2Bf"/>
+                            <constraint firstItem="rC8-RG-mgD" firstAttribute="top" secondItem="RLk-WP-2n1" secondAttribute="bottom" constant="30" id="EV7-QC-ZXR"/>
+                            <constraint firstItem="rC8-RG-mgD" firstAttribute="leading" secondItem="akC-eZ-ZpA" secondAttribute="leading" id="GJv-XN-yGg"/>
                             <constraint firstItem="akC-eZ-ZpA" firstAttribute="bottom" secondItem="S40-3M-mOl" secondAttribute="bottom" id="Kr6-cL-iQZ"/>
                             <constraint firstItem="RLk-WP-2n1" firstAttribute="centerX" secondItem="aOL-3o-MbV" secondAttribute="centerX" id="Lq8-hL-Ibk"/>
+                            <constraint firstItem="akC-eZ-ZpA" firstAttribute="bottom" secondItem="rC8-RG-mgD" secondAttribute="bottom" id="Q4P-9z-zeR"/>
+                            <constraint firstItem="akC-eZ-ZpA" firstAttribute="trailing" secondItem="rC8-RG-mgD" secondAttribute="trailing" id="cJk-k9-fU7"/>
                             <constraint firstItem="cT8-8f-iEz" firstAttribute="leading" secondItem="akC-eZ-ZpA" secondAttribute="leading" id="cPt-Ly-vZn"/>
                             <constraint firstItem="akC-eZ-ZpA" firstAttribute="trailing" secondItem="cT8-8f-iEz" secondAttribute="trailing" id="drr-PL-aKO"/>
                             <constraint firstItem="akC-eZ-ZpA" firstAttribute="trailing" secondItem="S40-3M-mOl" secondAttribute="trailing" id="f8X-eF-3si"/>
@@ -619,6 +629,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="dayView" destination="cT8-8f-iEz" id="rXG-sQ-KsL"/>
+                        <outlet property="map2View" destination="rC8-RG-mgD" id="jJh-Bq-i22"/>
                         <outlet property="mapView" destination="S40-3M-mOl" id="Nry-bO-xBV"/>
                         <outlet property="segmentedControl" destination="RLk-WP-2n1" id="Bto-XI-9zp"/>
                     </connections>
@@ -1502,6 +1513,36 @@
             </objects>
             <point key="canvasLocation" x="5733.6448598130837" y="350.53995680345577"/>
         </scene>
+        <!--Map2 View Controller-->
+        <scene sceneID="Ajy-3Y-eiq">
+            <objects>
+                <viewController storyboardIdentifier="Map2SB" id="tNU-K5-4VH" customClass="Map2ViewController" customModule="MemoriesOfTravel1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DLv-B6-fLC">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="713"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJL-t6-Lhn">
+                                <rect key="frame" x="312" y="94" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="clickDropDown:" destination="tNU-K5-4VH" eventType="touchUpInside" id="kaH-y5-5g7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="fJL-t6-Lhn" secondAttribute="trailing" constant="50" id="Qgr-t2-JW6"/>
+                            <constraint firstItem="fJL-t6-Lhn" firstAttribute="top" secondItem="DLv-B6-fLC" secondAttribute="topMargin" constant="50" id="XLj-Ce-d8z"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dropDownBtn" destination="fJL-t6-Lhn" id="3IM-di-rQ5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pbQ-AK-CJu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3921" y="1697"/>
+        </scene>
     </scenes>
     <resources>
         <image name="12" width="479" height="984"/>
@@ -1528,6 +1569,9 @@
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

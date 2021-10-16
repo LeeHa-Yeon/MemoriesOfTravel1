@@ -19,6 +19,7 @@ class DayCell: UITableViewCell {
     @IBOutlet weak var addPlaceButton: UIButton!
     @IBOutlet weak var addMemoButton: UIButton!
     @IBAction func addNewPlace(_ sender: UIButton){
+        print("와이")
         delegate?.moveToSearchPlace()
     }
     @IBAction func addNewMemo(_ sender: UIButton){

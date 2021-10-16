@@ -16,6 +16,7 @@ target 'MemoriesOfTravel1' do
   pod 'NMapsMap'
   pod 'MSPeekCollectionViewDelegateImplementation'
   pod 'FSCalendar'
+  pod 'DropDown'
 
 
 end

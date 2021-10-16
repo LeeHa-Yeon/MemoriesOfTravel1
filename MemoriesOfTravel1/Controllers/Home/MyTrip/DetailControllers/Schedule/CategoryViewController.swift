@@ -15,6 +15,7 @@ class CategoryViewController: UIViewController {
     let categoryName: [String] = ["숙소","차량","먹거리","카페","놀거리","기타"]
     
     @IBAction func moveToResult(_ sender: UIButton){
+        
         guard let ResultVC = self.storyboard?.instantiateViewController(identifier: "ResultSB") as? ResultViewController else {
             return
         }

@@ -68,6 +68,7 @@ extension DayViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = customTableView.dequeueReusableCell(withIdentifier: "DayCell", for: indexPath) as? DayCell else {
             return UITableViewCell()
         }
+        cell.delegate = self
         cell.settingData(isClicked: isExpending)
         cell.dateLabel.text = formatter.string(from: selectTripInfo.getTripFirstDay()+TimeInterval(86400*(indexPath.section)))
         return cell
@@ -110,9 +111,9 @@ class ExpendingTableCellContent {
 
 extension DayViewController: moveVCProtocol {
     func moveToSearchPlace() {
-        guard let SaerchPlaceVC = self.storyboard?.instantiateViewController(identifier: "SearchPlaceSB") as? SearchPlaceViewController else {
+        guard let SearchPlaceVC = self.storyboard?.instantiateViewController(identifier: "SearchPlaceSB") as? SearchPlaceViewController else {
             return
         }
-        navigationController?.pushViewController(SaerchPlaceVC, animated: true)
+        navigationController?.pushViewController(SearchPlaceVC, animated: true)
     }
 }
