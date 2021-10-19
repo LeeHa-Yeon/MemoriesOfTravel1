@@ -12,7 +12,6 @@ class ScheduleViewController: UIViewController {
     let selectTripInfo : TripInformation = TripInformation.shared
     
     @IBOutlet weak var dayView: UIView!
-    @IBOutlet weak var mapView: UIView!
     @IBOutlet weak var map2View: UIView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBAction func cancleButton(_ sender: UIButton){
@@ -21,16 +20,14 @@ class ScheduleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         dayView.alpha = 1
-        mapView.alpha = 0  // 
         map2View.alpha = 0
-        let dayRange = selectTripInfo.getTripRange()
-        navigationItem.title = "\(dayRange-1)박 \(dayRange)일"
+        let dayRange = Int(selectTripInfo.getTripInfo()!.getTripPeriod())
+        navigationItem.title = "\(dayRange!-1)박 \(dayRange!)일"
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "나눔손글씨 반짝반짝 별", size: 40)!]
     }
     
     @IBAction func switchViews(_ sender: UISegmentedControl) {
         let storyboard = UIStoryboard(name:"Main",bundle: nil)
-        mapView.alpha = 0 //
         if sender.selectedSegmentIndex == 0 {
             dayView.alpha = 1
             map2View.alpha = 0

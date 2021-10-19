@@ -7,10 +7,19 @@
 
 import UIKit
 import DropDown
+import NMapsMap
 
 class Map2ViewController: UIViewController {
+    // @@ 주석 @@
+    // let placeInfo = PlaceInformation.shared
+    
     let selectTripInfo: TripInformation = TripInformation.shared
     let dropDown = DropDown()
+    @IBOutlet weak var naverMapView: NMFNaverMapView!
+    var tripPeriod: Int = 0
+    var mapView : NMFMapView {
+            return naverMapView.mapView
+        }
     
     
     @IBOutlet weak var dropDownBtn: UIButton!
@@ -26,8 +35,9 @@ class Map2ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tripPeriod = Int(selectTripInfo.getTripInfo()!.getTripPeriod()) ?? 0
         dropDown.dataSource = [String]()
-        for i in 0..<selectTripInfo.getTripRange() {
+        for i in 0..<tripPeriod {
             dropDown.dataSource.append("Day \(i+1)")
         }
         dropDown.anchorView = dropDownBtn

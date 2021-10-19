@@ -1,31 +1,33 @@
 //
-//  Place.swift
+//  PlaceModel.swift
 //  MemoriesOfTravel1
 //
-//  Created by 이하연 on 2021/10/15.
+//  Created by 이하연 on 2021/10/19.
 //
 
 import Foundation
 
-class Place{
+class PlaceModel{
+    private var tripDate: String
     private var placeName: String
     private var x: String
     private var y: String
     private var category: String
-    private var distance: Double
-    private var time: String
-    private var memo: String
-    private var cost: Int
     
     init(){
+        self.tripDate = ""
         self.placeName = ""
         self.x = ""
         self.y = ""
         self.category = ""
-        self.distance = 0
-        self.time = ""
-        self.memo = ""
-        self.cost = 0
+    }
+    
+    func getTripDate() -> String {
+        return self.tripDate
+    }
+    
+    func setTripDate(_ tripDate: String){
+        self.tripDate = tripDate
     }
     
     func getPlaceName() -> String {
@@ -59,5 +61,7 @@ class Place{
     func setCategory(_ category: String){
         self.category = category
     }
+    
+    
     
 }

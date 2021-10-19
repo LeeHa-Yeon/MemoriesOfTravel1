@@ -9,12 +9,10 @@ import UIKit
 
 class DetailTripViewController: UIViewController {
     
-    let myInformation: UserInfomation = UserInfomation.shared
     let selectTripInformation: TripInformation = TripInformation.shared
     
     @IBOutlet weak var tripDateLabel: UILabel!
     @IBAction func moveScheduleView(_ sender: UIButton){
-
     }
     @IBAction func moveCalculateView(_ sender: UIButton){
 
@@ -29,8 +27,8 @@ class DetailTripViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "나눔손글씨 반짝반짝 별", size: 40)!]
-        self.navigationItem.title = selectTripInformation.getTripName()+"여행"
-        tripDateLabel.text = "2021. "+selectTripInformation.getTripDate()
+        self.navigationItem.title = selectTripInformation.getTripInfo()!.getTripName()+"여행"
+        tripDateLabel.text = "2021. "+selectTripInformation.getTripInfo()!.getTripDate()
         
     }
     

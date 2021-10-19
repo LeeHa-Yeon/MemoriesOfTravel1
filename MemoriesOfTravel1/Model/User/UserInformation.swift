@@ -13,54 +13,41 @@ class UserInfomation{
     
     private init(){}
     
-    var userInfo: User = User(id: "", password: "", name: "", profile: nil, tripCnt: 0, primaryKey:"")
     
-    func setPrimaryKey(primaryKey:String){
-        userInfo.setPrimaryKey(primaryKey)
-    }
-    func getPrimaryKey() -> String {
-        return userInfo.getPrimaryKey()
-    }
-    
-    func setUserId(id: String){
-        userInfo.setId(id)
-    }
-    
-    func setUserPwd(password: String){
-        userInfo.setPassword(password)
-    }
-    
-    func setUserProfile(profile: UIImage?){
-        userInfo.setProfile(profile)
-    }
-    
-    func setUserName(name: String){
-        userInfo.setName(name)
-    }
-    
-    func setUserTripCnt(tripCnt: Int){
-        userInfo.setTripCnt(tripCnt)
-    }
+    var userInfo: UserInfo?
 
-    func getUserId() -> String {
-        return userInfo.getId()
+    func setUserInfo(_ info: UserInfo){
+        self.userInfo = info
     }
     
-    func getUserPwd() -> String {
-        return userInfo.getPassword()
+    func getUserInfo() -> UserInfo? {
+        guard let userInfo = self.userInfo else { return nil }
+        
+        return userInfo
     }
     
-    func getUserName() -> String {
-        return userInfo.getName()
+    func updateTripCnt(){
+        self.userInfo?.updateTripCnt()
     }
     
-    func getUserProfile() -> UIImage {
-        return userInfo.getProfile()!
+    func getUid() -> String {
+        guard let uid = self.userInfo?.getUid() else { return "" }
+        
+        return uid
     }
-    
-    func getUserTripCnt() -> Int {
-        return userInfo.getTripCnt()
+    func getId() -> String {
+        guard let id = self.userInfo?.getId() else { return "" }
+        
+        return id
     }
-    
-    
+    func getName() -> String {
+        guard let name = self.userInfo?.getName() else { return "" }
+
+        return name
+    }
+    func getTripCnt() -> String {
+        guard let tripCnt = self.userInfo?.getTripCnt() else { return "" }
+        
+        return tripCnt
+    }
 }

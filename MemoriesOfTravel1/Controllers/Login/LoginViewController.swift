@@ -6,25 +6,23 @@
 //
 
 import UIKit
-import Firebase
-import FirebaseAuth
 
 class LoginViewController: UIViewController {
     
     let myInformation: UserInfomation = UserInfomation.shared
-    
-    var ref = Database.database().reference()
+    let firebaseManager = FirebaseManager.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
         originalBottomMargin = self.bottomContainerMargin.constant
         addNotification()
+//        firebaseManager.updateArrTest()
+//        firebaseManager.arrTest()
     }
     override func viewWillDisappear(_ animated: Bool){
         super.viewWillDisappear(true)
         idTextField.text = ""
         pwdTextField.text = ""
-        
     }
     
     @IBOutlet weak var logoImageView: UIImageView!
@@ -75,11 +73,17 @@ class LoginViewController: UIViewController {
     
     // Todo : 로그인 성공했을 경우 홈화면으로 이동, 해당 사용자 정보 디비에서 불러와 저장하기 , 실패했을 경우 경고창으로 알려줌
     @IBAction func moveToHome(_ sender: UIButton) {
-        login{ response in
-            guard let HomeVC = self.storyboard?.instantiateViewController(identifier: "HomeSB") as? ViewController else {
+        guard let id = idTextField.text else { return }
+        guard let password = pwdTextField.text else { return }
+        firebaseManager.emailLogin(id: id, password: password) { response in
+            guard let response = response else {
+                print("로그인 실패")
                 return
             }
-            self.loadingUserFB(userInfoDict: response)
+            self.myInformation.setUserInfo(response)
+            
+            guard let HomeVC = self.storyboard?.instantiateViewController(identifier: "HomeSB") as? ViewController
+            else { return }
             self.present(HomeVC,animated: true, completion: nil)
         }
     }
@@ -90,48 +94,7 @@ class LoginViewController: UIViewController {
         }
     }
     
-    func login(completion: @escaping (([String:Any])->(Void))){
-        guard let id = idTextField.text else {
-            return
-        }
-        guard let password = pwdTextField.text else {
-            return
-        }
-        Auth.auth().signIn(withEmail: id, password: password) { (user,error) in
-            // 로그인 성공 : "Login Success"
-            if user != nil {
-                self.ref.child("user").observeSingleEvent(of: .value, with: { (snapshot) in
-                    let dic = snapshot.value as! [String: [String:Any]]
-                    var findUserInfo : [String:Any] = [:]
-                    for (key,index) in dic{
-                        let usersInfo = index["userInfo"] as! [String:Any]
-                        // 로그인 유저를 데이터베이스에서 찾아서 findUserInfo 변수에 저장
-                        if (usersInfo["아이디"] as! String == "\(id)"){
-                            findUserInfo = usersInfo
-                            findUserInfo["primaryKey"] = key
-                        }
-                    }
-                    completion(findUserInfo)
-                })
-
-            }else {
-                // 실패되었을 경우 알림창 뜨게 하기
-                let alert = UIAlertController(title:"로그인 실패", message: "아이디와 비밀번호를 확인해주세요.", preferredStyle: .alert)
-                let okAction = UIAlertAction(title: "OK", style: .destructive, handler : nil)
-                alert.addAction(okAction)
-                self.present(alert, animated: false, completion: nil)
-                print("error -> ",error?.localizedDescription ?? "")
-            }
-        } // Auth end
-    } // login end
     
-    func loadingUserFB(userInfoDict: [String: Any]){
-        myInformation.setPrimaryKey(primaryKey: userInfoDict["primaryKey"] as! String)
-        myInformation.setUserId(id: userInfoDict["아이디"] as! String)
-        myInformation.setUserName(name: userInfoDict["이름"] as! String)
-        myInformation.setUserPwd(password: userInfoDict["비밀번호"] as! String)
-        myInformation.setUserTripCnt(tripCnt: userInfoDict["여행횟수"] as! Int)
-    }
 }
 
 extension LoginViewController: UITextFieldDelegate {

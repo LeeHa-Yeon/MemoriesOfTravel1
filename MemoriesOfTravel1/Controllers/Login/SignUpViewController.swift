@@ -8,18 +8,12 @@
 import UIKit
 import Firebase
 import FirebaseAuth
-import FirebaseDatabase
-import FirebaseStorage
-
-// 디비에 저장하기
 
 protocol SignupViewControllerDelegate {
     func isButtonEnable() -> Bool
 }
 
 class SignUpViewController: UIViewController {
-    
-    var ref : DatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,22 +53,11 @@ class SignUpViewController: UIViewController {
         }
     }
     @IBAction func registerButton(_ sender: UIButton) {
-        guard let id = idTextField.text else {
-            return
-        }
-        guard let password = passwordTextField.text else {
-            return
-        }
-        guard let profile = profileImageView.image else {
-            return
-        }
-        guard let name = nameTextField.text else {
-            return
-        }
+        guard let id = idTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
+        guard let name = nameTextField.text else { return }
         
         Auth.auth().createUser(withEmail: id, password: password) { (authResult, error) in
-            
-            
             guard let user = authResult?.user else {
                 // 실패되었을 경우 알림창 뜨게 하기
                 let alert = UIAlertController(title:"다시 입력", message: "중복된 아이디입니다.", preferredStyle: .alert)
@@ -85,19 +68,22 @@ class SignUpViewController: UIViewController {
                 return
             }
             // 성공적이라면 디비에 저장해야됨
-            self.registerUserFB(primaryKey: "\(user)",name: name,id: id,password: password)
+            self.registerUserFB(uid: "\(user.uid)", name: name, id: id, password: password)
             self.dismiss(animated: true, completion: nil)
         }
     }
     
-    func registerUserFB(primaryKey: String,name: String, id: String, password: String){
+    func registerUserFB(uid: String,name: String, id: String, password: String){
         var userInfoDict = [String: Any]()
-        userInfoDict["이름"] = name
-        userInfoDict["아이디"] = id
-        userInfoDict["비밀번호"] = password
-        userInfoDict["여행횟수"] = 0
-        self.ref = Database.database().reference()
-        let newUser = self.ref.child("user").child(primaryKey).child("userInfo")
+        var ref : DatabaseReference!
+        userInfoDict["uid"] = uid
+        userInfoDict["name"] = name
+        userInfoDict["id"] = id
+        userInfoDict["password"] = password
+        userInfoDict["tripCnt"] = "0"
+        
+        ref = Database.database().reference()
+        let newUser = ref.child("user").child(uid).child("userInfo")
         newUser.setValue(userInfoDict)
     }
     

@@ -10,7 +10,7 @@ import UIKit
 class SearchPlaceViewController: UIViewController, UISearchResultsUpdating{
     
     let kakaoAPI = SearchAPIManager.shared
-    let placeInfo = PlaceInformation.shared
+    let newPlace = PlaceInformation.shared
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var nextButton: UIButton!
@@ -83,17 +83,12 @@ extension SearchPlaceViewController : UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let cell = tableView.cellForRow(at: indexPath) as? PlaceCell else {return}
         guard let index = tableView.indexPath(for: cell) else { return }
-        placeInfo.setPlaceName(placeName: documents[index.row].place_name)
-        placeInfo.setX(x: documents[index.row].x)
-        placeInfo.setY(y:documents[index.row].y)
-        
+        newPlace.registerPlaceName(documents[index.row].place_name)
+        newPlace.registerX(documents[index.row].x)
+        newPlace.registerY(documents[index.row].y)
         print("-----------> \(index.row)")
     }
-    
-    
 }
-
-
 
 class PlaceCell: UITableViewCell {
     @IBOutlet weak var resultPlaceLabel: UILabel!

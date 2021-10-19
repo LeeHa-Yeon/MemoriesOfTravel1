@@ -6,24 +6,32 @@
 //
 
 import UIKit
+import Firebase
 
 protocol moveVCProtocol {
-    func moveToSearchPlace()
+    func moveToSelect()
+    func moveToMemo()
 }
 
 class DayViewController: UIViewController {
     
+    let myInformation: UserInfomation = UserInfomation.shared
     let selectTripInfo: TripInformation = TripInformation.shared
+    var tripPeriod: Int = 0
+    var tripFirstDay = Date()
+    
     @IBOutlet weak var customTableView: UITableView!
     var selectIndex: IndexPath = [100,0]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        tripPeriod = Int(selectTripInfo.getTripInfo()!.getTripPeriod()) ?? 0
+        tripFirstDay = formatter2.date(from: selectTripInfo.getTripInfo()!.getTripFirstDay())!
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        //        customTableView.rowHeight = UITableView.automaticDimension
+        //  customTableView.rowHeight = UITableView.automaticDimension
     }
     
     private func setupTableView(){
@@ -39,24 +47,31 @@ class DayViewController: UIViewController {
     
     fileprivate let formatter: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.dateFormat = "MM월 dd일"
+        formatter.dateFormat = "MM월_dd일"
         return formatter
     }()
     
+    fileprivate let formatter2: DateFormatter = {
+        let formatter2 = DateFormatter()
+        formatter2.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        formatter2.timeZone = NSTimeZone(name: "UTC") as TimeZone?
+        return formatter2
+    }()
+
 }
 
 extension DayViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return selectTripInfo.getTripRange()
+        return tripPeriod
     }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        for i in 0..<selectTripInfo.getTripRange() {
+        for i in 0..<tripPeriod {
             if section == i {
                 return "Day \(i+1)"
             }
@@ -69,8 +84,8 @@ extension DayViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         cell.delegate = self
+        cell.dateLabel.text = formatter.string(from: tripFirstDay+TimeInterval(86400*(indexPath.section)))
         cell.settingData(isClicked: isExpending)
-        cell.dateLabel.text = formatter.string(from: selectTripInfo.getTripFirstDay()+TimeInterval(86400*(indexPath.section)))
         return cell
     }
     
@@ -91,7 +106,7 @@ extension DayViewController: UITableViewDelegate, UITableViewDataSource {
         guard let index = customTableView.indexPath(for: cell) else { return 45 }
         if selectIndex == index {
             if isExpending.expanded {
-                return 300
+                return 250
             }else {
                 return 45
             }
@@ -110,10 +125,20 @@ class ExpendingTableCellContent {
 
 
 extension DayViewController: moveVCProtocol {
-    func moveToSearchPlace() {
-        guard let SearchPlaceVC = self.storyboard?.instantiateViewController(identifier: "SearchPlaceSB") as? SearchPlaceViewController else {
+
+    func moveToMemo() {
+        guard let MemoVC = self.storyboard?.instantiateViewController(identifier: "MemoSB") as? MemoViewController else {
             return
         }
-        navigationController?.pushViewController(SearchPlaceVC, animated: true)
+        MemoVC.modalPresentationStyle = .formSheet
+        self.present(MemoVC, animated: true, completion: nil)
     }
+    
+    func moveToSelect() {
+        guard let SelectVC = self.storyboard?.instantiateViewController(identifier: "SelectSB") as? SelectViewController else {
+            return
+        }
+        navigationController?.pushViewController(SelectVC, animated: true)
+    }
+    
 }

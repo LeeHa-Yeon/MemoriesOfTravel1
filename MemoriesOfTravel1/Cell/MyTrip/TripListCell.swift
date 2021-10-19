@@ -15,7 +15,11 @@ class TripListCell: UITableViewCell {
     @IBOutlet weak var myTripCollectionView: UICollectionView!
     let behavior = MSCollectionViewPeekingBehavior()
     var delegate: MyTripCellDelegate?
-    var myTripList = [String: [String:Any]]()
+    var myTripList = [String]()
+    var myTripInfo = [TripInfo]()
+    
+    let userInfo = UserInfomation.shared
+    let firebaseManager = FirebaseManager.shared
     
     
     override func awakeFromNib() {
@@ -43,38 +47,42 @@ class TripListCell: UITableViewCell {
         myTripCollectionView.layer.borderWidth = 3.0
         myTripCollectionView.isPagingEnabled = true
     }
+    
+    
+    
+    
+    fileprivate let formatter: DateFormatter = {
+        let formatter = DateFormatter()
+        
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        formatter.timeZone = NSTimeZone(name: "UTC") as TimeZone?
+        return formatter
+    }()
+    
 }
 
 extension TripListCell : UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
+        print("",myTripList)
         return myTripList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyTripCell", for: indexPath) as? MyTripCell {
             cell.delegate = self.delegate
-            var tripNameArr = [String]()
-            var tripDateArr = [String]()
-            var tripDdayArr = [String]()
-            var tripImageArr = [String]()
-            var tripPKArr = [String]()
-            for (key,index) in myTripList{
-                var toStringDday:Int = 0
-                toStringDday = index["디데이"] as! Int
-                tripPKArr.append(key)
-                tripNameArr.append((index["여행지"] as? String)!)
-                tripDateArr.append((index["날짜"] as? String)!)
-                tripDdayArr.append("D-"+String(toStringDday))
-                tripImageArr.append(index["여행사진"] as! String)
-            }
-            let tripImageName = UIImage(named: tripImageArr[indexPath.row])
-            cell.tripNameLabel.text = tripNameArr[indexPath.row]
-            cell.tripDateLabel.text = tripDateArr[indexPath.row]
-            cell.tripDdayLabel.text = tripDdayArr[indexPath.row]
+            let firstDate:Date = self.formatter.date(from: myTripInfo[indexPath.row].getTripFirstDay())!
+            let dDay = Int(firstDate-Date())/(24*60*60)
+            cell.tripDdayLabel.text = "D-\(dDay)"
+
+            let tripImageName = UIImage(named: myTripInfo[indexPath.row].getTripName())
             cell.tripImage.setImage(tripImageName, for: .normal)
-            cell.tripPK = tripPKArr[indexPath.row]
+
+            cell.tripNameLabel.text = myTripInfo[indexPath.row].getTripName()
+            cell.tripDateLabel.text = myTripInfo[indexPath.row].getTripDate()
+            
             return cell
+            
         }
         return UICollectionViewCell()
     }

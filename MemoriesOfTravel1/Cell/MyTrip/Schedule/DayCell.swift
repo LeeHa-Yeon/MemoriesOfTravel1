@@ -6,34 +6,34 @@
 //
 
 import UIKit
+import Firebase
 
 class DayCell: UITableViewCell {
-
-    var placeArr = ["베니키아","랑데자뷰","대림창고"]
-    var delegate: moveVCProtocol?
     
-    @IBOutlet weak var tableView: UITableView!
+    var delegate: moveVCProtocol?
+    let placeInfo: PlaceInformation = PlaceInformation.shared
+    
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var weatherImageView: UIImageView!
     @IBOutlet weak var toggleLebel: UILabel!
     @IBOutlet weak var addPlaceButton: UIButton!
     @IBOutlet weak var addMemoButton: UIButton!
+    @IBAction func showSchedule(_ sender: UIButton){
+        print("일정 보여주는 화면 구현하기")
+    }
+    
     @IBAction func addNewPlace(_ sender: UIButton){
-        print("와이")
-        delegate?.moveToSearchPlace()
+        placeInfo.setTripDate(dateLabel.text!)
+        delegate?.moveToSelect()
     }
     @IBAction func addNewMemo(_ sender: UIButton){
-        placeArr.append("e")
-        tableView.reloadData()
+        print("안녕!나는 메모!")
+        placeInfo.setTripDate(dateLabel.text!)
+        delegate?.moveToMemo()
     }
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        tableView.dataSource = self
-        tableView.delegate = self
-        
-        let contentCellNib = UINib(nibName: "ContentCell", bundle: nil)
-        self.tableView.register(contentCellNib, forCellReuseIdentifier: "ContentCell")
     }
     
 
@@ -53,21 +53,4 @@ class DayCell: UITableViewCell {
             self.addPlaceButton.isHidden = true
         }
     }
-    
-}
-
-
-extension DayCell : UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return placeArr.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ContentCell", for: indexPath) as? ContentCell else {
-            return UITableViewCell()
-        }
-        cell.placeName.text = placeArr[indexPath.row]
-        return cell
-    }
-    
 }

@@ -16,20 +16,24 @@ class MyProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        tripCntLabel.text = myInformation.getTripCnt() + "회"
+    }
     
     @IBOutlet weak var nameLabel: UILabel! {
         didSet{
-            nameLabel.text = myInformation.getUserName()
+            nameLabel.text = myInformation.getName()
         }
     }
     @IBOutlet weak var idLabel: UILabel! {
         didSet{
-            idLabel.text = myInformation.getUserId()
+            idLabel.text = myInformation.getId()
         }
     }
     @IBOutlet weak var tripCntLabel: UILabel! {
         didSet {
-            tripCntLabel.text = String(myInformation.getUserTripCnt()) + "회"
+            tripCntLabel.text = myInformation.getTripCnt() + "회"
         }
     }
     @IBOutlet weak var profileImageView: UIImageView!

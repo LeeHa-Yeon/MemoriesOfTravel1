@@ -9,7 +9,7 @@ import UIKit
 
 class SearchTripViewController: UIViewController {
     
-    let registerTripInfo: TripInformation = TripInformation.shared
+    let newTrip: TripInformation = TripInformation.shared
     var registerTripName: String = ""
     
     @IBOutlet weak var tableView: UITableView!
@@ -53,8 +53,7 @@ class SearchTripViewController: UIViewController {
     }
     
     @IBAction func selectTrip(_ sender: UIButton){
-        registerTripInfo.setTripName(tripName: registerTripName)
-        registerTripInfo.setTripImage(tripImage: registerTripName+".jpg")
+        newTrip.registerTripName(registerTripName)
     }
 
 }

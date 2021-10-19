@@ -10,13 +10,12 @@ import UIKit
 class HomeViewController: UIViewController {
     
     let myInformation: UserInfomation = UserInfomation.shared
-    
     @IBOutlet weak var nameLable: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if myInformation.getUserName() != "" {
-            nameLable.text = myInformation.getUserName()+"님 !"
-        }
+        guard let name = myInformation.getUserInfo()?.getName() else { return }
+        nameLable.text = name + "님!"
+        
     }
 }

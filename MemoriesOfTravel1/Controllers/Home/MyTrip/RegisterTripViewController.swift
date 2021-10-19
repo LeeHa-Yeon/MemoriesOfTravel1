@@ -12,8 +12,9 @@ import FirebaseStorage
 class RegisterTripViewController: UIViewController {
     
     let myInformation: UserInfomation = UserInfomation.shared
-    let registerTripInfo: TripInformation = TripInformation.shared
-    var ref : DatabaseReference!
+    let tripInformation: TripInformation = TripInformation.shared
+    let firebaseManager = FirebaseManager.shared
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,20 +22,12 @@ class RegisterTripViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        let loadingTripName = NSAttributedString(string: registerTripInfo.getTripName())
-        let loadingTripDate = NSAttributedString(string: registerTripInfo.getTripDate())
+        let loadingTripName = NSAttributedString(string: tripInformation.loadTripName() ?? "")
+        let loadingTripDate = NSAttributedString(string: tripInformation.loadTripDate() ?? "")
         self.tripName.setAttributedTitle(loadingTripName, for: .normal)
         self.tripDate.setAttributedTitle(loadingTripDate, for: .normal)
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(true)
-        let loadingTripName = NSAttributedString(string: "")
-        let loadingTripDate = NSAttributedString(string: "")
-        self.tripName.setAttributedTitle(loadingTripName, for: .normal)
-        self.tripDate.setAttributedTitle(loadingTripDate, for: .normal)
-    }
-   
     @IBOutlet weak var tripName: UIButton! {
         didSet{
             tripName.layer.borderWidth = 1.5
@@ -53,52 +46,52 @@ class RegisterTripViewController: UIViewController {
     }
     
     @IBAction func cancleButton(_ sender: UIButton){
+        tripInformation.registerTripName("")
+        tripInformation.registerTripDate("")
         dismiss(animated: true, completion: nil)
     }
     
-    var newTripDict = [String:Any]()
-    var key: String = ""
-    var fileName: String = ""
-    
     @IBAction func moveAddTrip(_ sender: UIButton){
-        addNewTripFB()
-        updateTripList()
-        self.dismiss(animated: true, completion: nil)
-    }
-    func addNewTripFB(){
-        self.ref = Database.database().reference()
-        key = myInformation.getPrimaryKey()
-        fileName = formatter.string(from: registerTripInfo.getTripFirstDay())+registerTripInfo.getTripName()
-        
-        newTripDict["여행지"] = registerTripInfo.getTripName()
-        newTripDict["여행사진"] = registerTripInfo.getTripImage()
-        newTripDict["날짜"] = registerTripInfo.getTripDate()
-        newTripDict["여행첫날"] = formatter2.string(from: registerTripInfo.getTripFirstDay())
-        newTripDict["디데이"] = registerTripInfo.getTripDday()
-        newTripDict["여행기간"] = registerTripInfo.getTripRange()
-        
-        let newTrip = self.ref.child("user").child(key).child("myTripList").child(fileName)
-        newTrip.setValue(newTripDict)
+        myInformation.updateTripCnt()
+        firebaseManager.updateTripCnt(uid: myInformation.getUid(),tripCnt: myInformation.getTripCnt())
+        firebaseManager.saveTripInfo(uid: myInformation.getUid(), tripName: tripInformation.loadTripName()!, tripPK: 1, tripFD: tripInformation.loadTripFirstDay()!, tripPeriod: tripInformation.loadTripPeriod()!, tripDate: tripInformation.loadTripDate()!)
+        tripInformation.registerTripName(" ")
+        tripInformation.registerTripDate(" ")
+        firebaseManager.loadTripList(uid: myInformation.getUid()) { response in
+            guard let response = response else {
+                print("여행 등록 후 로드 과정에서 문제 생김")
+                return
+            }
+            self.tripInformation.setAllTripList(response)
+            var allTripInfo = [TripInfo]()
+            var cnt:Int = 1
+            for value in response {
+                self.firebaseManager.loadTripInfo(uid: self.myInformation.getUid(), tripName: value) { response2 in
+                    
+                    guard let response2 = response2 else {
+                        print("여행 정보 없음")
+                        return
+                    }
+                    allTripInfo.append(response2)
+                    if cnt == response.count {
+                        self.tripInformation.setAllTripInfo(allTripInfo)
+                        self.dismiss(animated: true, completion: nil)
+                    }
+                    cnt+=1
+                }
+            }
+        }
+ 
     }
     
-    func updateTripList(){
-        let newTrip = registerTripInfo.createTripSheet(myInformation.getPrimaryKey(), registerTripInfo.getTripName(), formatter2.string(from: registerTripInfo.getTripFirstDay()), registerTripInfo.getTripDate(), registerTripInfo.getTripRange(), registerTripInfo.getTripDday(), registerTripInfo.getTripImage())
-        registerTripInfo.addTripInfo(fileName, newTrip)
-    }
-
+    
+    // 현재 사용 안함 -> 옛날에 파일명쓸때 사용했었음
     // 파이어베이스의 child는 -,:와 같은 특수문자가 못들어가서 이와 같이 바꿔서 넣어주자
-    fileprivate let formatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyyMMdd"
-        return formatter
-    }()
-    
-    // 파이어베이스는 Date형식이 불가능하여 String형식으로 바꿔서 넣어줘야됨
-    fileprivate let formatter2: DateFormatter = {
-        let formatter2 = DateFormatter()
-        formatter2.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        return formatter2
-    }()
+    //    fileprivate let formatter: DateFormatter = {
+    //        let formatter = DateFormatter()
+    //        formatter.dateFormat = "yyyyMMdd"
+    //        return formatter
+    //    }()
     
 }
 

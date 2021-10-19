@@ -15,7 +15,7 @@ class PickDateViewController: UIViewController {
         setupCalendar()
     }
     
-    let registerTripInfo: TripInformation = TripInformation.shared
+    let newTrip: TripInformation = TripInformation.shared
     var registerTripData: String = ""
         
     @IBOutlet var calendar: FSCalendar!
@@ -42,6 +42,13 @@ class PickDateViewController: UIViewController {
         return formatter2
     }()
     
+    // 파이어베이스는 Date형식이 불가능하여 String형식으로 바꿔서 넣어줘야됨
+    fileprivate let formatter3: DateFormatter = {
+        let formatter3 = DateFormatter()
+        formatter3.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        return formatter3
+    }()
+    
     private func setupCalendar(){
         calendar.appearance.headerDateFormat = "YYYY년 M월"
         calendar.locale = Locale(identifier: "ko_KR")
@@ -60,15 +67,14 @@ class PickDateViewController: UIViewController {
     }
     
     @IBAction func selectDate(_ sender: UIButton){
-        let day = Int(firstDate!-Date())/(24*60*60)
         registerTripData = formatter2.string(from: firstDate!) + "-" + formatter2.string(from: lastDate!)
-        registerTripInfo.setTripDate(tripDate: registerTripData)
-        registerTripInfo.setTripFirstDay(tripFirstDay: firstDate!)
-        registerTripInfo.setTripRange(tripRange: datesRange!.count)
-        registerTripInfo.setTripDday(tripDday: day + 1)
+        
+        newTrip.registerTripDate(registerTripData)
+        newTrip.registerTripPeriod("\(datesRange!.count)")
+        newTrip.registerTripFirstDay(formatter3.string(from: firstDate!))
+        
         dismiss(animated: true, completion: nil)
     }
-    
 }
 
 class calendarView: UIView {
@@ -85,7 +91,6 @@ class calendarView: UIView {
 
 extension PickDateViewController {
     func configureVisibleCells() {
-        print("안녕하세요",self.calendar.visibleCells())
         self.calendar.visibleCells().forEach { (cell) in
             let date = self.calendar.date(for: cell)
             let position = self.calendar.monthPosition(for: cell)

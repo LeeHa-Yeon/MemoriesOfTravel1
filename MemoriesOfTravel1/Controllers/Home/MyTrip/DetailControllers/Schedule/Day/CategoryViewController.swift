@@ -9,7 +9,11 @@ import UIKit
 
 class CategoryViewController: UIViewController {
     
-    let placeInfo = PlaceInformation.shared
+    let newPlace = PlaceInformation.shared
+    
+    let myInfo: UserInfomation = UserInfomation.shared
+    let tripInfo : TripInformation = TripInformation.shared
+    let firebaseManager = FirebaseManager.shared
     
     @IBOutlet weak var collectionView: UICollectionView!
     let categoryName: [String] = ["숙소","차량","먹거리","카페","놀거리","기타"]
@@ -26,6 +30,16 @@ class CategoryViewController: UIViewController {
         super.viewDidLoad()
         collectionView.dataSource = self
         collectionView.delegate = self
+        firebaseManager.loadSchedule(uid: myInfo.getUid(), tripName: (tripInfo.getTripInfo()?.getTripName())!, tripDate: newPlace.getTripDate()!){ response in
+            guard let response = response else {
+                print("Schedule 불러오기 실패")
+                return
+            }
+            var newSchedule = [String]()
+            newSchedule = response
+            newSchedule.append(self.newPlace.loadPlaceName())
+            self.newPlace.setScheduleList(newSchedule)
+        }
     }
     
 }
@@ -44,7 +58,7 @@ extension CategoryViewController: UICollectionViewDelegate, UICollectionViewData
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        placeInfo.setCategory(category: categoryName[indexPath.row])
+        newPlace.registerCategory(categoryName[indexPath.row])
         print("-----------> \(categoryName[indexPath.row])")
         
     }
