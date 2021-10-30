@@ -146,13 +146,33 @@ class FirebaseManager {
         self.db.child("user").child(uid).child("TripList").child(tripName).child(tripDate).child("Schedules").observeSingleEvent(of: .value) { snapshot in
             if !snapshot.hasChildren() {
                 print("don't have Schedules")
-                completion([String]())
+                completion(["일정을 추가해주세요"])
                 return
             }
             let dic = snapshot.value as! [String]
             completion(dic)
         }
     }
+    
+    // placeInfo 모두 불러오기
+    func loadPlaceInfo(uid: String, tripName: String,completion: @escaping ([String:[String:Any]]) -> (Void)){
+        self.db.child("user").child(uid).child("TripList").child(tripName).child("PlaceInfo").observeSingleEvent(of: .value) { snapshot in
+            if !snapshot.hasChildren() {
+                print("don't have PlaceInfoes")
+                return
+            }
+            let dic = snapshot.value as! [String:[String:Any]]
+            var scheduleInfo = [String:[String:Any]]()
+            for (key,value) in dic {
+                scheduleInfo[key] = value
+            }
+            
+            completion(scheduleInfo)
+        }
+    }
+    
+    
+    
     
     
     

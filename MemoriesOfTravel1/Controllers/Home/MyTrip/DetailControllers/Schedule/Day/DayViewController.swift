@@ -11,6 +11,7 @@ import Firebase
 protocol moveVCProtocol {
     func moveToSelect()
     func moveToMemo()
+    func moveToDetailDay()
 }
 
 class DayViewController: UIViewController {
@@ -125,6 +126,13 @@ class ExpendingTableCellContent {
 
 
 extension DayViewController: moveVCProtocol {
+    func moveToDetailDay() {
+        guard let DateilDayVC = self.storyboard?.instantiateViewController(identifier: "DetailDaySB") as? DetailDayViewController else {
+            return
+        }
+        navigationController?.pushViewController(DateilDayVC, animated: true)
+    }
+    
 
     func moveToMemo() {
         guard let MemoVC = self.storyboard?.instantiateViewController(identifier: "MemoSB") as? MemoViewController else {

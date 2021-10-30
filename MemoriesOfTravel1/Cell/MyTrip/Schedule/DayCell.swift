@@ -12,6 +12,9 @@ class DayCell: UITableViewCell {
     
     var delegate: moveVCProtocol?
     let placeInfo: PlaceInformation = PlaceInformation.shared
+    let myInformation: UserInfomation = UserInfomation.shared
+    let firebaseManager = FirebaseManager.shared
+    let myTripList = TripInformation.shared
     
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var weatherImageView: UIImageView!
@@ -20,6 +23,16 @@ class DayCell: UITableViewCell {
     @IBOutlet weak var addMemoButton: UIButton!
     @IBAction func showSchedule(_ sender: UIButton){
         print("일정 보여주는 화면 구현하기")
+        placeInfo.setTripDate(dateLabel.text!)
+        firebaseManager.loadMemo(uid: myInformation.getUid(), tripName: myTripList.getTripInfo()!.getTripName(), tripDate: placeInfo.getTripDate()!) { response in
+            self.placeInfo.setMemoList(response ?? [""])
+        }
+        firebaseManager.loadSchedule(uid: myInformation.getUid(), tripName: myTripList.getTripInfo()!.getTripName(), tripDate: placeInfo.getTripDate()!) { response in
+            self.placeInfo.setScheduleList(response!)
+            self.delegate?.moveToDetailDay()
+        }
+        
+        
     }
     
     @IBAction func addNewPlace(_ sender: UIButton){

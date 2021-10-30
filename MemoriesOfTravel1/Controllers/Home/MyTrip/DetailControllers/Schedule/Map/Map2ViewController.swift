@@ -16,6 +16,7 @@ class Map2ViewController: UIViewController {
     let selectTripInfo: TripInformation = TripInformation.shared
     let dropDown = DropDown()
     @IBOutlet weak var naverMapView: NMFNaverMapView!
+    @IBOutlet weak var label: UILabel!
     var tripPeriod: Int = 0
     var mapView : NMFMapView {
             return naverMapView.mapView
@@ -28,6 +29,7 @@ class Map2ViewController: UIViewController {
         dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
             print("선택한 아이템 : \(item)")
             print("인덱스 : \(index)")
+            label.text = "\(item)"
             self.dropDown.clearSelection()
         }
     }

@@ -10,6 +10,9 @@ import UIKit
 class ScheduleViewController: UIViewController {
     
     let selectTripInfo : TripInformation = TripInformation.shared
+    let myInformation: UserInfomation = UserInfomation.shared
+    let placeInfo: PlaceInformation = PlaceInformation.shared
+    let firebaseManager = FirebaseManager.shared
     
     @IBOutlet weak var dayView: UIView!
     @IBOutlet weak var map2View: UIView!
@@ -24,7 +27,16 @@ class ScheduleViewController: UIViewController {
         let dayRange = Int(selectTripInfo.getTripInfo()!.getTripPeriod())
         navigationItem.title = "\(dayRange!-1)박 \(dayRange!)일"
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "나눔손글씨 반짝반짝 별", size: 40)!]
+        
+        firebaseManager.loadPlaceInfo(uid: myInformation.getUid(), tripName: selectTripInfo.getTripInfo()!.getTripName()) { response in
+            for (key, value) in response{
+                let item = ScheduleInfo(key: key, value: value)
+                self.placeInfo.scheduleInfoList.append(item)
+            }
+        }
+        
     }
+    
     
     @IBAction func switchViews(_ sender: UISegmentedControl) {
         let storyboard = UIStoryboard(name:"Main",bundle: nil)

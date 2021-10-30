@@ -13,9 +13,11 @@ class PlaceInformation{
     
     private init(){}
     
+    var scheduleInfoList = [ScheduleInfo]()
+    
     // 저장된 정보 불러와서 표시할 때
     var placeInfo: PlaceInfo?
-
+    
     func setPlaceInfo(_ info: PlaceInfo){
         self.placeInfo = info
     }
