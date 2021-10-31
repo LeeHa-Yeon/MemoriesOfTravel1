@@ -31,6 +31,7 @@ class MyTripListViewController: UIViewController{
         super.viewWillAppear(true)
         loadingTripList = tripList.getAllTripList()
         loadingTripInfo = tripList.getAllTripInfo()
+        
         tripListTableView.reloadData()
     }
     
@@ -44,6 +45,14 @@ class MyTripListViewController: UIViewController{
         self.tripListTableView.register(tripListCellNib, forCellReuseIdentifier: "TripListCell")
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "나눔손글씨 반짝반짝 별", size: 40)!]
     }
+    
+    fileprivate let formatter: DateFormatter = {
+        let formatter = DateFormatter()
+        
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        formatter.timeZone = NSTimeZone(name: "UTC") as TimeZone?
+        return formatter
+    }()
   
 }
 
@@ -76,13 +85,30 @@ extension MyTripListViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var tripBeforeList = [String]()
+        var tripBeforeInfo = [TripInfo]()
+        var tripAfterList = [String]()
+        var tripAfterInfo = [TripInfo]()
+        for i in loadingTripInfo {
+            let firstDate:Date = self.formatter.date(from: i.getTripFirstDay())!
+            let dDay = Int(firstDate-Date())/(24*60*60)
+            if dDay <= 0 {
+                tripAfterList.append("")
+                tripAfterInfo.append(i)
+            }
+            else {
+                tripBeforeList.append("")
+                tripBeforeInfo.append(i)
+            }
+        }
+        
         
         switch indexPath.section {
         case 0 :
             if let cell = tripListTableView.dequeueReusableCell(withIdentifier: "TripListCell") as? TripListCell {
                 cell.delegate = self
-                cell.myTripList = loadingTripList
-                cell.myTripInfo = loadingTripInfo
+                cell.myTripList = tripBeforeList
+                cell.myTripInfo = tripBeforeInfo
                 cell.myTripCollectionView.reloadData()
                 cell.listSectionLabel.text = "  여행 전"
                 return cell
@@ -90,6 +116,10 @@ extension MyTripListViewController: UITableViewDataSource, UITableViewDelegate {
         case 1:
             if let cell = tripListTableView.dequeueReusableCell(withIdentifier: "TripListCell") as? TripListCell {
                 cell.listSectionLabel.text = "  여행 후"
+                cell.delegate = self
+                cell.myTripList = tripAfterList
+                cell.myTripInfo = tripAfterInfo
+                cell.myTripCollectionView.reloadData()
                 return cell
             }
         default :

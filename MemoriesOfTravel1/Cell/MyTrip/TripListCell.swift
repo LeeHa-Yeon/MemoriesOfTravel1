@@ -63,7 +63,6 @@ class TripListCell: UITableViewCell {
 
 extension TripListCell : UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print("",myTripList)
         return myTripList.count
     }
     
@@ -73,7 +72,14 @@ extension TripListCell : UICollectionViewDelegate, UICollectionViewDataSource {
             cell.delegate = self.delegate
             let firstDate:Date = self.formatter.date(from: myTripInfo[indexPath.row].getTripFirstDay())!
             let dDay = Int(firstDate-Date())/(24*60*60)
-            cell.tripDdayLabel.text = "D-\(dDay)"
+            if dDay < 0 {
+                cell.tripDdayLabel.text = "D+\(-dDay)"
+            }else if dDay == 0{
+                cell.tripDdayLabel.text = "D-day"
+            }
+            else{
+                cell.tripDdayLabel.text = "D-\(dDay)"
+            }
 
             let tripImageName = UIImage(named: myTripInfo[indexPath.row].getTripName())
             cell.tripImage.setImage(tripImageName, for: .normal)

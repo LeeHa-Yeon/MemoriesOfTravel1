@@ -22,6 +22,11 @@ class ScheduleViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         dayView.alpha = 1
         map2View.alpha = 0
         let dayRange = Int(selectTripInfo.getTripInfo()!.getTripPeriod())
@@ -34,7 +39,6 @@ class ScheduleViewController: UIViewController {
                 self.placeInfo.scheduleInfoList.append(item)
             }
         }
-        
     }
     
     
