@@ -1,17 +1,9 @@
-
-   
-//
-//  Map2ViewController.swift
-//  MemoriesOfTravel1
-//
-//  Created by 이하연 on 2021/10/16.
-//
 import UIKit
 import DropDown
 import NMapsMap
 
 class Map2ViewController: UIViewController {
-    @IBOutlet weak var naverMapView: NMFNaverMapView!
+//    @IBOutlet weak var naverMapView: NMFNaverMapView!
     @IBOutlet weak var testView: UIView!
     @IBOutlet weak var label: UILabel!
     let selectTripInfo: TripInformation = TripInformation.shared
@@ -26,6 +18,9 @@ class Map2ViewController: UIViewController {
 //    var mapView : NMFMapView {
 //            return naverMapView.mapView
 //        }
+    let infoWindow = NMFInfoWindow()
+    let dataSource = NMFInfoWindowDefaultTextSource.data()
+    
     
     
     @IBOutlet weak var dropDownBtn: UIButton!
@@ -33,11 +28,13 @@ class Map2ViewController: UIViewController {
         dropDown.show()
         dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
             selectDate = formatter.string(from: tripFirstDay+TimeInterval(86400*(index)))
+            label.text = selectDate
             firebaseManager.loadSchedule(uid: myInfo.getUid(), tripName: selectTripInfo.getTripInfo()!.getTripName(), tripDate: selectDate) { response in
                 let mapView = NMFMapView(frame: testView.bounds)
+                mapView.isZoomGestureEnabled = true
                 testView.addSubview(mapView)
                 
-                
+                var idx = 0
                 var coords1 = [NMGLatLng]()
                 coords1.removeAll()
                 var polylineOverlay: NMFPolylineOverlay
@@ -48,8 +45,29 @@ class Map2ViewController: UIViewController {
                             if i.key == placeName {
                                 let lng = i.value["x"] as! String
                                 let lat = i.value["y"] as! String
+                                
+                                let marker = NMFMarker(position: NMGLatLng(lat: Double(lat)!, lng: Double(lng)!))
+                                if idx == 0 {
+                                    marker.iconImage = NMF_MARKER_IMAGE_LIGHTBLUE
+                                }
+                                else if idx == response!.count - 2 {
+                                    marker.iconImage = NMF_MARKER_IMAGE_PINK
+                                }
+                                else{
+                                    marker.iconImage = NMF_MARKER_IMAGE_GRAY
+                                }
+                                marker.touchHandler = { (overlay: NMFOverlay) -> Bool in
+                                    infoWindow.close()
+                                    dataSource.title = "\(placeName)"
+                                    infoWindow.alpha = 0.8
+                                    infoWindow.open(with: marker)
+                                    return true
+                                }
+                                marker.mapView = mapView
                                 coords1.append(NMGLatLng(lat: Double(lat)!, lng: Double(lng)!))
+                                idx+=1
                             }
+                            
                         }
                     }
                 } // for end
@@ -57,11 +75,11 @@ class Map2ViewController: UIViewController {
                 mapView.moveCamera(NMFCameraUpdate(position: DEFAULT_CAMERA_POSITION))
                 let lineString = NMGLineString(points: coords1)
                 polylineOverlay = NMFPolylineOverlay(lineString as! NMGLineString<AnyObject>)!
-                polylineOverlay.width = 2
-                polylineOverlay.pattern = [9, 1]
-                polylineOverlay.color = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
+                polylineOverlay.width = 5
+//                polylineOverlay.pattern = [20, 1]
+                polylineOverlay.color = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
                 polylineOverlay.mapView = mapView
-                print("coords1--->\(coords1)")
+//                print("coords1--->\(coords1)")
                 self.dropDown.clearSelection()
             } // fire end
             
@@ -81,7 +99,8 @@ class Map2ViewController: UIViewController {
         tripFirstDay = formatter2.date(from: selectTripInfo.getTripInfo()!.getTripFirstDay())!
         // 초기화해줌 나중에 지워도됨
         label.text = ""
-        
+        dataSource.title = "Info window content"
+        infoWindow.dataSource = dataSource
 //        mapView.moveCamera(NMFCameraUpdate(position: DEFAULT_CAMERA_POSITION))
     }
 
