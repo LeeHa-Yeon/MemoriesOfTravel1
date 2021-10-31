@@ -29,7 +29,7 @@ class MapPlaceViewController: UIViewController {
         return naverMapView.mapView
     }
     
-    public let DEFAULT_CAMERA_POSITION = NMFCameraPosition(NMGLatLng(lat: 35.8347762643542, lng: 129.226975518857), zoom: 14, tilt: 0, heading: 0)
+    public let DEFAULT_CAMERA_POSITION = NMFCameraPosition(NMGLatLng(lat: 35.15978615475503, lng: 129.16109290865137), zoom: 8, tilt: 0, heading: 0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,8 +46,8 @@ class MapPlaceViewController: UIViewController {
         print("asdasdasdsdas")
         let coord = mapView.projection.latlng(from: crossHair.center)
         print("확인",coord.lat,coord.lng)
-        newPlace.registerX("\(coord.lat)")
-        newPlace.registerY("\(coord.lng)")
+        newPlace.registerX("\(coord.lng)")
+        newPlace.registerY("\(coord.lat)")
     }
 
 

@@ -14,7 +14,7 @@ class DetailDayViewController: UIViewController {
     let placeInfo: PlaceInformation = PlaceInformation.shared
     var scheduleList = [String]()
     var memoList = [String]()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
@@ -22,8 +22,8 @@ class DetailDayViewController: UIViewController {
         memoList = placeInfo.getMemoList()
         title = placeInfo.getTripDate()
     }
-
-
+    
+    
     private func setupTableView(){
         tableView.delegate = self
         tableView.dataSource = self
@@ -45,13 +45,19 @@ extension DetailDayViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         if indexPath.row < scheduleList.count {
-        cell.placeName.text = scheduleList[indexPath.row]
-        for i in placeInfo.scheduleInfoList {
-            if i.key == scheduleList[indexPath.row] {
-                let categoryName = i.value["category"]
-                cell.category.image = UIImage(named: "\(categoryName ?? "기타")카테고리")
+            if scheduleList[indexPath.row] == "일정을 추가해주세요" {
+                cell.placeName.text = "일정 순서"
+                cell.category.image = .none
+                cell.backgroundColor = #colorLiteral(red: 0.8984330297, green: 0.8027767539, blue: 0.9092169404, alpha: 1)
+            }else{
+                cell.placeName.text = scheduleList[indexPath.row]
+                for i in placeInfo.scheduleInfoList {
+                    if i.key == scheduleList[indexPath.row] {
+                        let categoryName = i.value["category"]
+                        cell.category.image = UIImage(named: "\(categoryName ?? "기타")카테고리")
+                    }
+                }
             }
-        }
         }else{
             cell.placeName.text = memoList[indexPath.row - scheduleList.count]
             cell.category.image = UIImage(named: "메모카테고리")
