@@ -1,19 +1,18 @@
+
+   
 //
 //  Map2ViewController.swift
 //  MemoriesOfTravel1
 //
 //  Created by 이하연 on 2021/10/16.
 //
-
 import UIKit
 import DropDown
 import NMapsMap
 
 class Map2ViewController: UIViewController {
-    // @@ 주석 @@
-    // let placeInfo = PlaceInformation.shared
-    
     @IBOutlet weak var naverMapView: NMFNaverMapView!
+    @IBOutlet weak var testView: UIView!
     @IBOutlet weak var label: UILabel!
     let selectTripInfo: TripInformation = TripInformation.shared
     let placeInfo : PlaceInformation = PlaceInformation.shared
@@ -24,9 +23,9 @@ class Map2ViewController: UIViewController {
     var tripFirstDay = Date()
     var selectDate = ""
     public var DEFAULT_CAMERA_POSITION = NMFCameraPosition(NMGLatLng(lat: 35.15978615475503, lng: 129.16109290865137), zoom: 10, tilt: 0, heading: 0)
-    var mapView : NMFMapView {
-            return naverMapView.mapView
-        }
+//    var mapView : NMFMapView {
+//            return naverMapView.mapView
+//        }
     
     
     @IBOutlet weak var dropDownBtn: UIButton!
@@ -35,6 +34,10 @@ class Map2ViewController: UIViewController {
         dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
             selectDate = formatter.string(from: tripFirstDay+TimeInterval(86400*(index)))
             firebaseManager.loadSchedule(uid: myInfo.getUid(), tripName: selectTripInfo.getTripInfo()!.getTripName(), tripDate: selectDate) { response in
+                let mapView = NMFMapView(frame: testView.bounds)
+                testView.addSubview(mapView)
+                
+                
                 var coords1 = [NMGLatLng]()
                 coords1.removeAll()
                 var polylineOverlay: NMFPolylineOverlay
@@ -50,13 +53,13 @@ class Map2ViewController: UIViewController {
                         }
                     }
                 } // for end
-                DEFAULT_CAMERA_POSITION = NMFCameraPosition(coords1[0], zoom: 14, tilt: 0, heading: 0)
+                DEFAULT_CAMERA_POSITION = NMFCameraPosition(coords1[1], zoom: 13, tilt: 0, heading: 0)
                 mapView.moveCamera(NMFCameraUpdate(position: DEFAULT_CAMERA_POSITION))
                 let lineString = NMGLineString(points: coords1)
                 polylineOverlay = NMFPolylineOverlay(lineString as! NMGLineString<AnyObject>)!
-                polylineOverlay.width = 3
-                polylineOverlay.pattern = [6, 3]
-                polylineOverlay.color = UIColor.gray
+                polylineOverlay.width = 2
+                polylineOverlay.pattern = [9, 1]
+                polylineOverlay.color = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
                 polylineOverlay.mapView = mapView
                 print("coords1--->\(coords1)")
                 self.dropDown.clearSelection()
@@ -79,7 +82,7 @@ class Map2ViewController: UIViewController {
         // 초기화해줌 나중에 지워도됨
         label.text = ""
         
-        mapView.moveCamera(NMFCameraUpdate(position: DEFAULT_CAMERA_POSITION))
+//        mapView.moveCamera(NMFCameraUpdate(position: DEFAULT_CAMERA_POSITION))
     }
 
     fileprivate let formatter: DateFormatter = {

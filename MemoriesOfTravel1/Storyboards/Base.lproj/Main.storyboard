@@ -1667,7 +1667,7 @@
                                     <action selector="clickDropDown:" destination="tNU-K5-4VH" eventType="touchUpInside" id="kaH-y5-5g7"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5NR-Np-SvU" customClass="NMFNaverMapView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5NR-Np-SvU">
                                 <rect key="frame" x="30" y="110" width="368" height="550"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -1675,7 +1675,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PkZ-17-icV">
-                                <rect key="frame" x="193" y="664" width="42" height="21"/>
+                                <rect key="frame" x="93" y="69" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1687,17 +1687,17 @@
                             <constraint firstAttribute="trailingMargin" secondItem="5NR-Np-SvU" secondAttribute="trailing" constant="10" id="6vw-0P-xgs"/>
                             <constraint firstItem="fJL-t6-Lhn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="DLv-B6-fLC" secondAttribute="leading" constant="20" symbolic="YES" id="7Wg-CG-VdJ"/>
                             <constraint firstItem="5NR-Np-SvU" firstAttribute="top" secondItem="fJL-t6-Lhn" secondAttribute="bottom" constant="20" id="9Ss-uP-WQx"/>
-                            <constraint firstItem="PkZ-17-icV" firstAttribute="centerX" secondItem="DLv-B6-fLC" secondAttribute="centerX" id="Nwc-Kz-YQE"/>
+                            <constraint firstItem="5NR-Np-SvU" firstAttribute="top" secondItem="PkZ-17-icV" secondAttribute="bottom" constant="20" id="EeN-GO-GnX"/>
+                            <constraint firstItem="PkZ-17-icV" firstAttribute="centerX" secondItem="DLv-B6-fLC" secondAttribute="centerX" constant="-100" id="Nwc-Kz-YQE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fJL-t6-Lhn" secondAttribute="trailing" constant="10" id="Qgr-t2-JW6"/>
                             <constraint firstItem="fJL-t6-Lhn" firstAttribute="top" secondItem="DLv-B6-fLC" secondAttribute="topMargin" constant="10" id="XLj-Ce-d8z"/>
-                            <constraint firstItem="PkZ-17-icV" firstAttribute="top" secondItem="5NR-Np-SvU" secondAttribute="bottom" constant="4" id="e4O-gI-cX7"/>
                             <constraint firstItem="5NR-Np-SvU" firstAttribute="leading" secondItem="DLv-B6-fLC" secondAttribute="leadingMargin" constant="10" id="k7y-mU-Iix"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="dropDownBtn" destination="fJL-t6-Lhn" id="3IM-di-rQ5"/>
                         <outlet property="label" destination="PkZ-17-icV" id="Flu-Hp-pbl"/>
-                        <outlet property="naverMapView" destination="5NR-Np-SvU" id="tte-1z-mIH"/>
+                        <outlet property="testView" destination="5NR-Np-SvU" id="iEd-gf-7qs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pbQ-AK-CJu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
