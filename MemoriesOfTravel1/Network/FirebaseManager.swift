@@ -170,11 +170,46 @@ class FirebaseManager {
             completion(scheduleInfo)
         }
     }
+    //MARK: - CheckList
+    func saveUnCheckList(uid: String, tripName: String, content: [String]){
+            let childUpdates = ["/user/\(uid)/TripList/\(tripName)/CheckList/False":content]
+            db.updateChildValues(childUpdates)
+    }
+    func saveCheckList(uid: String, tripName: String, content: [String]){
+            let childUpdates = ["/user/\(uid)/TripList/\(tripName)/CheckList/True":content]
+            db.updateChildValues(childUpdates)
+    }
+    // 모든 UnCheckList 불러오기
+    func loadUnCheckList(uid: String, tripName: String, completion: @escaping ([String]?) -> (Void)){
+        self.db.child("user").child(uid).child("TripList").child(tripName).child("CheckList").child("False").observeSingleEvent(of: .value) { snapshot in
+            if !snapshot.hasChildren() {
+                let itemName = ["신용카드", "핸드폰충전기", "보조배터리", "카메라", "우산", "휴지", "물티슈", "휴대용선풍기", "마스크", "소독제", "의류", "잠옷", "속옷", "수영복", "양말", "슬리퍼", "선글라스", "모자", "여분신발", "세면도구", "치약", "칫솔", "샴푸", "린스", "바디워시", "클렌징폼", "스킨로션", "화장품", "선크림", "향수", "면도기", "렌즈", "드라이기", "고데기", "헤어에센스", "여성용품", "가방", "비상약", "지갑", "신분증", "여권", "에어팟"]
+                
+                print("don't have UnCheckList")
+                completion(itemName)
+                return
+            }
+            let dic = snapshot.value as! [String]
+            completion(dic)
+        }
+    }
+    // 모든 CheckList 불러오기
+    func loadCheckList(uid: String, tripName: String, completion: @escaping ([String]?) -> (Void)){
+        self.db.child("user").child(uid).child("TripList").child(tripName).child("CheckList").child("True").observeSingleEvent(of: .value) { snapshot in
+            if !snapshot.hasChildren() {
+                let itemName = [""]
+                
+                print("don't have CheckList")
+                completion(itemName)
+                return
+            }
+            let dic = snapshot.value as! [String]
+            completion(dic)
+        }
+    }
     
     
-    
-    
-    
+
     
     //MARK: - Test
     // 회원가입할 때 생성

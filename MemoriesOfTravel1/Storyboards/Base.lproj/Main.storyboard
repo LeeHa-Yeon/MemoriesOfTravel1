@@ -1152,7 +1152,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mz9-6l-cgV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4393" y="617"/>
+            <point key="canvasLocation" x="4430" y="480"/>
         </scene>
         <!--장소 검색-->
         <scene sceneID="vsE-Aq-qVv">
@@ -1439,7 +1439,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s8y-kh-WGA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7193" y="1000"/>
+            <point key="canvasLocation" x="7193" y="1026"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ejK-xt-YXc">
@@ -1459,6 +1459,136 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bwa-MJ-xYN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2815" y="871"/>
+        </scene>
+        <!--CheckList-->
+        <scene sceneID="Vcn-gm-vwd">
+            <objects>
+                <viewController storyboardIdentifier="CheckSB" id="PGU-qA-TXQ" customClass="CheckListViewController" customModule="MemoriesOfTravel1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="X1I-up-zdh">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Yr4-7x-Erx">
+                                <rect key="frame" x="0.0" y="88" width="428" height="804"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="checkCell" id="tRQ-Hu-YwZ" customClass="CheckListCell" customModule="MemoriesOfTravel1" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="49" width="388" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tRQ-Hu-YwZ" id="YAY-mV-nxc">
+                                            <rect key="frame" x="0.0" y="0.0" width="388" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fN8-qw-zgo">
+                                                    <rect key="frame" x="10" y="7" width="30" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="30" id="FCB-uH-wng"/>
+                                                        <constraint firstAttribute="width" secondItem="fN8-qw-zgo" secondAttribute="height" id="nZT-8Z-HVf"/>
+                                                    </constraints>
+                                                    <state key="normal" image="blank"/>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J6A-qD-0pE">
+                                                    <rect key="frame" x="50" y="7.3333333333333321" width="36.333333333333343" height="28.999999999999996"/>
+                                                    <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="25"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="J6A-qD-0pE" firstAttribute="centerY" secondItem="YAY-mV-nxc" secondAttribute="centerY" id="cUi-AT-PUE"/>
+                                                <constraint firstItem="fN8-qw-zgo" firstAttribute="centerY" secondItem="YAY-mV-nxc" secondAttribute="centerY" id="fxp-eb-owG"/>
+                                                <constraint firstItem="J6A-qD-0pE" firstAttribute="leading" secondItem="fN8-qw-zgo" secondAttribute="trailing" constant="10" id="rBz-ja-rYN"/>
+                                                <constraint firstItem="fN8-qw-zgo" firstAttribute="leading" secondItem="YAY-mV-nxc" secondAttribute="leading" constant="10" id="z2D-X3-sJr"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="checkImage" destination="fN8-qw-zgo" id="Q7e-f4-FiP"/>
+                                            <outlet property="itemLabel" destination="J6A-qD-0pE" id="DW6-pR-bXd"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="n3d-z2-8hh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Yr4-7x-Erx" firstAttribute="leading" secondItem="n3d-z2-8hh" secondAttribute="leading" id="mg2-ac-OjI"/>
+                            <constraint firstItem="n3d-z2-8hh" firstAttribute="bottom" secondItem="Yr4-7x-Erx" secondAttribute="bottom" id="oUm-f9-Oaf"/>
+                            <constraint firstItem="n3d-z2-8hh" firstAttribute="trailing" secondItem="Yr4-7x-Erx" secondAttribute="trailing" id="rYE-gz-sJZ"/>
+                            <constraint firstItem="Yr4-7x-Erx" firstAttribute="top" secondItem="n3d-z2-8hh" secondAttribute="top" id="ulS-sO-at7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="CheckList" id="39z-7K-GoK">
+                        <barButtonItem key="leftBarButtonItem" systemItem="save" id="nlA-dz-twW">
+                            <connections>
+                                <action selector="confirm:" destination="PGU-qA-TXQ" id="mqd-q8-vcZ"/>
+                            </connections>
+                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="7j5-2x-xaR">
+                                <connections>
+                                    <action selector="addItem:" destination="PGU-qA-TXQ" id="0ip-QJ-Jik"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Edit" style="plain" id="xTD-T8-Ykc">
+                                <connections>
+                                    <action selector="editTable:" destination="PGU-qA-TXQ" id="llL-cl-IYm"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="editDoneButton" destination="xTD-T8-Ykc" id="uKE-zn-udf"/>
+                        <outlet property="tableView" destination="Yr4-7x-Erx" id="mze-gg-Fd0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V4u-PA-3Q4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3657" y="1713"/>
+        </scene>
+        <!--준비물 추가하기-->
+        <scene sceneID="uQD-25-95d">
+            <objects>
+                <viewController id="BG2-lQ-wSz" customClass="AddSuppliesViewController" customModule="MemoriesOfTravel1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8dz-Zf-Pvc">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wES-Y2-7Wy">
+                                <rect key="frame" x="30" y="294" width="368" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RzB-6A-yB9">
+                                <rect key="frame" x="193" y="358" width="42" height="47"/>
+                                <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="30"/>
+                                <state key="normal" title="추가">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addButton:" destination="BG2-lQ-wSz" eventType="touchUpInside" id="e2r-le-xx7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="EaE-Nr-eu9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RzB-6A-yB9" firstAttribute="centerX" secondItem="8dz-Zf-Pvc" secondAttribute="centerX" id="4Cd-Cl-Ddp"/>
+                            <constraint firstItem="RzB-6A-yB9" firstAttribute="top" secondItem="wES-Y2-7Wy" secondAttribute="bottom" constant="30" id="HEf-Ki-TIM"/>
+                            <constraint firstItem="wES-Y2-7Wy" firstAttribute="leading" secondItem="EaE-Nr-eu9" secondAttribute="leading" constant="30" id="e9A-NA-NdU"/>
+                            <constraint firstItem="EaE-Nr-eu9" firstAttribute="trailing" secondItem="wES-Y2-7Wy" secondAttribute="trailing" constant="30" id="hgs-yz-p2S"/>
+                            <constraint firstItem="wES-Y2-7Wy" firstAttribute="centerX" secondItem="8dz-Zf-Pvc" secondAttribute="centerX" id="qWH-Cq-C3F"/>
+                            <constraint firstItem="wES-Y2-7Wy" firstAttribute="top" secondItem="EaE-Nr-eu9" secondAttribute="top" constant="250" id="wTY-aA-Ny1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="준비물 추가하기" id="ql2-Ao-bHH"/>
+                    <connections>
+                        <outlet property="suppliesTextField" destination="wES-Y2-7Wy" id="vzH-po-S7E"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fyf-Bm-meM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4430" y="1713"/>
         </scene>
         <!--Select View Controller-->
         <scene sceneID="7fe-CZ-RRb">
@@ -1627,7 +1757,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pbQ-AK-CJu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4392" y="1193"/>
+            <point key="canvasLocation" x="4430" y="1069"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1QU-sP-Kit">
@@ -1645,7 +1775,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z4d-cl-Drf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6452.8037383177571" y="999.78401727861774"/>
+            <point key="canvasLocation" x="6498" y="1026"/>
         </scene>
         <!--Memo View Controller-->
         <scene sceneID="qj2-BY-sFX">
@@ -1710,7 +1840,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MHV-gS-7gB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5738" y="1768"/>
+            <point key="canvasLocation" x="6635.0467289719618" y="1767.6025917926568"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="O4e-i7-fm8">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CEh-sN-F7w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="diX-Bj-b4b" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="R29-lf-cFc"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="P85-MF-9ft">
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="PGU-qA-TXQ" kind="relationship" relationship="rootViewController" id="dT0-24-9ZZ"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="2815" y="1713"/>
         </scene>
     </scenes>
     <resources>
@@ -1718,6 +1867,7 @@
         <image name="addButton" width="820" height="663"/>
         <image name="airplane" catalog="system" width="128" height="115"/>
         <image name="arrow.left" catalog="system" width="128" height="98"/>
+        <image name="blank" width="98" height="96"/>
         <image name="homebg" width="1026" height="1740"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="logo" width="2000" height="2000"/>

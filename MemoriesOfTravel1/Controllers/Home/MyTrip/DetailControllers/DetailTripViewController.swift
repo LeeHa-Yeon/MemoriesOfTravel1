@@ -10,15 +10,29 @@ import UIKit
 class DetailTripViewController: UIViewController {
     
     let selectTripInformation: TripInformation = TripInformation.shared
+    let firebaseManager = FirebaseManager.shared
+    let myInfo = UserInfomation.shared
+    let checkManager = CheckListManager.shared
     
     @IBOutlet weak var tripDateLabel: UILabel!
     @IBAction func moveScheduleView(_ sender: UIButton){
     }
     @IBAction func moveCalculateView(_ sender: UIButton){
-
+        
     }
     @IBAction func moveCheckListView(_ sender: UIButton){
-
+        guard let CheckVC = self.storyboard?.instantiateViewController(identifier: "CheckSB") as? CheckListViewController else {
+            return
+        }
+        firebaseManager.loadCheckList(uid: myInfo.getUid(), tripName: selectTripInformation.getTripInfo()!.getTripName()) { response in
+            self.checkManager.setCheckList(response!)
+        }
+        firebaseManager.loadUnCheckList(uid: myInfo.getUid(), tripName: selectTripInformation.getTripInfo()!.getTripName()) { response in
+            self.checkManager.setUnCheckList(response!)
+            CheckVC.modalPresentationStyle = .fullScreen
+            self.navigationController?.pushViewController(CheckVC, animated: true)
+        }
+       
     }
     @IBAction func moveAlbumView(_ sender: UIButton){
 
