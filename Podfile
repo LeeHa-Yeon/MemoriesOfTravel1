@@ -17,6 +17,8 @@ target 'MemoriesOfTravel1' do
   pod 'MSPeekCollectionViewDelegateImplementation'
   pod 'FSCalendar'
   pod 'DropDown'
+  
+  pod "Pastel"
 
 
 end

@@ -6,14 +6,17 @@
 //
 
 import UIKit
+import Pastel
 
 class HomeViewController: UIViewController {
     
     let myInformation: UserInfomation = UserInfomation.shared
     @IBOutlet weak var nameLable: UILabel!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
         guard let name = myInformation.getUserInfo()?.getName() else { return }
         nameLable.text = name + "님!"
         

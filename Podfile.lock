@@ -105,6 +105,7 @@ PODS:
   - nanopb/decode (2.30908.0)
   - nanopb/encode (2.30908.0)
   - NMapsMap (3.13.0)
+  - Pastel (0.6.0)
   - PromisesObjC (2.0.0)
 
 DEPENDENCIES:
@@ -118,6 +119,7 @@ DEPENDENCIES:
   - FSCalendar
   - MSPeekCollectionViewDelegateImplementation
   - NMapsMap
+  - Pastel
 
 SPEC REPOS:
   trunk:
@@ -141,6 +143,7 @@ SPEC REPOS:
     - MSPeekCollectionViewDelegateImplementation
     - nanopb
     - NMapsMap
+    - Pastel
     - PromisesObjC
 
 SPEC CHECKSUMS:
@@ -164,8 +167,9 @@ SPEC CHECKSUMS:
   MSPeekCollectionViewDelegateImplementation: be35a217bd302976a9e4476151be992c1f150127
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   NMapsMap: 88b5bdac7087bfa99ab058ff5cdd95fb766e0e95
+  Pastel: 814f081efbe2859c37e65ee44f396e6e5be88619
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
 
-PODFILE CHECKSUM: ff6cebbed9d05d8809ade6b3e27566ead349ad85
+PODFILE CHECKSUM: e5e76874f5948b67b0b24cabc140882ee07a9e82
 
 COCOAPODS: 1.10.1
