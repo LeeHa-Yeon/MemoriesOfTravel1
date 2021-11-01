@@ -13,13 +13,28 @@ class DetailTripViewController: UIViewController {
     let firebaseManager = FirebaseManager.shared
     let myInfo = UserInfomation.shared
     let checkManager = CheckListManager.shared
+    let calculateManager = CalculateManager.shared
     
     @IBOutlet weak var tripDateLabel: UILabel!
     @IBAction func moveScheduleView(_ sender: UIButton){
     }
+    
     @IBAction func moveCalculateView(_ sender: UIButton){
+        guard let CalculateVC = self.storyboard?.instantiateViewController(identifier: "CalculateSB") as? CalculateViewController else {
+            return
+        }
         
+        firebaseManager.loadCalculate(uid: myInfo.getUid(), tripName: selectTripInformation.getTripInfo()!.getTripName()) { response in
+            self.calculateManager.setCalculateList(response!)
+        }
+        firebaseManager.loadExpectedCost(uid: myInfo.getUid(), tripName: selectTripInformation.getTripInfo()!.getTripName()) { response in
+            self.calculateManager.setExpectedCost(response!)
+            CalculateVC.modalPresentationStyle = .fullScreen
+            self.navigationController?.pushViewController(CalculateVC, animated: true)
+            
+        }
     }
+    
     @IBAction func moveCheckListView(_ sender: UIButton){
         guard let CheckVC = self.storyboard?.instantiateViewController(identifier: "CheckSB") as? CheckListViewController else {
             return

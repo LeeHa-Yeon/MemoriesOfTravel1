@@ -17,6 +17,11 @@
 		9F365645272F0BCB0070543D /* CheckListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F365644272F0BCB0070543D /* CheckListViewController.swift */; };
 		9F365647272F116A0070543D /* AddSuppliesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F365646272F116A0070543D /* AddSuppliesViewController.swift */; };
 		9F36564E272F56210070543D /* CheckListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F36564D272F56210070543D /* CheckListManager.swift */; };
+		9F365650272FE30E0070543D /* CalculateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F36564F272FE30E0070543D /* CalculateViewController.swift */; };
+		9F36565227300F830070543D /* AddCalculateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F36565127300F830070543D /* AddCalculateViewController.swift */; };
+		9F36565427300F990070543D /* SelectDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F36565327300F990070543D /* SelectDateViewController.swift */; };
+		9F36565627300FA80070543D /* DetailCalculateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F36565527300FA80070543D /* DetailCalculateViewController.swift */; };
+		9F36565827302BE70070543D /* CalculateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F36565727302BE70070543D /* CalculateManager.swift */; };
 		9F4AB67F271D1A4A00E561CA /* TripInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4AB67E271D1A4A00E561CA /* TripInfo.swift */; };
 		9F4AB688271D3A3C00E561CA /* TripModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4AB687271D3A3C00E561CA /* TripModel.swift */; };
 		9F4AB691271DDDBD00E561CA /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4AB690271DDDBD00E561CA /* PlaceModel.swift */; };
@@ -77,6 +82,11 @@
 		9F365644272F0BCB0070543D /* CheckListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListViewController.swift; sourceTree = "<group>"; };
 		9F365646272F116A0070543D /* AddSuppliesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSuppliesViewController.swift; sourceTree = "<group>"; };
 		9F36564D272F56210070543D /* CheckListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListManager.swift; sourceTree = "<group>"; };
+		9F36564F272FE30E0070543D /* CalculateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateViewController.swift; sourceTree = "<group>"; };
+		9F36565127300F830070543D /* AddCalculateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCalculateViewController.swift; sourceTree = "<group>"; };
+		9F36565327300F990070543D /* SelectDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectDateViewController.swift; sourceTree = "<group>"; };
+		9F36565527300FA80070543D /* DetailCalculateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCalculateViewController.swift; sourceTree = "<group>"; };
+		9F36565727302BE70070543D /* CalculateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateManager.swift; sourceTree = "<group>"; };
 		9F4AB67E271D1A4A00E561CA /* TripInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripInfo.swift; sourceTree = "<group>"; };
 		9F4AB687271D3A3C00E561CA /* TripModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripModel.swift; sourceTree = "<group>"; };
 		9F4AB690271DDDBD00E561CA /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
@@ -202,6 +212,7 @@
 		9F34989327019CA000226BEE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9F36565927302BFC0070543D /* Calculate */,
 				9F365648272F557C0070543D /* CheckList */,
 				9F4AB689271D63F100E561CA /* TripList */,
 				9FF7C5E2271119C400E9501C /* Trip */,
@@ -228,6 +239,14 @@
 				9F36564D272F56210070543D /* CheckListManager.swift */,
 			);
 			path = CheckList;
+			sourceTree = "<group>";
+		};
+		9F36565927302BFC0070543D /* Calculate */ = {
+			isa = PBXGroup;
+			children = (
+				9F36565727302BE70070543D /* CalculateManager.swift */,
+			);
+			path = Calculate;
 			sourceTree = "<group>";
 		};
 		9F4AB67C271C2C3300E561CA /* Request */ = {
@@ -428,6 +447,10 @@
 		9FF7C60227127B7400E9501C /* Calculate */ = {
 			isa = PBXGroup;
 			children = (
+				9F36564F272FE30E0070543D /* CalculateViewController.swift */,
+				9F36565127300F830070543D /* AddCalculateViewController.swift */,
+				9F36565327300F990070543D /* SelectDateViewController.swift */,
+				9F36565527300FA80070543D /* DetailCalculateViewController.swift */,
 			);
 			path = Calculate;
 			sourceTree = "<group>";
@@ -589,6 +612,7 @@
 				9FD507CC272D681D007ED66A /* ScheduleInfo.swift in Sources */,
 				9FF7C60627127BCF00E9501C /* CategoryViewController.swift in Sources */,
 				9F365645272F0BCB0070543D /* CheckListViewController.swift in Sources */,
+				9F36565627300FA80070543D /* DetailCalculateViewController.swift in Sources */,
 				9FF7C5EC27111E9600E9501C /* SearchTripViewController.swift in Sources */,
 				9FC0C146271AB37B001F69FD /* MemoViewController.swift in Sources */,
 				9FF7C5F52711926E00E9501C /* DayViewController.swift in Sources */,
@@ -603,8 +627,11 @@
 				9FC0C142271AA875001F69FD /* SelectViewController.swift in Sources */,
 				9F34988227019C7D00226BEE /* LoginViewController.swift in Sources */,
 				9FF7C5E1271113FD00E9501C /* RegisterTripViewController.swift in Sources */,
+				9F36565827302BE70070543D /* CalculateManager.swift in Sources */,
+				9F36565227300F830070543D /* AddCalculateViewController.swift in Sources */,
 				9FF7C5E4271119DC00E9501C /* TripInformation.swift in Sources */,
 				9FF7C5F12711910B00E9501C /* ScheduleViewController.swift in Sources */,
+				9F365650272FE30E0070543D /* CalculateViewController.swift in Sources */,
 				9F34987E27019C7D00226BEE /* AppDelegate.swift in Sources */,
 				9FC0C14C271B65D1001F69FD /* FirebaseManager.swift in Sources */,
 				9FC0C144271AA8DD001F69FD /* MapPlaceViewController.swift in Sources */,
@@ -620,6 +647,7 @@
 				9FC0C13627186549001F69FD /* PlaceRequestParameter.swift in Sources */,
 				9FC0C13127185CFA001F69FD /* SearchPlaceViewController.swift in Sources */,
 				9FF7C5FF2711966500E9501C /* ContentCell.swift in Sources */,
+				9F36565427300F990070543D /* SelectDateViewController.swift in Sources */,
 				9F7FB635270E06E80064106B /* MyTripListViewController.swift in Sources */,
 				9FC0C14E271B6A73001F69FD /* UserInfo.swift in Sources */,
 				9F7FB642270E6B5A0064106B /* HomeViewController.swift in Sources */,

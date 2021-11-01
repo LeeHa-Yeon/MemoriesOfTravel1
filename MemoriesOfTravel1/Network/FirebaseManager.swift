@@ -208,6 +208,45 @@ class FirebaseManager {
         }
     }
     
+    //MARK: - Calculate
+    
+    func saveExpectedCost(uid: String, tripName: String, content: String){
+            let childUpdates = ["/user/\(uid)/TripList/\(tripName)/Calculate/ExpectedCost":content]
+            db.updateChildValues(childUpdates)
+    }
+    
+    func saveCalculate(uid: String, tripName: String, content: [[String:Any]]){
+            let childUpdates = ["/user/\(uid)/TripList/\(tripName)/Calculate/CostList":content]
+            db.updateChildValues(childUpdates)
+    }
+    
+    func loadExpectedCost(uid: String, tripName: String, completion: @escaping (String?) -> (Void)){
+        self.db.child("user").child(uid).child("TripList").child(tripName).child("Calculate").observeSingleEvent(of: .value) { snapshot in
+            if !snapshot.hasChildren() {
+                completion("0")
+                print("don't have ExpectedCost")
+                return
+            }
+            let dic = snapshot.value as! [String:Any]
+            for (key,value) in dic {
+                if key == "ExpectedCost" {
+                    completion(value as? String)
+                }
+            }
+        }
+    }
+    
+    func loadCalculate(uid: String, tripName: String, completion: @escaping ([[String:Any]]?) -> (Void)){
+        self.db.child("user").child(uid).child("TripList").child(tripName).child("Calculate").child("CostList").observeSingleEvent(of: .value) { snapshot in
+            if !snapshot.hasChildren() {
+                print("don't have loadCalculate")
+                return
+            }
+            let dic = snapshot.value as! [[String:Any]]
+            completion(dic)
+        }
+    }
+    
     
 
     
