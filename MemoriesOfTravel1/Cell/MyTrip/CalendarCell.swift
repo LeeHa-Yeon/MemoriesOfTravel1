@@ -9,7 +9,7 @@ import UIKit
 import FSCalendar
 
 // (red: 2/255, green: 138/255, blue: 75/255, alpha: 1)
-public var selectedColor = #colorLiteral(red: 0.4125044942, green: 0.5286813378, blue: 0.5355831385, alpha: 1)
+public var selectedColor = #colorLiteral(red: 0.004922470078, green: 0.06949602813, blue: 0.1757650971, alpha: 1)
 
 enum SelectionType : Int {
     case none

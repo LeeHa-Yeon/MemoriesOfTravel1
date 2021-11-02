@@ -26,7 +26,7 @@ class PickDateViewController: UIViewController {
     var lastDate: Date?
     var datesRange: [Date]?
     
-    let highlightedColorForRange = UIColor.init(cgColor: #colorLiteral(red: 0.5896497369, green: 0.7362760901, blue: 0.7649900317, alpha: 1))
+    let highlightedColorForRange = UIColor.init(cgColor: #colorLiteral(red: 0.3862627745, green: 0.4432284236, blue: 0.5376770496, alpha: 1))
     
     // gregorian 양력 달력
     fileprivate let gregorian = Calendar(identifier: .gregorian)
@@ -59,7 +59,7 @@ class PickDateViewController: UIViewController {
         calendar.pagingEnabled = false
         calendar.register(CalendarCell.self, forCellReuseIdentifier: "cell")
         calendar.allowsMultipleSelection = true
-        //        calendar.layer.cornerRadius = 0
+                calendar.layer.cornerRadius = 20
     }
 
     @IBAction func cancle(_ sender: UIButton){
@@ -260,7 +260,7 @@ extension PickDateViewController:FSCalendarDelegate,FSCalendarDataSource,FSCalen
     func calendar(_ calendar: FSCalendar, titleFor date: Date) -> String? {
         switch formatter.string(from: date) {
         case formatter.string(from: Date()):
-            return "⭐️"
+            return "✈️"
         default:
             return nil
         }

@@ -98,7 +98,7 @@ class Map2ViewController: UIViewController {
         dropDown.bottomOffset = CGPoint(x: 0, y:(dropDown.anchorView?.plainView.bounds.height)!)
         tripFirstDay = formatter2.date(from: selectTripInfo.getTripInfo()!.getTripFirstDay())!
         // 초기화해줌 나중에 지워도됨
-        label.text = ""
+        label.text = "날짜"
         dataSource.title = "Info window content"
         infoWindow.dataSource = dataSource
 //        mapView.moveCamera(NMFCameraUpdate(position: DEFAULT_CAMERA_POSITION))

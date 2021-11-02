@@ -19,6 +19,7 @@ target 'MemoriesOfTravel1' do
   pod 'DropDown'
   
   pod "Pastel"
+  pod 'SSCustomTabbar'
 
 
 end

@@ -48,7 +48,7 @@ extension DetailDayViewController: UITableViewDelegate, UITableViewDataSource {
             if scheduleList[indexPath.row] == "일정을 추가해주세요" {
                 cell.placeName.text = "일정 순서"
                 cell.category.image = .none
-                cell.backgroundColor = #colorLiteral(red: 0.8984330297, green: 0.8027767539, blue: 0.9092169404, alpha: 1)
+                cell.backgroundColor = #colorLiteral(red: 0.495657444, green: 0.7202214599, blue: 0.9071255922, alpha: 1)
             }else{
                 cell.placeName.text = scheduleList[indexPath.row]
                 for i in placeInfo.scheduleInfoList {

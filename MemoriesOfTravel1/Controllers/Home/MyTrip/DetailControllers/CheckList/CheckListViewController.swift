@@ -27,7 +27,8 @@ class CheckListViewController: UIViewController {
 //        print("check  --->\(checkItemes)")
         firebaseManager.saveUnCheckList(uid: myInfo.getUid(), tripName: (tripInfo.getTripInfo()?.getTripName())!, content: unCheckItems)
         firebaseManager.saveCheckList(uid: myInfo.getUid(), tripName: (tripInfo.getTripInfo()?.getTripName())!, content: checkItemes)
-        self.navigationController?.popViewController(animated: true)
+//        self.navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true, completion: nil)
     }
     @IBAction func editTable(_ sender: Any) {
         if self.tableView.isEditing {

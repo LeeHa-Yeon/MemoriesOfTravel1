@@ -15,8 +15,8 @@ class ViewController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.selectedIndex = 1
-        
+                self.selectedIndex = 1
+//        selectedTabIndex = 1
         // 처음 사용자의 여행 리스트 정보를 불러온다.
         firebaseManager.loadTripList(uid: myInformation.getUid()) { response in
             
@@ -38,5 +38,6 @@ class ViewController: UITabBarController {
                 }
             }
         }
-    }    
+    }
+    
 }

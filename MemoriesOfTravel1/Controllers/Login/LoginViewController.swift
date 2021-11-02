@@ -82,9 +82,9 @@ class LoginViewController: UIViewController {
             }
             self.myInformation.setUserInfo(response)
             
-            guard let HomeVC = self.storyboard?.instantiateViewController(identifier: "HomeSB") as? ViewController
+            guard let LodingVC = self.storyboard?.instantiateViewController(identifier: "LodingSB") as? LodingViewController
             else { return }
-            self.present(HomeVC,animated: true, completion: nil)
+            self.present(LodingVC,animated: true, completion: nil)
         }
     }
     

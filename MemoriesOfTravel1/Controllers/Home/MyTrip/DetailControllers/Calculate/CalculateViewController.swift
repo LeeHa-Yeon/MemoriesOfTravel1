@@ -27,7 +27,8 @@ class CalculateViewController: UIViewController {
     @IBAction func confirm(_ sender: UIButton){
         firebaseManager.saveExpectedCost(uid: myInfo.getUid(), tripName: (tripInfo.getTripInfo()?.getTripName())!, content: "\(expected)")
         firebaseManager.saveCalculate(uid: myInfo.getUid(), tripName: (tripInfo.getTripInfo()?.getTripName())!, content: costList)
-        self.navigationController?.popViewController(animated: true)
+//        self.navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func addExpectedCost(_ sender: Any) {

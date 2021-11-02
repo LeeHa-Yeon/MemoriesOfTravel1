@@ -52,10 +52,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weather" translatesAutoresizingMaskIntoConstraints="NO" id="BMs-Fh-q8W">
-                                <rect key="frame" x="211.5" y="0.0" width="50" height="36.5"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="해" translatesAutoresizingMaskIntoConstraints="NO" id="BMs-Fh-q8W">
+                                <rect key="frame" x="236.5" y="5" width="40" height="29"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="OhL-es-Whl"/>
+                                    <constraint firstAttribute="width" constant="40" id="OhL-es-Whl"/>
                                     <constraint firstAttribute="width" secondItem="BMs-Fh-q8W" secondAttribute="height" multiplier="11:8" id="zwI-rj-4hU"/>
                                 </constraints>
                             </imageView>
@@ -69,10 +69,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="iRf-0v-QMX" firstAttribute="leading" secondItem="Clw-3U-fZ0" secondAttribute="leading" constant="30" id="9Fr-bg-s19"/>
-                            <constraint firstItem="BMs-Fh-q8W" firstAttribute="top" secondItem="Clw-3U-fZ0" secondAttribute="top" id="MG5-0e-AL0"/>
+                            <constraint firstItem="BMs-Fh-q8W" firstAttribute="top" secondItem="Clw-3U-fZ0" secondAttribute="top" constant="5" id="MG5-0e-AL0"/>
                             <constraint firstAttribute="height" constant="40" id="SPr-qY-FFH"/>
                             <constraint firstAttribute="trailing" secondItem="7It-NY-sS7" secondAttribute="trailing" constant="30" id="au2-VD-eWj"/>
-                            <constraint firstItem="7It-NY-sS7" firstAttribute="leading" secondItem="BMs-Fh-q8W" secondAttribute="trailing" constant="15" id="jzl-Sx-7U5"/>
+                            <constraint firstItem="7It-NY-sS7" firstAttribute="leading" secondItem="BMs-Fh-q8W" secondAttribute="trailing" id="jzl-Sx-7U5"/>
                             <constraint firstItem="iRf-0v-QMX" firstAttribute="top" secondItem="Clw-3U-fZ0" secondAttribute="top" id="lVu-cT-dXX"/>
                             <constraint firstItem="7It-NY-sS7" firstAttribute="top" secondItem="Clw-3U-fZ0" secondAttribute="top" constant="5" id="uRu-08-ZAl"/>
                         </constraints>
@@ -81,7 +81,7 @@
                         <rect key="frame" x="20" y="40" width="287" height="157"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D8K-D5-4Sm">
-                                <rect key="frame" x="97.5" y="20" width="92" height="53"/>
+                                <rect key="frame" x="70" y="50" width="92" height="53"/>
                                 <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="35"/>
                                 <state key="normal" title="일정 보기">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -90,20 +90,20 @@
                                     <action selector="showSchedule:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="E50-h9-VaV"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test" translatesAutoresizingMaskIntoConstraints="NO" id="VAG-rw-Gfw">
-                                <rect key="frame" x="43.5" y="83" width="200" height="30"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="클릭" translatesAutoresizingMaskIntoConstraints="NO" id="gnI-DY-ncJ">
+                                <rect key="frame" x="162" y="57" width="80" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="KQc-CZ-5n2"/>
-                                    <constraint firstAttribute="width" constant="200" id="thr-1y-JbE"/>
+                                    <constraint firstAttribute="width" constant="80" id="ERR-HX-GHQ"/>
+                                    <constraint firstAttribute="width" secondItem="gnI-DY-ncJ" secondAttribute="height" multiplier="2:1" id="efo-qM-ok2"/>
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.8818313807" green="0.80835837150000001" blue="0.90095661599999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.544485569" green="0.71413511039999999" blue="0.89021974800000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="VAG-rw-Gfw" firstAttribute="top" secondItem="D8K-D5-4Sm" secondAttribute="bottom" constant="10" id="1Uc-3l-7qk"/>
-                            <constraint firstItem="D8K-D5-4Sm" firstAttribute="top" secondItem="sPk-7v-aiT" secondAttribute="top" constant="20" id="U78-U4-C6f"/>
-                            <constraint firstItem="D8K-D5-4Sm" firstAttribute="centerX" secondItem="sPk-7v-aiT" secondAttribute="centerX" id="ug0-Iv-W3F"/>
-                            <constraint firstItem="VAG-rw-Gfw" firstAttribute="centerX" secondItem="sPk-7v-aiT" secondAttribute="centerX" id="yjk-1z-e1u"/>
+                            <constraint firstItem="D8K-D5-4Sm" firstAttribute="top" secondItem="sPk-7v-aiT" secondAttribute="top" constant="50" id="853-kP-7GX"/>
+                            <constraint firstItem="gnI-DY-ncJ" firstAttribute="leading" secondItem="D8K-D5-4Sm" secondAttribute="trailing" id="RVW-bF-eum"/>
+                            <constraint firstItem="D8K-D5-4Sm" firstAttribute="leading" secondItem="sPk-7v-aiT" secondAttribute="leading" constant="70" id="fO4-Xa-aPh"/>
+                            <constraint firstItem="gnI-DY-ncJ" firstAttribute="top" secondItem="sPk-7v-aiT" secondAttribute="top" constant="57" id="i5I-To-oYO"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -124,6 +124,7 @@
                 <outlet property="addMemoButton" destination="tMr-Zq-0Cd" id="PWW-cH-2Qp"/>
                 <outlet property="addPlaceButton" destination="Qcr-jr-ejy" id="Ao7-Om-4WO"/>
                 <outlet property="dateLabel" destination="iRf-0v-QMX" id="yqT-0A-rEb"/>
+                <outlet property="showView" destination="sPk-7v-aiT" id="ozD-Qw-smx"/>
                 <outlet property="toggleLebel" destination="7It-NY-sS7" id="BZk-hy-J6f"/>
                 <outlet property="weatherImageView" destination="BMs-Fh-q8W" id="KNU-NP-uyO"/>
             </connections>
@@ -131,8 +132,8 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="test" width="540" height="100"/>
-        <image name="weather" width="222" height="166"/>
+        <image name="클릭" width="205" height="233"/>
+        <image name="해" width="156" height="140"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

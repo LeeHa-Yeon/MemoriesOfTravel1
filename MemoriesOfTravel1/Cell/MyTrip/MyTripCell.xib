@@ -35,22 +35,16 @@
                             <action selector="moveDetailView:" destination="gTV-IL-0wX" eventType="touchUpInside" id="Wx1-z4-h05"/>
                         </connections>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10.6-10.8" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FA3-mm-g2h">
-                        <rect key="frame" x="215" y="90" width="62.5" height="36.5"/>
-                        <fontDescription key="fontDescription" name="Dongle-Light" family="Dongle" pointSize="25"/>
-                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="부산" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2E-WB-UUo">
-                        <rect key="frame" x="215" y="45" width="45" height="46.5"/>
+                        <rect key="frame" x="215" y="50" width="45" height="46.5"/>
                         <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="40"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D-3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFy-tl-C7C">
-                        <rect key="frame" x="85" y="116.5" width="31" height="43.5"/>
-                        <fontDescription key="fontDescription" name="Dongle-Light" family="Dongle" pointSize="30"/>
-                        <color key="textColor" red="0.92853996699999997" green="1" blue="0.99011772129999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <rect key="frame" x="223" y="96.5" width="27" height="38"/>
+                        <fontDescription key="fontDescription" name="Dongle-Light" family="Dongle" pointSize="26"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -58,18 +52,15 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="FA3-mm-g2h" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" constant="20" id="Goq-qe-2wg"/>
-                <constraint firstItem="fFy-tl-C7C" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="85" id="OhS-qT-rrV"/>
+                <constraint firstItem="fFy-tl-C7C" firstAttribute="top" secondItem="y2E-WB-UUo" secondAttribute="bottom" id="9aW-9m-Ln4"/>
+                <constraint firstItem="fFy-tl-C7C" firstAttribute="leading" secondItem="S6b-y3-msW" secondAttribute="trailing" constant="58" id="RhE-by-gG4"/>
                 <constraint firstItem="S6b-y3-msW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="35" id="TUZ-dz-lBd"/>
-                <constraint firstItem="fFy-tl-C7C" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" constant="50" id="WCV-bP-MFB"/>
-                <constraint firstItem="y2E-WB-UUo" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" constant="-20" id="beB-dy-h6U"/>
+                <constraint firstItem="y2E-WB-UUo" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" constant="-15" id="beB-dy-h6U"/>
                 <constraint firstItem="y2E-WB-UUo" firstAttribute="leading" secondItem="S6b-y3-msW" secondAttribute="trailing" constant="50" id="gva-e2-7HM"/>
                 <constraint firstItem="S6b-y3-msW" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="peP-qX-brB"/>
-                <constraint firstItem="FA3-mm-g2h" firstAttribute="leading" secondItem="S6b-y3-msW" secondAttribute="trailing" constant="50" id="zGF-8H-QZk"/>
             </constraints>
             <size key="customSize" width="383" height="176"/>
             <connections>
-                <outlet property="tripDateLabel" destination="FA3-mm-g2h" id="aQX-og-HBR"/>
                 <outlet property="tripDdayLabel" destination="fFy-tl-C7C" id="IVb-oV-ml0"/>
                 <outlet property="tripImage" destination="S6b-y3-msW" id="jvo-Je-UdI"/>
                 <outlet property="tripNameLabel" destination="y2E-WB-UUo" id="b6w-aO-Lxf"/>

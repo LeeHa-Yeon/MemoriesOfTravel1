@@ -17,7 +17,6 @@ class MyTripCell: UICollectionViewCell {
     
     @IBOutlet weak var tripNameLabel: UILabel!
     @IBOutlet weak var tripDdayLabel: UILabel!
-    @IBOutlet weak var tripDateLabel: UILabel!
     @IBOutlet weak var tripImage: UIButton!
 
     @IBAction func moveDetailView(_ sender: UIButton){

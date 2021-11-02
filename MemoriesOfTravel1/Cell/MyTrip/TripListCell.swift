@@ -43,8 +43,8 @@ class TripListCell: UITableViewCell {
         behavior.numberOfItemsToShow = 1
         myTripCollectionView.configureForPeekingBehavior(behavior: behavior)
         myTripCollectionView.layer.cornerRadius = 50
-        myTripCollectionView.layer.borderColor = #colorLiteral(red: 0.5236939192, green: 0.6544969678, blue: 0.6698578596, alpha: 1)
-        myTripCollectionView.layer.borderWidth = 3.0
+        myTripCollectionView.layer.borderColor = #colorLiteral(red: 0.2281734943, green: 0.2263353765, blue: 0.2871279716, alpha: 1)
+        myTripCollectionView.layer.borderWidth = 1.0
         myTripCollectionView.isPagingEnabled = true
     }
     
@@ -85,7 +85,6 @@ extension TripListCell : UICollectionViewDelegate, UICollectionViewDataSource {
             cell.tripImage.setImage(tripImageName, for: .normal)
 
             cell.tripNameLabel.text = myTripInfo[indexPath.row].getTripName()
-            cell.tripDateLabel.text = myTripInfo[indexPath.row].getTripDate()
             
             return cell
             

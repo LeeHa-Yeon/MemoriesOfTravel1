@@ -27,6 +27,7 @@ class DayViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        
         tripPeriod = Int(selectTripInfo.getTripInfo()!.getTripPeriod()) ?? 0
         tripFirstDay = formatter2.date(from: selectTripInfo.getTripInfo()!.getTripFirstDay())!
     }
@@ -41,7 +42,7 @@ class DayViewController: UIViewController {
         customTableView.separatorStyle = .none
         let dayCellNib = UINib(nibName: "DayCell", bundle: nil)
         self.customTableView.register(dayCellNib, forCellReuseIdentifier: "DayCell")
-        
+        customTableView.layer.cornerRadius = 20
     }
     
     var isExpending = ExpendingTableCellContent()

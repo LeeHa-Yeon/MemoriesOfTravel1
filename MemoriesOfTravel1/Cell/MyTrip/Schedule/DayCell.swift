@@ -16,6 +16,7 @@ class DayCell: UITableViewCell {
     let firebaseManager = FirebaseManager.shared
     let myTripList = TripInformation.shared
     
+    @IBOutlet weak var showView: UIView!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var weatherImageView: UIImageView!
     @IBOutlet weak var toggleLebel: UILabel!
@@ -58,6 +59,7 @@ class DayCell: UITableViewCell {
     func settingData(isClicked: ExpendingTableCellContent) {
         if isClicked.expanded {
             self.toggleLebel.text = "▲"
+            self.showView.layer.cornerRadius = 30
             self.addMemoButton.isHidden = false
             self.addPlaceButton.isHidden = false
         } else {

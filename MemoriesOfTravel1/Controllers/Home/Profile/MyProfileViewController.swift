@@ -9,7 +9,7 @@ import UIKit
 import Firebase
 import FirebaseAuth
 
-class MyProfileViewController: UIViewController {
+class MyProfileViewController: UIViewController  {
     
     let myInformation: UserInfomation = UserInfomation.shared
     

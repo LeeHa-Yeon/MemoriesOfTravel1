@@ -35,7 +35,7 @@ class AddCalculateViewController: UIViewController {
     
     @IBAction func selectMoney(_ sender: UIButton){
         moneyButton.layer.cornerRadius = 20
-        moneyButton.backgroundColor = #colorLiteral(red: 0.8381986022, green: 1, blue: 0.9245430827, alpha: 1)
+        moneyButton.backgroundColor = #colorLiteral(red: 0.7731111646, green: 0.8716285825, blue: 0.7287326455, alpha: 1)
         cardButton.backgroundColor = .none
         selectPayment = "현금"
         
@@ -43,7 +43,7 @@ class AddCalculateViewController: UIViewController {
     @IBAction func selectCard(_ sender: UIButton){
         cardButton.layer.cornerRadius = 20
         moneyButton.backgroundColor = .none
-        cardButton.backgroundColor = #colorLiteral(red: 0.8381986022, green: 1, blue: 0.9245430827, alpha: 1)
+        cardButton.backgroundColor = #colorLiteral(red: 0.7731111646, green: 0.8716285825, blue: 0.7287326455, alpha: 1)
         selectPayment = "카드"
     }
     

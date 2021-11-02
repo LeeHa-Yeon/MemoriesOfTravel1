@@ -107,6 +107,7 @@ PODS:
   - NMapsMap (3.13.0)
   - Pastel (0.6.0)
   - PromisesObjC (2.0.0)
+  - SSCustomTabbar (2.0.6)
 
 DEPENDENCIES:
   - Alamofire
@@ -120,6 +121,7 @@ DEPENDENCIES:
   - MSPeekCollectionViewDelegateImplementation
   - NMapsMap
   - Pastel
+  - SSCustomTabbar
 
 SPEC REPOS:
   trunk:
@@ -145,6 +147,7 @@ SPEC REPOS:
     - NMapsMap
     - Pastel
     - PromisesObjC
+    - SSCustomTabbar
 
 SPEC CHECKSUMS:
   Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
@@ -169,7 +172,8 @@ SPEC CHECKSUMS:
   NMapsMap: 88b5bdac7087bfa99ab058ff5cdd95fb766e0e95
   Pastel: 814f081efbe2859c37e65ee44f396e6e5be88619
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
+  SSCustomTabbar: a52533e429bd40f52ce8d7ecb801f3521fbd56a0
 
-PODFILE CHECKSUM: e5e76874f5948b67b0b24cabc140882ee07a9e82
+PODFILE CHECKSUM: 1d62715e9ac8e5e5037d5585ba46d257ce37f685
 
 COCOAPODS: 1.10.1

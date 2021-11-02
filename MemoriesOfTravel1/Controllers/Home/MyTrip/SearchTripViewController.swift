@@ -13,7 +13,7 @@ class SearchTripViewController: UIViewController {
     var registerTripName: String = ""
     
     @IBOutlet weak var tableView: UITableView!
-    var Korean_cities = ["국내","서울","경기","인천","가평","강원,강릉","경주","부산","여수","전주","제주","춘천","테안","통영,거제,남해","대구","포항"]
+    var Korean_cities = ["국내","서울","경기","인천","가평","강원","경주","부산","여수","전주","제주","춘천","테안","통영,거제,남해","대구","포항"]
     var filteredArr: [String] = []
 
     override func viewDidLoad() {
@@ -74,7 +74,7 @@ extension SearchTripViewController: UITableViewDelegate, UITableViewDataSource{
         } else {
             cell.textLabel?.text = self.Korean_cities[indexPath.row]
         }
-        cell.textLabel?.font = UIFont(name: "나눔손글씨 반짝반짝 별", size: 25)
+        cell.textLabel?.font = UIFont(name: "나눔손글씨 반짝반짝 별", size: 20)
         return cell
     }
     
@@ -84,10 +84,10 @@ extension SearchTripViewController: UITableViewDelegate, UITableViewDataSource{
     }
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
             let headerView = UIView()
-            headerView.backgroundColor = #colorLiteral(red: 0.38995561, green: 0.5010837317, blue: 0.5080655813, alpha: 1)
+            headerView.backgroundColor = #colorLiteral(red: 0.2984945774, green: 0.4874641299, blue: 0.9440074563, alpha: 1)
             let sectionLabel = UILabel(frame: CGRect(x: 10 , y: 10, width:
                 tableView.bounds.size.width, height: 30))
-            sectionLabel.font = UIFont(name: "나눔손글씨 반짝반짝 별", size: 30)
+            sectionLabel.font = UIFont(name: "나눔손글씨 반짝반짝 별", size: 25)
             sectionLabel.textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         sectionLabel.text = "대한민국 지역"
             sectionLabel.sizeToFit()

@@ -12,8 +12,7 @@ class HomeViewController: UIViewController {
     
     let myInformation: UserInfomation = UserInfomation.shared
     @IBOutlet weak var nameLable: UILabel!
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
