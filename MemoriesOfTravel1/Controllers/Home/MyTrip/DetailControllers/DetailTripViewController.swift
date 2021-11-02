@@ -14,6 +14,7 @@ class DetailTripViewController: UIViewController {
     let myInfo = UserInfomation.shared
     let checkManager = CheckListManager.shared
     let calculateManager = CalculateManager.shared
+    let albumManger = AlbumManager.shared
     
     @IBOutlet weak var tripDateLabel: UILabel!
     @IBOutlet weak var tripNameLabel: UILabel!
@@ -61,7 +62,9 @@ class DetailTripViewController: UIViewController {
        
     }
     @IBAction func moveAlbumView(_ sender: UIButton){
-
+        firebaseManager.loadAlbum(uid: myInfo.getUid(), tripName: selectTripInformation.getTripInfo()!.getTripName()) { response in
+            self.albumManger.setAlbumCnt(response!)
+        }
     }
 
     override func viewDidLoad() {

@@ -89,6 +89,7 @@ class LoginViewController: UIViewController {
             
             guard let LodingVC = self.storyboard?.instantiateViewController(identifier: "LodingSB") as? LodingViewController
             else { return }
+            LodingVC.modalPresentationStyle = .fullScreen
             self.present(LodingVC,animated: true, completion: nil)
         }
     }

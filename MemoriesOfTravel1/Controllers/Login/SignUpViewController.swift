@@ -26,7 +26,7 @@ class SignUpViewController: UIViewController {
     
     @IBOutlet var profileImageView: UIImageView! {
         didSet{
-            profileImageView.layer.cornerRadius = 50
+//            profileImageView.layer.cornerRadius = 50
         }
     }
     @IBOutlet var idTextField: UITextField! {

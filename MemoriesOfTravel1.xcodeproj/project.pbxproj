@@ -32,6 +32,7 @@
 		9F4AB693271DDE3B00E561CA /* PlaceInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4AB692271DDE3B00E561CA /* PlaceInformation.swift */; };
 		9F4AB695271DE98600E561CA /* PlaceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4AB694271DE98600E561CA /* PlaceInfo.swift */; };
 		9F6A8BAF2730F941001D842A /* LodingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6A8BAE2730F941001D842A /* LodingViewController.swift */; };
+		9F6A8BB2273192CB001D842A /* AlbumManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6A8BB1273192CB001D842A /* AlbumManager.swift */; };
 		9F7FB635270E06E80064106B /* MyTripListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7FB634270E06E80064106B /* MyTripListViewController.swift */; };
 		9F7FB639270E07490064106B /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7FB638270E07490064106B /* MyProfileViewController.swift */; };
 		9F7FB63F270E69A00064106B /* 나눔손글씨 반짝반짝 별.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9F7FB63E270E69770064106B /* 나눔손글씨 반짝반짝 별.ttf */; };
@@ -102,6 +103,7 @@
 		9F4AB692271DDE3B00E561CA /* PlaceInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInformation.swift; sourceTree = "<group>"; };
 		9F4AB694271DE98600E561CA /* PlaceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInfo.swift; sourceTree = "<group>"; };
 		9F6A8BAE2730F941001D842A /* LodingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodingViewController.swift; sourceTree = "<group>"; };
+		9F6A8BB1273192CB001D842A /* AlbumManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumManager.swift; sourceTree = "<group>"; };
 		9F7FB634270E06E80064106B /* MyTripListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTripListViewController.swift; sourceTree = "<group>"; };
 		9F7FB638270E07490064106B /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
 		9F7FB63E270E69770064106B /* 나눔손글씨 반짝반짝 별.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "나눔손글씨 반짝반짝 별.ttf"; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 		9F34989327019CA000226BEE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9F6A8BB0273192B3001D842A /* Album */,
 				9F36565927302BFC0070543D /* Calculate */,
 				9F365648272F557C0070543D /* CheckList */,
 				9F4AB689271D63F100E561CA /* TripList */,
@@ -320,6 +323,14 @@
 				9FC0C145271AB37B001F69FD /* MemoViewController.swift */,
 			);
 			path = Memo;
+			sourceTree = "<group>";
+		};
+		9F6A8BB0273192B3001D842A /* Album */ = {
+			isa = PBXGroup;
+			children = (
+				9F6A8BB1273192CB001D842A /* AlbumManager.swift */,
+			);
+			path = Album;
 			sourceTree = "<group>";
 		};
 		9F7FB636270E07030064106B /* Home */ = {
@@ -647,6 +658,7 @@
 				9FF7C5E1271113FD00E9501C /* RegisterTripViewController.swift in Sources */,
 				9F36565827302BE70070543D /* CalculateManager.swift in Sources */,
 				9F36565227300F830070543D /* AddCalculateViewController.swift in Sources */,
+				9F6A8BB2273192CB001D842A /* AlbumManager.swift in Sources */,
 				9F3656612730CD880070543D /* AlbumViewController.swift in Sources */,
 				9FF7C5E4271119DC00E9501C /* TripInformation.swift in Sources */,
 				9FF7C5F12711910B00E9501C /* ScheduleViewController.swift in Sources */,

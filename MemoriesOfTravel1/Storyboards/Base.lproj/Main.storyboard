@@ -165,7 +165,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3SL-8i-Byb">
                                                 <rect key="frame" x="0.0" y="134" width="250" height="34.666666666666657"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" textContentType="new-password"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yaW-du-IKM">
                                                 <rect key="frame" x="0.0" y="178.66666666666663" width="250" height="34.666666666666657"/>
@@ -694,7 +694,7 @@
                                 <rect key="frame" x="20" y="44" width="388" height="130"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="여행을 계획해보세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P58-nb-7O2">
-                                        <rect key="frame" x="89.333333333333329" y="43.666666666666671" width="209.66666666666669" height="42.666666666666671"/>
+                                        <rect key="frame" x="89.333333333333329" y="43.666666666666671" width="209.66666666666669" height="43"/>
                                         <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="36"/>
                                         <color key="textColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                                         <nil key="highlightedColor"/>
@@ -972,7 +972,7 @@
                                     <constraint firstAttribute="width" secondItem="0ir-z3-CEJ" secondAttribute="height" multiplier="4:3" id="c9g-cn-ojX"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="여행4" translatesAutoresizingMaskIntoConstraints="NO" id="NPU-TT-iEp">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="여행4" translatesAutoresizingMaskIntoConstraints="NO" id="NPU-TT-iEp">
                                 <rect key="frame" x="128" y="584.66666666666663" width="270" height="192.66666666666663"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="270" id="V8H-EM-VrZ"/>
@@ -1340,7 +1340,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="검색 결과" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ych-Rc-pSr">
-                                                    <rect key="frame" x="39.999999999999993" y="4.6666666666666679" width="87.333333333333314" height="34.666666666666657"/>
+                                                    <rect key="frame" x="39.999999999999993" y="4.3333333333333321" width="87.333333333333314" height="35"/>
                                                     <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="30"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -1645,7 +1645,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="nrO-li-5EU">
-                                <rect key="frame" x="50" y="268" width="321.33333333333331" height="353"/>
+                                <rect key="frame" x="50" y="278" width="321.33333333333331" height="353"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이곳에서는" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U9d-mc-Zol">
                                         <rect key="frame" x="0.0" y="0.0" width="321.33333333333331" height="46.333333333333336"/>
@@ -1686,12 +1686,12 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="S4Y-yP-l3I">
-                                <rect key="frame" x="92" y="721" width="244" height="59"/>
+                                <rect key="frame" x="110" y="721" width="208" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2QM-x5-fvQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="102" height="59"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="84" height="50"/>
                                         <color key="backgroundColor" red="0.97545726030000002" green="0.97545726030000002" blue="0.97545726030000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="40"/>
+                                        <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="33"/>
                                         <state key="normal" title="확인">
                                             <color key="titleColor" systemColor="systemOrangeColor"/>
                                             <color key="titleShadowColor" red="0.059832759200000002" green="0.080664612349999998" blue="0.152949065" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1702,9 +1702,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6pe-ud-RxU">
-                                        <rect key="frame" x="142" y="0.0" width="102" height="59"/>
+                                        <rect key="frame" x="124" y="0.0" width="84" height="50"/>
                                         <color key="backgroundColor" red="0.97648364310000002" green="0.97644716499999995" blue="0.97647196049999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="40"/>
+                                        <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="33"/>
                                         <state key="normal" title="뒤로가기">
                                             <color key="titleColor" systemColor="systemOrangeColor"/>
                                             <color key="titleShadowColor" red="0.059832759200000002" green="0.080664612349999998" blue="0.152949065" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1721,7 +1721,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="S4Y-yP-l3I" firstAttribute="centerX" secondItem="DBp-Ii-yKa" secondAttribute="centerX" id="4eA-lQ-Azl"/>
-                            <constraint firstItem="S4Y-yP-l3I" firstAttribute="top" secondItem="nrO-li-5EU" secondAttribute="bottom" constant="100" id="AVL-ro-Cf9"/>
+                            <constraint firstItem="S4Y-yP-l3I" firstAttribute="top" secondItem="nrO-li-5EU" secondAttribute="bottom" constant="90" id="AVL-ro-Cf9"/>
                             <constraint firstItem="nrO-li-5EU" firstAttribute="leading" secondItem="Azl-YY-B4z" secondAttribute="leading" constant="50" id="CrX-20-Hgw"/>
                             <constraint firstItem="cuv-LF-OK9" firstAttribute="trailing" secondItem="Azl-YY-B4z" secondAttribute="trailing" id="JxO-ka-a1K"/>
                             <constraint firstItem="cuv-LF-OK9" firstAttribute="leading" secondItem="Azl-YY-B4z" secondAttribute="leading" id="TSn-iH-DV0"/>
@@ -1729,7 +1729,7 @@
                             <constraint firstItem="cuv-LF-OK9" firstAttribute="top" secondItem="Azl-YY-B4z" secondAttribute="top" id="ZTB-7h-XIJ"/>
                             <constraint firstItem="S9n-K9-Yn1" firstAttribute="top" secondItem="Azl-YY-B4z" secondAttribute="top" constant="50" id="bSE-tz-EG0"/>
                             <constraint firstItem="cuv-LF-OK9" firstAttribute="bottom" secondItem="Azl-YY-B4z" secondAttribute="bottom" id="jmY-xt-d3G"/>
-                            <constraint firstItem="nrO-li-5EU" firstAttribute="top" secondItem="S9n-K9-Yn1" secondAttribute="bottom" constant="30" id="kvc-us-s6G"/>
+                            <constraint firstItem="nrO-li-5EU" firstAttribute="top" secondItem="S9n-K9-Yn1" secondAttribute="bottom" constant="40" id="kvc-us-s6G"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="g1g-hl-aVq"/>
@@ -1882,7 +1882,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="선택해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dAq-td-S8h">
-                                <rect key="frame" x="107.66666666666669" y="144" width="213" height="70"/>
+                                <rect key="frame" x="107.66666666666667" y="144" width="212.66666666666663" height="70"/>
                                 <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="60"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -2014,7 +2014,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="날짜" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PkZ-17-icV">
-                                <rect key="frame" x="190" y="52.333333333333343" width="48" height="34.666666666666657"/>
+                                <rect key="frame" x="190" y="52" width="48" height="35"/>
                                 <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -2069,7 +2069,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="메모" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ftx-ad-zNV">
-                                <rect key="frame" x="179" y="94" width="70" height="70"/>
+                                <rect key="frame" x="179.33333333333334" y="94" width="69.333333333333343" height="70"/>
                                 <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="60"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -2355,7 +2355,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="hZc-GL-Wh8">
-                                <rect key="frame" x="50" y="268" width="378" height="353"/>
+                                <rect key="frame" x="50" y="278" width="378" height="353"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이곳에서는" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Veu-6C-KAw">
                                         <rect key="frame" x="0.0" y="0.0" width="378" height="46.333333333333336"/>
@@ -2396,12 +2396,12 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="8oY-cx-voD">
-                                <rect key="frame" x="92" y="721" width="244" height="59"/>
+                                <rect key="frame" x="110" y="721" width="208" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0h-oj-xHF">
-                                        <rect key="frame" x="0.0" y="0.0" width="102" height="59"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="84" height="50"/>
                                         <color key="backgroundColor" red="0.97545726030000002" green="0.97545726030000002" blue="0.97545726030000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="40"/>
+                                        <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="33"/>
                                         <state key="normal" title="확인">
                                             <color key="titleColor" red="0.40008988979999999" green="0.49531704189999998" blue="0.4117544293" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
@@ -2410,9 +2410,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nmY-lX-tcu">
-                                        <rect key="frame" x="142" y="0.0" width="102" height="59"/>
+                                        <rect key="frame" x="124" y="0.0" width="84" height="50"/>
                                         <color key="backgroundColor" red="0.97648364310000002" green="0.97644716499999995" blue="0.97647196049999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="40"/>
+                                        <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="33"/>
                                         <state key="normal" title="뒤로가기">
                                             <color key="titleColor" red="0.39619544150000002" green="0.49531549219999998" blue="0.41175448889999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
@@ -2430,11 +2430,11 @@
                             <constraint firstItem="8Y7-1f-0d3" firstAttribute="bottom" secondItem="0ab-1c-cXG" secondAttribute="bottom" id="HCF-zc-TFk"/>
                             <constraint firstItem="8Y7-1f-0d3" firstAttribute="trailing" secondItem="0ab-1c-cXG" secondAttribute="trailing" id="YOB-pg-d16"/>
                             <constraint firstAttribute="trailing" secondItem="hZc-GL-Wh8" secondAttribute="trailing" id="aEN-KJ-SRZ"/>
-                            <constraint firstItem="hZc-GL-Wh8" firstAttribute="top" secondItem="iUh-te-A5F" secondAttribute="bottom" constant="30" id="aR5-qF-cHV"/>
+                            <constraint firstItem="hZc-GL-Wh8" firstAttribute="top" secondItem="iUh-te-A5F" secondAttribute="bottom" constant="40" id="aR5-qF-cHV"/>
                             <constraint firstItem="iUh-te-A5F" firstAttribute="leading" secondItem="8Y7-1f-0d3" secondAttribute="leading" constant="50" id="aWx-uO-UsJ"/>
                             <constraint firstItem="8oY-cx-voD" firstAttribute="centerX" secondItem="JXY-fs-Jrb" secondAttribute="centerX" id="cTy-FO-KPo"/>
                             <constraint firstItem="hZc-GL-Wh8" firstAttribute="leading" secondItem="8Y7-1f-0d3" secondAttribute="leading" constant="50" id="dhp-Zc-rMT"/>
-                            <constraint firstItem="8oY-cx-voD" firstAttribute="top" secondItem="hZc-GL-Wh8" secondAttribute="bottom" constant="100" id="kD7-Ut-oGv"/>
+                            <constraint firstItem="8oY-cx-voD" firstAttribute="top" secondItem="hZc-GL-Wh8" secondAttribute="bottom" constant="90" id="kD7-Ut-oGv"/>
                             <constraint firstItem="0ab-1c-cXG" firstAttribute="top" secondItem="8Y7-1f-0d3" secondAttribute="top" id="paE-PL-EMv"/>
                             <constraint firstItem="0ab-1c-cXG" firstAttribute="leading" secondItem="JXY-fs-Jrb" secondAttribute="leading" id="rja-ss-zL6"/>
                         </constraints>
@@ -3168,7 +3168,7 @@
             </objects>
             <point key="canvasLocation" x="1927.5700934579438" y="3364.7948164146869"/>
         </scene>
-        <!--Album View Controller-->
+        <!--추억 앨범-->
         <scene sceneID="5C2-qi-s0h">
             <objects>
                 <viewController storyboardIdentifier="AlubmSB" id="iam-vd-u4t" customClass="AlbumViewController" customModule="MemoriesOfTravel1" customModuleProvider="target" sceneMemberID="viewController">
@@ -3176,25 +3176,104 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아직 미구현" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="16g-bY-jvX">
-                                <rect key="frame" x="175" y="452.66666666666669" width="78" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="u5S-Wr-czX">
+                                <rect key="frame" x="30" y="808.66666666666663" width="360" height="33.333333333333371"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jaJ-Ve-iGO">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="33.333333333333336"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="jaJ-Ve-iGO" secondAttribute="height" multiplier="3:1" id="7ss-8f-gyN"/>
+                                            <constraint firstAttribute="width" constant="100" id="I77-kA-FoV"/>
+                                        </constraints>
+                                        <state key="normal" image="업로드"/>
+                                        <connections>
+                                            <action selector="upLoadTapped:" destination="iam-vd-u4t" eventType="touchUpInside" id="tvT-Iu-Apa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3r2-kD-AsS">
+                                        <rect key="frame" x="130" y="0.0" width="100" height="33.333333333333336"/>
+                                        <state key="normal" image="다운로드"/>
+                                        <connections>
+                                            <action selector="reloadTapped:" destination="iam-vd-u4t" eventType="touchUpInside" id="3CW-XH-rso"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ebm-Uo-0d6">
+                                        <rect key="frame" x="260" y="0.0" width="100" height="33.333333333333336"/>
+                                        <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="27"/>
+                                        <state key="normal" title="종료">
+                                            <color key="titleColor" red="0.055843549909999998" green="0.055843549909999998" blue="0.055843549909999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="saveButton:" destination="iam-vd-u4t" eventType="touchUpInside" id="Bg1-eX-TPG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="l8D-ml-5dq">
+                                <rect key="frame" x="30" y="142.33333333333331" width="360" height="636.33333333333348"/>
+                                <color key="backgroundColor" red="0.95243901009999998" green="0.87061220409999995" blue="0.87058794500000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="C58-5C-DSG">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="pictureCell" id="Ai4-Jm-Alg" customClass="PictureCell" customModule="MemoriesOfTravel1" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="aOz-bU-H3M">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="로딩중" translatesAutoresizingMaskIntoConstraints="NO" id="zuO-Vv-YBU">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="zuO-Vv-YBU" secondAttribute="bottom" id="Ay7-rO-vz9"/>
+                                                <constraint firstItem="zuO-Vv-YBU" firstAttribute="top" secondItem="aOz-bU-H3M" secondAttribute="top" id="VPu-TY-XDR"/>
+                                                <constraint firstItem="zuO-Vv-YBU" firstAttribute="leading" secondItem="aOz-bU-H3M" secondAttribute="leading" id="rj6-sa-qyE"/>
+                                                <constraint firstAttribute="trailing" secondItem="zuO-Vv-YBU" secondAttribute="trailing" id="ztN-kM-Cw2"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="fireImg" destination="zuO-Vv-YBU" id="Rwc-wA-u7l"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="나의 추억들을 모으고 모아 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ltG-s8-laK">
+                                <rect key="frame" x="134" y="98" width="152.33333333333337" height="24.333333333333329"/>
+                                <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vMF-Fi-0Q9"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.95243901009999998" green="0.87061220409999995" blue="0.87058794500000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="16g-bY-jvX" firstAttribute="centerY" secondItem="oPP-zr-jui" secondAttribute="centerY" id="kYN-Vl-Zsr"/>
-                            <constraint firstItem="16g-bY-jvX" firstAttribute="centerX" secondItem="oPP-zr-jui" secondAttribute="centerX" id="l23-5R-b9i"/>
+                            <constraint firstItem="ltG-s8-laK" firstAttribute="centerX" secondItem="oPP-zr-jui" secondAttribute="centerX" id="1Zm-Ru-2Ez"/>
+                            <constraint firstItem="u5S-Wr-czX" firstAttribute="centerX" secondItem="oPP-zr-jui" secondAttribute="centerX" id="KEa-fS-Aze"/>
+                            <constraint firstItem="l8D-ml-5dq" firstAttribute="leading" secondItem="vMF-Fi-0Q9" secondAttribute="leading" constant="30" id="XqY-mv-s7O"/>
+                            <constraint firstItem="vMF-Fi-0Q9" firstAttribute="trailing" secondItem="l8D-ml-5dq" secondAttribute="trailing" constant="30" id="ZCv-cB-rHf"/>
+                            <constraint firstItem="l8D-ml-5dq" firstAttribute="top" secondItem="ltG-s8-laK" secondAttribute="bottom" constant="20" id="a4f-4l-YHU"/>
+                            <constraint firstItem="u5S-Wr-czX" firstAttribute="top" secondItem="l8D-ml-5dq" secondAttribute="bottom" constant="30" id="cjs-7k-uQR"/>
+                            <constraint firstItem="u5S-Wr-czX" firstAttribute="leading" secondItem="vMF-Fi-0Q9" secondAttribute="leading" constant="30" id="l4f-jG-LUE"/>
+                            <constraint firstItem="vMF-Fi-0Q9" firstAttribute="bottom" secondItem="u5S-Wr-czX" secondAttribute="bottom" constant="50" id="qtn-Q4-6dZ"/>
+                            <constraint firstItem="ltG-s8-laK" firstAttribute="top" secondItem="vMF-Fi-0Q9" secondAttribute="top" constant="10" id="u5Y-lC-pLv"/>
+                            <constraint firstItem="vMF-Fi-0Q9" firstAttribute="trailing" secondItem="u5S-Wr-czX" secondAttribute="trailing" constant="30" id="zRt-q1-8gg"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="b9q-LV-YBh"/>
+                    <navigationItem key="navigationItem" title="추억 앨범" id="b9q-LV-YBh"/>
+                    <connections>
+                        <outlet property="collectionView" destination="l8D-ml-5dq" id="ORG-3J-RPR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MMF-zz-ct3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3573" y="3365"/>
+            <point key="canvasLocation" x="3571.9626168224295" y="3364.7948164146869"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cp7-lB-QeL">
@@ -3246,6 +3325,8 @@
         <image name="plusCost" width="488" height="502"/>
         <image name="pointer" width="14" height="14"/>
         <image name="결제한사람2" width="136" height="154"/>
+        <image name="다운로드" width="300" height="82"/>
+        <image name="로딩중" width="442" height="390"/>
         <image name="먹거리카테고리" width="480" height="622"/>
         <image name="비용" width="168" height="146"/>
         <image name="산" width="1920" height="1200"/>
@@ -3256,10 +3337,11 @@
         <image name="설명창6" width="364" height="478"/>
         <image name="시계" width="189" height="202"/>
         <image name="아이콘" width="437" height="357"/>
+        <image name="업로드" width="230" height="82"/>
         <image name="여행1" width="786" height="966"/>
         <image name="여행2" width="774" height="1198"/>
         <image name="여행3" width="1150" height="744"/>
-        <image name="여행4" width="1140" height="738"/>
+        <image name="여행4" width="1140" height="738"/>
         <image name="여행지" width="220" height="201"/>
         <image name="일정" width="302" height="330"/>
         <image name="정산2" width="238" height="318"/>

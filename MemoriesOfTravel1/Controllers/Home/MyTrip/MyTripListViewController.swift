@@ -110,12 +110,12 @@ extension MyTripListViewController: UITableViewDataSource, UITableViewDelegate {
                 cell.myTripList = tripBeforeList
                 cell.myTripInfo = tripBeforeInfo
                 cell.myTripCollectionView.reloadData()
-                cell.listSectionLabel.text = "     여행 전"
+                cell.listSectionLabel.text = " 여행 전"
                 return cell
             }
         case 1:
             if let cell = tripListTableView.dequeueReusableCell(withIdentifier: "TripListCell") as? TripListCell {
-                cell.listSectionLabel.text = "     여행 후"
+                cell.listSectionLabel.text = " 여행 후"
                 cell.delegate = self
                 cell.myTripList = tripAfterList
                 cell.myTripInfo = tripAfterInfo

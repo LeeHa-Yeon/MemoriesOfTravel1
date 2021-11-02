@@ -43,7 +43,8 @@ class MyProfileViewController: UIViewController  {
         } catch let signOutError as NSError {
             print ("Error signing out: %@", signOutError)
         }
-        self.dismiss(animated: true, completion: nil)
+//        self.dismiss(animated: true, completion: nil)
+        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
     }
     
 }

@@ -247,6 +247,23 @@ class FirebaseManager {
         }
     }
     
+    //MARK: - Album
+    func saveAlbum(uid: String, tripName: String, albumCnt: Int){
+            let childUpdates = ["/user/\(uid)/TripList/\(tripName)/Album/Cnt":albumCnt]
+            db.updateChildValues(childUpdates)
+    }
+    func loadAlbum(uid: String, tripName: String, completion: @escaping (Int?) -> (Void)){
+        self.db.child("user").child(uid).child("TripList").child(tripName).child("Album").observeSingleEvent(of: .value) { snapshot in
+            if !snapshot.hasChildren() {
+                print("don't have loadlbum")
+                completion(0)
+                return
+            }
+            let dic = snapshot.value as! [String:Int]
+            completion(dic["Cnt"])
+        }
+    }
+    
     
 
     
