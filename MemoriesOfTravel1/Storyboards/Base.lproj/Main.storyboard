@@ -26,8 +26,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="설명창6" translatesAutoresizingMaskIntoConstraints="NO" id="M4q-TC-lhi">
+                                <rect key="frame" x="0.0" y="44" width="428" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="Qrg-2z-ycP"/>
+                                </constraints>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="5tQ-31-sAf">
-                                <rect key="frame" x="64" y="146.33333333333331" width="300" height="605.66666666666674"/>
+                                <rect key="frame" x="64" y="171.33333333333331" width="300" height="605.66666666666674"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="uOs-F9-73T">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
@@ -68,9 +74,10 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qTH-FZ-Pbk">
                                                 <rect key="frame" x="0.0" y="0.0" width="125" height="47"/>
+                                                <color key="backgroundColor" red="0.84378552439999999" green="0.8774191737" blue="0.93334227800000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="30"/>
                                                 <state key="normal" title="로그인">
-                                                    <color key="titleColor" red="0.32789766660000003" green="0.0" blue="0.55900495080000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="titleColor" red="0.09423568568" green="0.09423568568" blue="0.09423568568" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="moveToHome:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eGi-iG-tp3"/>
@@ -78,9 +85,10 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQk-rk-ewY">
                                                 <rect key="frame" x="175" y="0.0" width="125" height="47"/>
+                                                <color key="backgroundColor" red="0.84378552439999999" green="0.8774191737" blue="0.93334227800000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="30"/>
                                                 <state key="normal" title="회원가입">
-                                                    <color key="titleColor" red="0.41768186629999998" green="0.0" blue="0.71207042580000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <color key="titleColor" red="0.09423568568" green="0.09423568568" blue="0.09423568568" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="moveToSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tKP-aD-qFz"/>
@@ -97,20 +105,25 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5tQ-31-sAf" secondAttribute="bottom" constant="140" id="LIh-dI-R4K"/>
+                            <constraint firstItem="M4q-TC-lhi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Foq-Gf-Biz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5tQ-31-sAf" secondAttribute="bottom" constant="115" id="LIh-dI-R4K"/>
+                            <constraint firstItem="M4q-TC-lhi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eMw-IJ-IhN"/>
+                            <constraint firstItem="M4q-TC-lhi" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="unI-0j-mn9"/>
                             <constraint firstItem="5tQ-31-sAf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zs9-gA-1o4"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="bottomContainerMargin" destination="LIh-dI-R4K" id="Xs3-Mq-WNh"/>
+                        <outlet property="firstButton" destination="qTH-FZ-Pbk" id="PPB-wQ-xbN"/>
                         <outlet property="idTextField" destination="VCE-qq-CZ4" id="EMn-wy-8yC"/>
                         <outlet property="logoImageView" destination="uOs-F9-73T" id="v8G-1f-BGT"/>
                         <outlet property="pwdTextField" destination="BP3-dg-8iL" id="MeP-Wi-wGY"/>
+                        <outlet property="secondButton" destination="KQk-rk-ewY" id="WwC-mY-fJQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2338" y="947"/>
+            <point key="canvasLocation" x="-2338.3177570093458" y="946.65226781857461"/>
         </scene>
         <!--회원가입-->
         <scene sceneID="gMa-cO-ago">
@@ -3240,6 +3253,7 @@
         <image name="설명창" width="500" height="614"/>
         <image name="설명창2" width="486" height="602"/>
         <image name="설명창3" width="490" height="602"/>
+        <image name="설명창6" width="364" height="478"/>
         <image name="시계" width="189" height="202"/>
         <image name="아이콘" width="437" height="357"/>
         <image name="여행1" width="786" height="966"/>

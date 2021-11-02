@@ -16,6 +16,8 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         originalBottomMargin = self.bottomContainerMargin.constant
         addNotification()
+        firstButton.layer.cornerRadius = 20
+        secondButton.layer.cornerRadius = 20
 //        firebaseManager.updateArrTest()
 //        firebaseManager.arrTest()
     }
@@ -24,6 +26,9 @@ class LoginViewController: UIViewController {
         idTextField.text = ""
         pwdTextField.text = ""
     }
+    
+    @IBOutlet weak var firstButton: UIButton!
+    @IBOutlet weak var secondButton: UIButton!
     
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var idTextField: UITextField! {
