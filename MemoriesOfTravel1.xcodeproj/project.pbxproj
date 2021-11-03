@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9F0DD477272B1148006D7FC9 /* DetailDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0DD476272B1148006D7FC9 /* DetailDayViewController.swift */; };
+		9F2FC5832732967700BA1880 /* 78118-loading-balance.json in Resources */ = {isa = PBXBuildFile; fileRef = 9F2FC5822732967700BA1880 /* 78118-loading-balance.json */; };
+		9F2FC5852732995500BA1880 /* 5783-loding.json in Resources */ = {isa = PBXBuildFile; fileRef = 9F2FC5842732995500BA1880 /* 5783-loding.json */; };
 		9F34987E27019C7D00226BEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F34987D27019C7D00226BEE /* AppDelegate.swift */; };
 		9F34988027019C7D00226BEE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F34987F27019C7D00226BEE /* SceneDelegate.swift */; };
 		9F34988227019C7D00226BEE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F34988127019C7D00226BEE /* LoginViewController.swift */; };
@@ -31,6 +33,8 @@
 		9F4AB691271DDDBD00E561CA /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4AB690271DDDBD00E561CA /* PlaceModel.swift */; };
 		9F4AB693271DDE3B00E561CA /* PlaceInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4AB692271DDE3B00E561CA /* PlaceInformation.swift */; };
 		9F4AB695271DE98600E561CA /* PlaceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4AB694271DE98600E561CA /* PlaceInfo.swift */; };
+		9F51F74327328BF7004F698A /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F51F74227328BF7004F698A /* LoadingViewController.swift */; };
+		9F51F74527328C03004F698A /* Loading.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F51F74427328C03004F698A /* Loading.storyboard */; };
 		9F6A8BAF2730F941001D842A /* LodingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6A8BAE2730F941001D842A /* LodingViewController.swift */; };
 		9F6A8BB2273192CB001D842A /* AlbumManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F6A8BB1273192CB001D842A /* AlbumManager.swift */; };
 		9F7FB635270E06E80064106B /* MyTripListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7FB634270E06E80064106B /* MyTripListViewController.swift */; };
@@ -84,6 +88,8 @@
 /* Begin PBXFileReference section */
 		6CA4AE4526DB6FC6E96773B3 /* Pods-MemoriesOfTravel1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoriesOfTravel1.release.xcconfig"; path = "Target Support Files/Pods-MemoriesOfTravel1/Pods-MemoriesOfTravel1.release.xcconfig"; sourceTree = "<group>"; };
 		9F0DD476272B1148006D7FC9 /* DetailDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDayViewController.swift; sourceTree = "<group>"; };
+		9F2FC5822732967700BA1880 /* 78118-loading-balance.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "78118-loading-balance.json"; path = "../../../../../../Downloads/78118-loading-balance.json"; sourceTree = "<group>"; };
+		9F2FC5842732995500BA1880 /* 5783-loding.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "5783-loding.json"; path = "../../../../../../Downloads/5783-loding.json"; sourceTree = "<group>"; };
 		9F34987A27019C7D00226BEE /* MemoriesOfTravel1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoriesOfTravel1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F34987D27019C7D00226BEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F34987F27019C7D00226BEE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +115,8 @@
 		9F4AB690271DDDBD00E561CA /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
 		9F4AB692271DDE3B00E561CA /* PlaceInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInformation.swift; sourceTree = "<group>"; };
 		9F4AB694271DE98600E561CA /* PlaceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInfo.swift; sourceTree = "<group>"; };
+		9F51F74227328BF7004F698A /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		9F51F74427328C03004F698A /* Loading.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Loading.storyboard; sourceTree = "<group>"; };
 		9F6A8BAE2730F941001D842A /* LodingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LodingViewController.swift; sourceTree = "<group>"; };
 		9F6A8BB1273192CB001D842A /* AlbumManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumManager.swift; sourceTree = "<group>"; };
 		9F7FB634270E06E80064106B /* MyTripListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTripListViewController.swift; sourceTree = "<group>"; };
@@ -230,6 +238,7 @@
 		9F34989227019C9400226BEE /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9F51F73F27328A96004F698A /* Loding */,
 				9F7FB637270E07080064106B /* Login */,
 				9F7FB636270E07030064106B /* Home */,
 			);
@@ -340,6 +349,17 @@
 				9FC0C145271AB37B001F69FD /* MemoViewController.swift */,
 			);
 			path = Memo;
+			sourceTree = "<group>";
+		};
+		9F51F73F27328A96004F698A /* Loding */ = {
+			isa = PBXGroup;
+			children = (
+				9F2FC5842732995500BA1880 /* 5783-loding.json */,
+				9F2FC5822732967700BA1880 /* 78118-loading-balance.json */,
+				9F51F74227328BF7004F698A /* LoadingViewController.swift */,
+				9F51F74427328C03004F698A /* Loading.storyboard */,
+			);
+			path = Loding;
 			sourceTree = "<group>";
 		};
 		9F6A8BB0273192B3001D842A /* Album */ = {
@@ -621,9 +641,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FF0FDFB2710EA4E00717411 /* TripListCell.xib in Resources */,
+				9F2FC5852732995500BA1880 /* 5783-loding.json in Resources */,
 				9FF7C6002711966500E9501C /* ContentCell.xib in Resources */,
 				9FF7C5FC2711963F00E9501C /* DayCell.xib in Resources */,
+				9F2FC5832732967700BA1880 /* 78118-loading-balance.json in Resources */,
 				9F34988A27019C7F00226BEE /* LaunchScreen.storyboard in Resources */,
+				9F51F74527328C03004F698A /* Loading.storyboard in Resources */,
 				9F7FB63F270E69A00064106B /* 나눔손글씨 반짝반짝 별.ttf in Resources */,
 				9F7FB652270F67620064106B /* GoogleService-Info.plist in Resources */,
 				9FF0FE002710EEC400717411 /* MyTripCell.xib in Resources */,
@@ -683,6 +706,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F51F74327328BF7004F698A /* LoadingViewController.swift in Sources */,
 				9FC0C13427186365001F69FD /* SearchAPIManager.swift in Sources */,
 				9FF0FDFF2710EEC400717411 /* MyTripCell.swift in Sources */,
 				9FF7C5EA27111E1800E9501C /* PickDateViewController.swift in Sources */,

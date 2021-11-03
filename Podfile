@@ -21,5 +21,6 @@ target 'MemoriesOfTravel1' do
   pod "Pastel"
   pod 'SSCustomTabbar'
 
+  pod 'lottie-ios'
 
 end
