@@ -612,52 +612,49 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S40-3M-mOl">
-                                <rect key="frame" x="0.0" y="179" width="428" height="713"/>
+                                <rect key="frame" x="0.0" y="178" width="428" height="714"/>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rC8-RG-mgD">
-                                <rect key="frame" x="0.0" y="179" width="428" height="713"/>
+                                <rect key="frame" x="0.0" y="178" width="428" height="714"/>
                                 <connections>
                                     <segue destination="tNU-K5-4VH" kind="embed" id="C1Q-1X-TbH"/>
                                 </connections>
                             </containerView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="RLk-WP-2n1">
-                                <rect key="frame" x="64" y="118" width="300" height="32"/>
-                                <color key="backgroundColor" red="0.55677992109999996" green="0.75300794839999996" blue="0.9451237321" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="Uxr-qi-aBu"/>
-                                </constraints>
-                                <segments>
-                                    <segment title="일정"/>
-                                    <segment title="지도"/>
-                                </segments>
-                                <connections>
-                                    <action selector="switchViews:" destination="6Yj-z7-1Z2" eventType="valueChanged" id="b8O-Kd-gdx"/>
-                                </connections>
-                            </segmentedControl>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cT8-8f-iEz">
-                                <rect key="frame" x="0.0" y="179" width="428" height="713"/>
+                                <rect key="frame" x="0.0" y="178" width="428" height="714"/>
                                 <connections>
                                     <segue destination="Cjw-p7-XdG" kind="embed" id="chj-Ds-m7y"/>
                                 </connections>
                             </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OuR-S1-i19" customClass="EASegments" customModule="EASegments">
+                                <rect key="frame" x="89" y="118" width="250" height="30"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="iEW-Gz-kUa"/>
+                                    <constraint firstAttribute="width" constant="250" id="pti-Zq-ufj"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="segmentsValueDidChange:" destination="6Yj-z7-1Z2" eventType="touchUpInside" id="GbK-4e-ad2"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="akC-eZ-ZpA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="S40-3M-mOl" firstAttribute="leading" secondItem="akC-eZ-ZpA" secondAttribute="leading" id="1rG-gT-aJu"/>
-                            <constraint firstItem="RLk-WP-2n1" firstAttribute="top" secondItem="akC-eZ-ZpA" secondAttribute="top" constant="30" id="3PH-Hr-kp7"/>
-                            <constraint firstItem="cT8-8f-iEz" firstAttribute="top" secondItem="RLk-WP-2n1" secondAttribute="bottom" constant="30" id="ArV-Vg-2Bf"/>
-                            <constraint firstItem="rC8-RG-mgD" firstAttribute="top" secondItem="RLk-WP-2n1" secondAttribute="bottom" constant="30" id="EV7-QC-ZXR"/>
                             <constraint firstItem="rC8-RG-mgD" firstAttribute="leading" secondItem="akC-eZ-ZpA" secondAttribute="leading" id="GJv-XN-yGg"/>
                             <constraint firstItem="akC-eZ-ZpA" firstAttribute="bottom" secondItem="S40-3M-mOl" secondAttribute="bottom" id="Kr6-cL-iQZ"/>
-                            <constraint firstItem="RLk-WP-2n1" firstAttribute="centerX" secondItem="aOL-3o-MbV" secondAttribute="centerX" id="Lq8-hL-Ibk"/>
                             <constraint firstItem="akC-eZ-ZpA" firstAttribute="bottom" secondItem="rC8-RG-mgD" secondAttribute="bottom" id="Q4P-9z-zeR"/>
+                            <constraint firstItem="cT8-8f-iEz" firstAttribute="top" secondItem="OuR-S1-i19" secondAttribute="bottom" constant="30" id="R8n-Lk-aX5"/>
+                            <constraint firstItem="OuR-S1-i19" firstAttribute="top" secondItem="akC-eZ-ZpA" secondAttribute="top" constant="30" id="byn-8d-jID"/>
                             <constraint firstItem="akC-eZ-ZpA" firstAttribute="trailing" secondItem="rC8-RG-mgD" secondAttribute="trailing" id="cJk-k9-fU7"/>
                             <constraint firstItem="cT8-8f-iEz" firstAttribute="leading" secondItem="akC-eZ-ZpA" secondAttribute="leading" id="cPt-Ly-vZn"/>
                             <constraint firstItem="akC-eZ-ZpA" firstAttribute="trailing" secondItem="cT8-8f-iEz" secondAttribute="trailing" id="drr-PL-aKO"/>
                             <constraint firstItem="akC-eZ-ZpA" firstAttribute="trailing" secondItem="S40-3M-mOl" secondAttribute="trailing" id="f8X-eF-3si"/>
-                            <constraint firstItem="S40-3M-mOl" firstAttribute="top" secondItem="RLk-WP-2n1" secondAttribute="bottom" constant="30" id="fmo-9y-0nW"/>
+                            <constraint firstItem="rC8-RG-mgD" firstAttribute="top" secondItem="OuR-S1-i19" secondAttribute="bottom" constant="30" id="mJo-B1-XhW"/>
                             <constraint firstItem="akC-eZ-ZpA" firstAttribute="bottom" secondItem="cT8-8f-iEz" secondAttribute="bottom" id="mw2-kx-A6K"/>
+                            <constraint firstItem="S40-3M-mOl" firstAttribute="top" secondItem="OuR-S1-i19" secondAttribute="bottom" constant="30" id="n9c-Tz-Hse"/>
+                            <constraint firstItem="OuR-S1-i19" firstAttribute="centerX" secondItem="aOL-3o-MbV" secondAttribute="centerX" id="oXa-xe-ohU"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="부산 여행" id="VsX-I1-2qd">
@@ -675,7 +672,7 @@
                     <connections>
                         <outlet property="dayView" destination="cT8-8f-iEz" id="rXG-sQ-KsL"/>
                         <outlet property="map2View" destination="rC8-RG-mgD" id="jJh-Bq-i22"/>
-                        <outlet property="segmentedControl" destination="RLk-WP-2n1" id="Bto-XI-9zp"/>
+                        <outlet property="segmentsViaIB" destination="OuR-S1-i19" id="dhQ-Yk-MYE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ldd-6f-oyf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1633,11 +1630,11 @@
             <objects>
                 <viewController storyboardIdentifier="DaySB" id="Cjw-p7-XdG" customClass="DayViewController" customModule="MemoriesOfTravel1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="554-Y7-ott">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="713"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="714"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Z69-h7-yF4">
-                                <rect key="frame" x="20" y="44" width="388" height="669"/>
+                                <rect key="frame" x="20" y="44" width="388" height="670"/>
                                 <color key="backgroundColor" red="0.84378552439999999" green="0.8774191737" blue="0.93334227800000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="sectionIndexBackgroundColor" red="0.84378552439999999" green="0.8774191737" blue="0.93334227800000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </tableView>
@@ -2347,13 +2344,16 @@
             <objects>
                 <viewController storyboardIdentifier="Map2SB" id="tNU-K5-4VH" customClass="Map2ViewController" customModule="MemoriesOfTravel1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DLv-B6-fLC">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="713"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="714"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJL-t6-Lhn">
-                                <rect key="frame" x="248" y="54" width="30" height="36"/>
-                                <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="20"/>
-                                <state key="normal" title="▽">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fJL-t6-Lhn">
+                                <rect key="frame" x="368" y="64" width="30" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="fJL-t6-Lhn" secondAttribute="height" multiplier="5:3.5" id="ljC-7R-ZOL"/>
+                                    <constraint firstAttribute="width" constant="30" id="v4M-lE-EKY"/>
+                                </constraints>
+                                <state key="normal" image="드롭다운">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -2368,8 +2368,8 @@
                                     <constraint firstAttribute="height" constant="570" id="y2z-gF-20k"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="날짜" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PkZ-17-icV">
-                                <rect key="frame" x="190" y="52" width="48" height="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PkZ-17-icV">
+                                <rect key="frame" x="214" y="90" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -2379,11 +2379,11 @@
                         <color key="backgroundColor" red="0.84378552439999999" green="0.8774191737" blue="0.93334227800000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="5NR-Np-SvU" secondAttribute="trailing" id="6vw-0P-xgs"/>
-                            <constraint firstItem="5NR-Np-SvU" firstAttribute="top" secondItem="fJL-t6-Lhn" secondAttribute="bottom" constant="5" id="9Ss-uP-WQx"/>
-                            <constraint firstItem="5NR-Np-SvU" firstAttribute="top" secondItem="PkZ-17-icV" secondAttribute="bottom" constant="8" id="EeN-GO-GnX"/>
-                            <constraint firstItem="fJL-t6-Lhn" firstAttribute="leading" secondItem="PkZ-17-icV" secondAttribute="trailing" constant="10" id="K1B-Jo-ZYJ"/>
-                            <constraint firstItem="PkZ-17-icV" firstAttribute="centerX" secondItem="DLv-B6-fLC" secondAttribute="centerX" id="Nwc-Kz-YQE"/>
-                            <constraint firstItem="fJL-t6-Lhn" firstAttribute="top" secondItem="DLv-B6-fLC" secondAttribute="topMargin" constant="10" id="XLj-Ce-d8z"/>
+                            <constraint firstItem="vJ1-7Q-eB6" firstAttribute="trailing" secondItem="fJL-t6-Lhn" secondAttribute="trailing" constant="30" id="7nb-67-hG2"/>
+                            <constraint firstItem="5NR-Np-SvU" firstAttribute="top" secondItem="fJL-t6-Lhn" secondAttribute="bottom" constant="10" id="9Ss-uP-WQx"/>
+                            <constraint firstItem="5NR-Np-SvU" firstAttribute="top" secondItem="PkZ-17-icV" secondAttribute="bottom" constant="5" id="EeN-GO-GnX"/>
+                            <constraint firstItem="PkZ-17-icV" firstAttribute="centerX" secondItem="DLv-B6-fLC" secondAttribute="centerX" id="XFa-Vt-0g0"/>
+                            <constraint firstItem="fJL-t6-Lhn" firstAttribute="top" secondItem="DLv-B6-fLC" secondAttribute="topMargin" constant="20" id="XLj-Ce-d8z"/>
                             <constraint firstItem="5NR-Np-SvU" firstAttribute="leading" secondItem="DLv-B6-fLC" secondAttribute="leadingMargin" id="k7y-mU-Iix"/>
                         </constraints>
                     </view>
@@ -3085,8 +3085,8 @@
                             </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3s2-iD-gXV">
                                 <rect key="frame" x="0.0" y="152" width="428" height="252"/>
-                                <date key="date" timeIntervalSinceReferenceDate="657640314.41068399">
-                                    <!--2021-11-03 13:51:54 +0000-->
+                                <date key="date" timeIntervalSinceReferenceDate="657646753.340886">
+                                    <!--2021-11-03 15:39:13 +0000-->
                                 </date>
                                 <connections>
                                     <action selector="selectDatePicker:" destination="cCE-NS-fDq" eventType="valueChanged" id="nCi-bc-0UM"/>
@@ -3686,6 +3686,7 @@
         <image name="pointer" width="14" height="14"/>
         <image name="결제한사람2" width="136" height="154"/>
         <image name="다운로드" width="70" height="84"/>
+        <image name="드롭다운" width="678" height="510"/>
         <image name="로딩중" width="442" height="390"/>
         <image name="먹거리카테고리" width="480" height="622"/>
         <image name="비용" width="168" height="146"/>
