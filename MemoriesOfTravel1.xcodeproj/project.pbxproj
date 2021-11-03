@@ -58,6 +58,7 @@
 		9FC0F73B2731DC850073BDCB /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0F73A2731DC850073BDCB /* WeatherService.swift */; };
 		9FC0F73F273201B40073BDCB /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0F73E273201B40073BDCB /* WeatherManager.swift */; };
 		9FC0F741273219010073BDCB /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0F740273219010073BDCB /* InformationViewController.swift */; };
+		9FC0F744273273B50073BDCB /* CompanionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0F743273273B50073BDCB /* CompanionManager.swift */; };
 		9FD507CC272D681D007ED66A /* ScheduleInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD507CB272D681D007ED66A /* ScheduleInfo.swift */; };
 		9FF0FDFA2710EA4E00717411 /* TripListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF0FDF82710EA4E00717411 /* TripListCell.swift */; };
 		9FF0FDFB2710EA4E00717411 /* TripListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FF0FDF92710EA4E00717411 /* TripListCell.xib */; };
@@ -135,6 +136,7 @@
 		9FC0F73A2731DC850073BDCB /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		9FC0F73E273201B40073BDCB /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
 		9FC0F740273219010073BDCB /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
+		9FC0F743273273B50073BDCB /* CompanionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanionManager.swift; sourceTree = "<group>"; };
 		9FD507CB272D681D007ED66A /* ScheduleInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleInfo.swift; sourceTree = "<group>"; };
 		9FF0FDF82710EA4E00717411 /* TripListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListCell.swift; sourceTree = "<group>"; };
 		9FF0FDF92710EA4E00717411 /* TripListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TripListCell.xib; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 		9F34989327019CA000226BEE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9FC0F7422732737F0073BDCB /* Companion */,
 				9FC0F73D2731FAEE0073BDCB /* WeatherInfo */,
 				9F6A8BB0273192B3001D842A /* Album */,
 				9F36565927302BFC0070543D /* Calculate */,
@@ -442,6 +445,14 @@
 				9FC0F73E273201B40073BDCB /* WeatherManager.swift */,
 			);
 			path = WeatherInfo;
+			sourceTree = "<group>";
+		};
+		9FC0F7422732737F0073BDCB /* Companion */ = {
+			isa = PBXGroup;
+			children = (
+				9FC0F743273273B50073BDCB /* CompanionManager.swift */,
+			);
+			path = Companion;
 			sourceTree = "<group>";
 		};
 		9FF0FDF62710E9DF00717411 /* Cell */ = {
@@ -724,6 +735,7 @@
 				9FC0C13627186549001F69FD /* PlaceRequestParameter.swift in Sources */,
 				9F36565B2730C0DC0070543D /* ExplanationViewController.swift in Sources */,
 				9FC0F73B2731DC850073BDCB /* WeatherService.swift in Sources */,
+				9FC0F744273273B50073BDCB /* CompanionManager.swift in Sources */,
 				9FC0C13127185CFA001F69FD /* SearchPlaceViewController.swift in Sources */,
 				9FF7C5FF2711966500E9501C /* ContentCell.swift in Sources */,
 				9F36565427300F990070543D /* SelectDateViewController.swift in Sources */,

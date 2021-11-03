@@ -1000,7 +1000,7 @@
                                                 </cells>
                                             </collectionView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BGO-HB-6Im">
-                                                <rect key="frame" x="20" y="224.00000000000003" width="50" height="37.666666666666657"/>
+                                                <rect key="frame" x="20" y="204.00000000000003" width="50" height="37.666666666666657"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="BGO-HB-6Im" secondAttribute="height" multiplier="4:3" id="IhI-Fv-93T"/>
                                                     <constraint firstAttribute="width" constant="50" id="raJ-6W-oZd"/>
@@ -1013,16 +1013,33 @@
                                                     <action selector="plusCompanion:" destination="PBC-Jj-eTe" eventType="touchUpInside" id="ngI-zk-3TA"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2og-34-wQb">
+                                                <rect key="frame" x="20" y="241.66666666666666" width="50" height="37.333333333333343"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="2og-34-wQb" secondAttribute="height" multiplier="4:3" id="Qnu-L7-CAK"/>
+                                                    <constraint firstAttribute="width" constant="50" id="XbL-uQ-mhH"/>
+                                                </constraints>
+                                                <color key="tintColor" systemColor="systemGray6Color"/>
+                                                <state key="normal">
+                                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <imageReference key="image" image="person.crop.circle.fill.badge.minus" catalog="system" symbolScale="large"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="removeCompanion:" destination="PBC-Jj-eTe" eventType="touchUpInside" id="ag4-eq-MYk"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.079125873740000005" green="0.088769815860000004" blue="0.15294831989999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstItem="gQZ-VX-xg2" firstAttribute="top" secondItem="r4G-Ue-cCJ" secondAttribute="top" constant="20" id="61W-F1-pQ9"/>
                                             <constraint firstAttribute="bottom" secondItem="VYT-03-Cvb" secondAttribute="bottom" id="AS0-Bk-uZ4"/>
-                                            <constraint firstItem="VYT-03-Cvb" firstAttribute="leading" secondItem="BGO-HB-6Im" secondAttribute="trailing" constant="20" id="Ko0-kd-IHl"/>
-                                            <constraint firstItem="BGO-HB-6Im" firstAttribute="top" secondItem="gQZ-VX-xg2" secondAttribute="bottom" constant="30" id="SF0-C1-Jr8"/>
+                                            <constraint firstItem="2og-34-wQb" firstAttribute="leading" secondItem="r4G-Ue-cCJ" secondAttribute="leading" constant="20" id="Cks-DZ-Che"/>
+                                            <constraint firstItem="BGO-HB-6Im" firstAttribute="top" secondItem="gQZ-VX-xg2" secondAttribute="bottom" constant="10" id="SF0-C1-Jr8"/>
+                                            <constraint firstItem="2og-34-wQb" firstAttribute="top" secondItem="BGO-HB-6Im" secondAttribute="bottom" id="WAu-0k-W3V"/>
                                             <constraint firstAttribute="trailing" secondItem="VYT-03-Cvb" secondAttribute="trailing" constant="30" id="YxL-5W-eI4"/>
                                             <constraint firstItem="VYT-03-Cvb" firstAttribute="top" secondItem="gQZ-VX-xg2" secondAttribute="bottom" constant="10" id="haw-3x-Dbd"/>
                                             <constraint firstItem="BGO-HB-6Im" firstAttribute="leading" secondItem="r4G-Ue-cCJ" secondAttribute="leading" constant="20" id="hfT-Uc-VBD"/>
+                                            <constraint firstItem="VYT-03-Cvb" firstAttribute="leading" secondItem="BGO-HB-6Im" secondAttribute="trailing" constant="20" id="mvh-dO-6xr"/>
                                             <constraint firstAttribute="height" constant="300" id="usz-EY-CD7"/>
                                             <constraint firstItem="gQZ-VX-xg2" firstAttribute="leading" secondItem="r4G-Ue-cCJ" secondAttribute="leading" constant="30" id="zPW-Ww-Y3m"/>
                                         </constraints>
@@ -3642,6 +3659,7 @@
         <image name="paperplane.fill" catalog="system" width="128" height="118"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.crop.circle.badge.plus" catalog="system" width="128" height="113"/>
+        <image name="person.crop.circle.fill.badge.minus" catalog="system" width="128" height="113"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="plusCost" width="488" height="502"/>
         <image name="pointer" width="14" height="14"/>
@@ -3689,6 +3707,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

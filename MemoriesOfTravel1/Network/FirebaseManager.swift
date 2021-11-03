@@ -264,6 +264,24 @@ class FirebaseManager {
         }
     }
     
+    //MARK: - Companion
+    func saveCompanion(uid: String, tripName: String, companionList: [String]){
+            let childUpdates = ["/user/\(uid)/TripList/\(tripName)/Companion":companionList]
+            db.updateChildValues(childUpdates)
+    }
+    // 모든 Companion 불러오기
+    func loadCompanion(uid: String, tripName: String, completion: @escaping ([String]?) -> (Void)){
+        self.db.child("user").child(uid).child("TripList").child(tripName).child("Companion").observeSingleEvent(of: .value) { snapshot in
+            if !snapshot.hasChildren() {
+                print("don't have Companion")
+                let itemName = [String]()
+                completion(itemName)
+                return
+            }
+            let dic = snapshot.value as! [String]
+            completion(dic)
+        }
+    }
     
 
     

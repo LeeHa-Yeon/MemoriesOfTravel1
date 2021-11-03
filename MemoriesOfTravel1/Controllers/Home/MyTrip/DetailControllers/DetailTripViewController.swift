@@ -16,6 +16,7 @@ class DetailTripViewController: UIViewController {
     let calculateManager = CalculateManager.shared
     let albumManger = AlbumManager.shared
     let weatherInfo = WeatherManager.shared
+    let companionInfo = CompanionManager.shared
     
     var weather: Weather?
     var main: Main?
@@ -100,7 +101,7 @@ class DetailTripViewController: UIViewController {
                     self.weatherInfo.setHumidity(self.main!.humidity)
                 }
             case .failure(_ ):
-                print("error22")
+                print("DetailTrip - WeatherService Error")
             }
         }
         
