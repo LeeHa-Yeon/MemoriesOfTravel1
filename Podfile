@@ -20,6 +20,8 @@ target 'MemoriesOfTravel1' do
   
   pod "Pastel"
   pod 'SSCustomTabbar'
+  pod 'BetterSegmentedControl', '~> 2.0'
+  pod 'SJFluidSegmentedControl' ,  '~> 1.0' 
 
   pod 'lottie-ios'
 

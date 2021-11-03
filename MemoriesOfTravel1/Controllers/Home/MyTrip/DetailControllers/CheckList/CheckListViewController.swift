@@ -38,6 +38,7 @@ class CheckListViewController: UIViewController {
         }
     }
     
+    
     @IBAction func addItem(_ sender: Any) {
         let alert = UIAlertController(title: "추가", message: "준비물을 입력해주세요.", preferredStyle: .alert)
         alert.addTextField { textField in

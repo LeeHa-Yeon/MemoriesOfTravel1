@@ -75,6 +75,17 @@ class PlaceInformation{
         self.scheduleList = tripList
     }
     
+    //MARK: -- 카테고리 저장하여 쓰기
+    var categoryList = [String]()
+    
+    func getCategoryList() -> [String] {
+        return categoryList
+    }
+    
+    func setCategoryList(_ categoryList: [String]){
+        self.categoryList = categoryList
+    }
+    
     //MARK: -- 모든 메모 관리
     var memoList = [String]()
     

@@ -71,6 +71,15 @@ class Map2ViewController: UIViewController {
                         }
                     }
                 } // for end
+                if coords1 == [] {
+                    let alert = UIAlertController(title: "알림", message: "일정이 없습니다.", preferredStyle: UIAlertController.Style.alert)
+                    let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
+                                
+                            }
+                    alert.addAction(okAction)
+                    present(alert, animated: false, completion: nil)
+                }else{
+                    print("현재 상태...->\(coords1)")
                 DEFAULT_CAMERA_POSITION = NMFCameraPosition(coords1[1], zoom: 13, tilt: 0, heading: 0)
                 mapView.moveCamera(NMFCameraUpdate(position: DEFAULT_CAMERA_POSITION))
                 let lineString = NMGLineString(points: coords1)
@@ -80,6 +89,7 @@ class Map2ViewController: UIViewController {
                 polylineOverlay.color = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
                 polylineOverlay.mapView = mapView
 //                print("coords1--->\(coords1)")
+                }
                 self.dropDown.clearSelection()
             } // fire end
             

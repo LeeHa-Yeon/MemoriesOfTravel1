@@ -2285,27 +2285,44 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="NFE-U0-efA">
-                                <rect key="frame" x="0.0" y="44" width="428" height="848"/>
+                                <rect key="frame" x="0.0" y="44" width="428" height="787"/>
                                 <color key="backgroundColor" red="0.84378552439999999" green="0.8774191737" blue="0.93334227800000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="sectionIndexBackgroundColor" red="0.84378552439999999" green="0.8774191737" blue="0.93334227800000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CIe-n4-qkg">
+                                <rect key="frame" x="150" y="841" width="128" height="41"/>
+                                <color key="backgroundColor" red="0.544485569" green="0.71413511039999999" blue="0.89021974800000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="25"/>
+                                <size key="titleShadowOffset" width="0.0" height="1"/>
+                                <state key="normal" title="SAVE">
+                                    <color key="titleColor" red="0.079125873740000005" green="0.088769815860000004" blue="0.15294831989999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveTapped:" destination="1n7-Jt-Lnu" eventType="touchUpInside" id="70e-yH-hto"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jbl-ka-7ot"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="NFE-U0-efA" firstAttribute="leading" secondItem="jbl-ka-7ot" secondAttribute="leading" id="NhX-d8-jDz"/>
-                            <constraint firstItem="jbl-ka-7ot" firstAttribute="bottom" secondItem="NFE-U0-efA" secondAttribute="bottom" id="QzY-dr-TFy"/>
+                            <constraint firstItem="CIe-n4-qkg" firstAttribute="top" secondItem="NFE-U0-efA" secondAttribute="bottom" constant="10" id="Oy0-Wv-wMM"/>
+                            <constraint firstItem="jbl-ka-7ot" firstAttribute="bottom" secondItem="CIe-n4-qkg" secondAttribute="bottom" constant="10" id="ToT-Sg-ucS"/>
+                            <constraint firstItem="jbl-ka-7ot" firstAttribute="trailing" secondItem="CIe-n4-qkg" secondAttribute="trailing" constant="150" id="j6h-8e-q4h"/>
                             <constraint firstItem="NFE-U0-efA" firstAttribute="top" secondItem="jbl-ka-7ot" secondAttribute="top" id="oX3-cY-1gH"/>
                             <constraint firstItem="jbl-ka-7ot" firstAttribute="trailing" secondItem="NFE-U0-efA" secondAttribute="trailing" id="tg8-Dt-2A1"/>
+                            <constraint firstItem="CIe-n4-qkg" firstAttribute="leading" secondItem="jbl-ka-7ot" secondAttribute="leading" constant="150" id="xmp-wT-J5E"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="saveButton" destination="CIe-n4-qkg" id="eAj-5e-Hof"/>
                         <outlet property="tableView" destination="NFE-U0-efA" id="T9J-zz-DP7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XvJ-NP-jkQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5523" y="-69"/>
+            <point key="canvasLocation" x="5521.9626168224295" y="-69.330453563714912"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lvg-hi-3sL">
@@ -3066,8 +3083,11 @@
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="3s2-iD-gXV">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3s2-iD-gXV">
                                 <rect key="frame" x="0.0" y="152" width="428" height="252"/>
+                                <date key="date" timeIntervalSinceReferenceDate="657640314.41068399">
+                                    <!--2021-11-03 13:51:54 +0000-->
+                                </date>
                                 <connections>
                                     <action selector="selectDatePicker:" destination="cCE-NS-fDq" eventType="valueChanged" id="nCi-bc-0UM"/>
                                 </connections>
@@ -3112,6 +3132,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="VEo-es-p7X"/>
                     <connections>
+                        <outlet property="datePicker" destination="3s2-iD-gXV" id="EYh-5E-59T"/>
                         <outlet property="selectDateLabel" destination="uGm-NM-E47" id="D1B-em-3JV"/>
                     </connections>
                 </viewController>

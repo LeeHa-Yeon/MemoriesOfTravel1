@@ -92,7 +92,7 @@ extension MyTripListViewController: UITableViewDataSource, UITableViewDelegate {
         for i in loadingTripInfo {
             let firstDate:Date = self.formatter.date(from: i.getTripFirstDay())!
             let dDay = Int(firstDate-Date())/(24*60*60)
-            if dDay <= 0 {
+            if dDay < 0 {
                 tripAfterList.append("")
                 tripAfterInfo.append(i)
             }

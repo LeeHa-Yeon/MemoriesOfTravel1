@@ -8,7 +8,15 @@
 import UIKit
 
 class SelectDateViewController: UIViewController {
+    
+    let tripInfo = TripInformation.shared
+    
+    var firstDate:Date = Date()
+    var lastDate:Date = Date()
+    var tripRange:Int = 0
+    
     @IBOutlet weak var selectDateLabel: UILabel!
+    @IBOutlet weak var datePicker: UIDatePicker!
     @IBAction func selectDatePicker(_ sender : UIDatePicker){
         let datePickerView = sender
         let formatter = DateFormatter()
@@ -21,7 +29,24 @@ class SelectDateViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tripRange = Int(tripInfo.getTripInfo()?.getTripPeriod() ?? "1")! - 1
+        firstDate = formatter.date(from: (tripInfo.getTripInfo()?.getTripFirstDay())!) ?? Date()
+        lastDate = firstDate+TimeInterval(86400*tripRange)
+        
+        datePicker.minimumDate = firstDate
+        datePicker.maximumDate = lastDate
+        datePicker.date = firstDate
+        
+        selectDateLabel.text = "여행날짜만 선택이 가능합니다."
+        
     }
     
+    fileprivate let formatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        formatter.timeZone = NSTimeZone(name: "UTC") as TimeZone?
+        return formatter
+    }()
     
 }
