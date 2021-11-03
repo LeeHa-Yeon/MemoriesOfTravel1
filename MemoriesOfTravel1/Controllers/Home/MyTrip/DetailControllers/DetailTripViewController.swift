@@ -15,6 +15,12 @@ class DetailTripViewController: UIViewController {
     let checkManager = CheckListManager.shared
     let calculateManager = CalculateManager.shared
     let albumManger = AlbumManager.shared
+    let weatherInfo = WeatherManager.shared
+    
+    var weather: Weather?
+    var main: Main?
+    var name: String?
+    var weatherIconName: String = ""
     
     @IBOutlet weak var tripDateLabel: UILabel!
     @IBOutlet weak var tripNameLabel: UILabel!
@@ -78,6 +84,70 @@ class DetailTripViewController: UIViewController {
         threeView.layer.cornerRadius = 30
         fourView.layer.cornerRadius = 30
         
+        WeatherService().getWeather { result in
+            switch result {
+            case .success(let weatherResponse):
+                DispatchQueue.main.async {
+                    self.weather = weatherResponse.weather.first
+                    self.main = weatherResponse.main
+                    self.name = weatherResponse.name
+                    
+                    self.weatherInfo.setIconName(self.setWeatherUI())
+                    self.weatherInfo.setDescription(self.weather!.description)
+                    self.weatherInfo.setNowTemp(self.main!.temp)
+                    self.weatherInfo.setTempMax(self.main!.temp_max)
+                    self.weatherInfo.setTempMin(self.main!.temp_min)
+                    self.weatherInfo.setHumidity(self.main!.humidity)
+                }
+            case .failure(_ ):
+                print("error22")
+            }
+        }
+        
+    }
+    //MARK: - 만든 아이콘 대입하는 부분
+    private func setWeatherUI() -> String {
+        var weatherIcon:String = "02n"
+        weatherIcon = self.weather!.icon
+        if weatherIcon == "01d"{
+            weatherIconName = "01d"
+        }
+        else if weatherIcon == "01n"{
+            weatherIconName = "01n"
+        }
+        else if weatherIcon == "02d"{
+            weatherIconName = "02d"
+        }
+        else if weatherIcon == "02n"{
+            weatherIconName = "02n"
+        }
+        else if weatherIcon == "03d" || weatherIcon == "03n" {
+            weatherIconName = "03"
+        }
+        else if weatherIcon == "04d" || weatherIcon == "04n" {
+            weatherIconName = "04"
+        }
+        else if weatherIcon == "09d" || weatherIcon == "09n"{
+            weatherIconName = "09"
+        }
+        else if weatherIcon == "10d"{
+            weatherIconName = "10d"
+        }
+        else if weatherIcon == "10n"{
+            weatherIconName = "10n"
+        }
+        else if weatherIcon == "11d" || weatherIcon == "11n"{
+            weatherIconName = "11"
+        }
+        else if weatherIcon == "13d" || weatherIcon == "13n"{
+            weatherIconName = "13"
+        }
+        else if weatherIcon == "50d" || weatherIcon == "50n"{
+            weatherIconName = "50"
+        }
+
+        return weatherIconName
+
     }
     
 

@@ -18,8 +18,11 @@ class DayViewController: UIViewController {
     
     let myInformation: UserInfomation = UserInfomation.shared
     let selectTripInfo: TripInformation = TripInformation.shared
+    let weatherInfo : WeatherManager = WeatherManager.shared
     var tripPeriod: Int = 0
     var tripFirstDay = Date()
+    
+
     
     @IBOutlet weak var customTableView: UITableView!
     var selectIndex: IndexPath = [100,0]
@@ -30,6 +33,11 @@ class DayViewController: UIViewController {
         
         tripPeriod = Int(selectTripInfo.getTripInfo()!.getTripPeriod()) ?? 0
         tripFirstDay = formatter2.date(from: selectTripInfo.getTripInfo()!.getTripFirstDay())!
+        
+        print("확인-->\(weatherInfo.getIconName())")
+        print("확인22-->\(weatherInfo.getNowTemp())")
+        print("메롱",String(format: "%.1f", weatherInfo.getNowTemp()),"ºC")
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -44,6 +52,8 @@ class DayViewController: UIViewController {
         self.customTableView.register(dayCellNib, forCellReuseIdentifier: "DayCell")
         customTableView.layer.cornerRadius = 20
     }
+    
+    
     
     var isExpending = ExpendingTableCellContent()
     
@@ -87,6 +97,7 @@ extension DayViewController: UITableViewDelegate, UITableViewDataSource {
         }
         cell.delegate = self
         cell.dateLabel.text = formatter.string(from: tripFirstDay+TimeInterval(86400*(indexPath.section)))
+        cell.weatherImg.image = UIImage(named: weatherInfo.getIconName())
         cell.settingData(isClicked: isExpending)
         return cell
     }

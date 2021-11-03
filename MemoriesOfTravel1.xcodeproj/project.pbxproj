@@ -52,6 +52,12 @@
 		9FC0C146271AB37B001F69FD /* MemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0C145271AB37B001F69FD /* MemoViewController.swift */; };
 		9FC0C14C271B65D1001F69FD /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0C14B271B65D1001F69FD /* FirebaseManager.swift */; };
 		9FC0C14E271B6A73001F69FD /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0C14D271B6A73001F69FD /* UserInfo.swift */; };
+		9FC0F7352731DADC0073BDCB /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0F7342731DADC0073BDCB /* WeatherResponse.swift */; };
+		9FC0F7372731DB850073BDCB /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0F7362731DB850073BDCB /* WeatherViewController.swift */; };
+		9FC0F7392731DB900073BDCB /* Weather.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FC0F7382731DB900073BDCB /* Weather.storyboard */; };
+		9FC0F73B2731DC850073BDCB /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0F73A2731DC850073BDCB /* WeatherService.swift */; };
+		9FC0F73F273201B40073BDCB /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0F73E273201B40073BDCB /* WeatherManager.swift */; };
+		9FC0F741273219010073BDCB /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0F740273219010073BDCB /* InformationViewController.swift */; };
 		9FD507CC272D681D007ED66A /* ScheduleInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD507CB272D681D007ED66A /* ScheduleInfo.swift */; };
 		9FF0FDFA2710EA4E00717411 /* TripListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF0FDF82710EA4E00717411 /* TripListCell.swift */; };
 		9FF0FDFB2710EA4E00717411 /* TripListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FF0FDF92710EA4E00717411 /* TripListCell.xib */; };
@@ -123,6 +129,12 @@
 		9FC0C145271AB37B001F69FD /* MemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoViewController.swift; sourceTree = "<group>"; };
 		9FC0C14B271B65D1001F69FD /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		9FC0C14D271B6A73001F69FD /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		9FC0F7342731DADC0073BDCB /* WeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
+		9FC0F7362731DB850073BDCB /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		9FC0F7382731DB900073BDCB /* Weather.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Weather.storyboard; sourceTree = "<group>"; };
+		9FC0F73A2731DC850073BDCB /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
+		9FC0F73E273201B40073BDCB /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
+		9FC0F740273219010073BDCB /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
 		9FD507CB272D681D007ED66A /* ScheduleInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleInfo.swift; sourceTree = "<group>"; };
 		9FF0FDF82710EA4E00717411 /* TripListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListCell.swift; sourceTree = "<group>"; };
 		9FF0FDF92710EA4E00717411 /* TripListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TripListCell.xib; sourceTree = "<group>"; };
@@ -194,6 +206,7 @@
 				9F34987F27019C7D00226BEE /* SceneDelegate.swift */,
 				9F34988827019C7F00226BEE /* LaunchScreen.storyboard */,
 				9F34988B27019C7F00226BEE /* Info.plist */,
+				9FC0F7332731DAC20073BDCB /* Weather */,
 				9F7FB63C270E69640064106B /* Font */,
 				9F34989427019CA400226BEE /* Network */,
 				9F34989327019CA000226BEE /* Model */,
@@ -224,6 +237,7 @@
 		9F34989327019CA000226BEE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9FC0F73D2731FAEE0073BDCB /* WeatherInfo */,
 				9F6A8BB0273192B3001D842A /* Album */,
 				9F36565927302BFC0070543D /* Calculate */,
 				9F365648272F557C0070543D /* CheckList */,
@@ -403,6 +417,33 @@
 			path = Place;
 			sourceTree = "<group>";
 		};
+		9FC0F7332731DAC20073BDCB /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				9FC0F73C2731F8E40073BDCB /* Test */,
+				9FC0F7342731DADC0073BDCB /* WeatherResponse.swift */,
+				9FC0F73A2731DC850073BDCB /* WeatherService.swift */,
+			);
+			path = Weather;
+			sourceTree = "<group>";
+		};
+		9FC0F73C2731F8E40073BDCB /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				9FC0F7362731DB850073BDCB /* WeatherViewController.swift */,
+				9FC0F7382731DB900073BDCB /* Weather.storyboard */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		9FC0F73D2731FAEE0073BDCB /* WeatherInfo */ = {
+			isa = PBXGroup;
+			children = (
+				9FC0F73E273201B40073BDCB /* WeatherManager.swift */,
+			);
+			path = WeatherInfo;
+			sourceTree = "<group>";
+		};
 		9FF0FDF62710E9DF00717411 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -436,6 +477,7 @@
 		9FF7C5EF271190B600E9501C /* DetailControllers */ = {
 			isa = PBXGroup;
 			children = (
+				9FC0F740273219010073BDCB /* InformationViewController.swift */,
 				9FF7C6162713E62400E9501C /* DetailTripViewController.swift */,
 				9FF7C60127127B6200E9501C /* Schedule */,
 				9FF7C60227127B7400E9501C /* Calculate */,
@@ -575,6 +617,7 @@
 				9F7FB652270F67620064106B /* GoogleService-Info.plist in Resources */,
 				9FF0FE002710EEC400717411 /* MyTripCell.xib in Resources */,
 				9FF0FE062710FF2400717411 /* Dongle-Light.ttf in Resources */,
+				9FC0F7392731DB900073BDCB /* Weather.storyboard in Resources */,
 				9F34988727019C7F00226BEE /* Assets.xcassets in Resources */,
 				9F34988527019C7D00226BEE /* Main.storyboard in Resources */,
 			);
@@ -651,6 +694,7 @@
 				9FF0FDFA2710EA4E00717411 /* TripListCell.swift in Sources */,
 				9F4AB688271D3A3C00E561CA /* TripModel.swift in Sources */,
 				9F7FB645270E71240064106B /* SignUpViewController.swift in Sources */,
+				9FC0F73F273201B40073BDCB /* WeatherManager.swift in Sources */,
 				9FF7C5FB2711963F00E9501C /* DayCell.swift in Sources */,
 				9FC0C142271AA875001F69FD /* SelectViewController.swift in Sources */,
 				9F6A8BAF2730F941001D842A /* LodingViewController.swift in Sources */,
@@ -665,8 +709,10 @@
 				9F365650272FE30E0070543D /* CalculateViewController.swift in Sources */,
 				9F34987E27019C7D00226BEE /* AppDelegate.swift in Sources */,
 				9FC0C14C271B65D1001F69FD /* FirebaseManager.swift in Sources */,
+				9FC0F7352731DADC0073BDCB /* WeatherResponse.swift in Sources */,
 				9FC0C144271AA8DD001F69FD /* MapPlaceViewController.swift in Sources */,
 				9F34988027019C7D00226BEE /* SceneDelegate.swift in Sources */,
+				9FC0F741273219010073BDCB /* InformationViewController.swift in Sources */,
 				9F365647272F116A0070543D /* AddSuppliesViewController.swift in Sources */,
 				9FC0C13827186562001F69FD /* PlaceResponseData.swift in Sources */,
 				9F4AB691271DDDBD00E561CA /* PlaceModel.swift in Sources */,
@@ -677,10 +723,12 @@
 				9F7FB64C270E8F650064106B /* UserInformation.swift in Sources */,
 				9FC0C13627186549001F69FD /* PlaceRequestParameter.swift in Sources */,
 				9F36565B2730C0DC0070543D /* ExplanationViewController.swift in Sources */,
+				9FC0F73B2731DC850073BDCB /* WeatherService.swift in Sources */,
 				9FC0C13127185CFA001F69FD /* SearchPlaceViewController.swift in Sources */,
 				9FF7C5FF2711966500E9501C /* ContentCell.swift in Sources */,
 				9F36565427300F990070543D /* SelectDateViewController.swift in Sources */,
 				9F7FB635270E06E80064106B /* MyTripListViewController.swift in Sources */,
+				9FC0F7372731DB850073BDCB /* WeatherViewController.swift in Sources */,
 				9FC0C14E271B6A73001F69FD /* UserInfo.swift in Sources */,
 				9F7FB642270E6B5A0064106B /* HomeViewController.swift in Sources */,
 			);
