@@ -82,7 +82,14 @@ class LoginViewController: UIViewController {
         guard let password = pwdTextField.text else { return }
         firebaseManager.emailLogin(id: id, password: password) { response in
             guard let response = response else {
+                
+                let alert = UIAlertController(title:"로그인 실패", message: "다시 시도해시길 바랍니다", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "OK", style: .destructive, handler : nil)
+                alert.addAction(okAction)
+                self.present(alert, animated: false, completion: nil)
                 print("로그인 실패")
+                self.idTextField.text = ""
+                self.pwdTextField.text = ""
                 return
             }
             self.myInformation.setUserInfo(response)

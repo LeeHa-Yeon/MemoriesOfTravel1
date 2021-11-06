@@ -20,6 +20,7 @@ class SignUpViewController: UIViewController {
         originalBottomMargin = self.bottomContainerMargin.constant
         addNotification()
     }
+
     
     @IBOutlet weak var bottomContainerMargin: NSLayoutConstraint!
     private var originalBottomMargin: CGFloat = 0
@@ -170,3 +171,4 @@ extension SignUpViewController : SignupViewControllerDelegate {
         return false
     }
 }
+

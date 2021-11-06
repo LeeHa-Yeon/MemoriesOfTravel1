@@ -15,7 +15,7 @@ class UserInfomation{
     
     
     var userInfo: UserInfo?
-
+    
     func setUserInfo(_ info: UserInfo){
         self.userInfo = info
     }
@@ -42,7 +42,7 @@ class UserInfomation{
     }
     func getName() -> String {
         guard let name = self.userInfo?.getName() else { return "" }
-
+        
         return name
     }
     func getTripCnt() -> String {
@@ -51,3 +51,8 @@ class UserInfomation{
         return tripCnt
     }
 }
+
+
+
+
+

@@ -26,7 +26,7 @@ struct UserInfo: Codable {
     
     mutating func updateTripCnt(){
         self.tripCnt = "\(Int(self.tripCnt)!+1)"
-//        self.tripCnt = "\(Int(self.tripCnt) ?? 0 + 1)"
+        //        self.tripCnt = "\(Int(self.tripCnt) ?? 0 + 1)"
     }
     
     func getUid() -> String {

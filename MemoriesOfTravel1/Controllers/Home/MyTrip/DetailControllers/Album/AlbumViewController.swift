@@ -49,7 +49,7 @@ class AlbumViewController: UIViewController {
     // MARK: - 파이어베이스에 업로드하기
     @IBAction func upLoadTapped(_ sender: UIButton){
         // 원하는 이미지 업로드
-        let imageName: String = "커플"
+        let imageName: String = "산"
         let image = UIImage(named: imageName)
         upLoadImage(img: image!, fileStr: imageName)
     }
