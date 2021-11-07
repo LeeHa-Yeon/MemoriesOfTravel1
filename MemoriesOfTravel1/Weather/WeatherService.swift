@@ -16,8 +16,8 @@ enum NetworkError: Error {
 
 class WeatherService {
     var apiKey: String = "c40972bd95e2c39d1cbabc60bec6d3f4"
-    var longitude: Double = 127
-    var latitude: Double = 37
+    var longitude: Double = 128.7384361
+    var latitude: Double = 35.3959361
     
     func getWeather(completion: @escaping (Result<WeatherResponse, NetworkError>) -> Void) {
         

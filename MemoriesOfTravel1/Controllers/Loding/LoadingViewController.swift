@@ -31,7 +31,7 @@ class LoadingViewController: UIViewController {
         //애니메이션 시간 후에 작동하게끔.
         self.animationView.play()
         self.animationView.loopMode = .loop
-        let time = DispatchTime.now() + .seconds(6)
+        let time = DispatchTime.now() + .seconds(2)
         DispatchQueue.main.asyncAfter(deadline: time) {
             
             let board = UIStoryboard(name: "Main", bundle: nil)

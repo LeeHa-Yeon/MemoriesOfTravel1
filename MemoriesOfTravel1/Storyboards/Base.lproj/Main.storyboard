@@ -248,7 +248,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="화면구성" translatesAutoresizingMaskIntoConstraints="NO" id="fYh-BH-GiE">
                                 <rect key="frame" x="0.0" y="44" width="428" height="599"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="프로필화면3" translatesAutoresizingMaskIntoConstraints="NO" id="81j-pZ-TXg">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="민영프로필" translatesAutoresizingMaskIntoConstraints="NO" id="81j-pZ-TXg">
                                 <rect key="frame" x="139" y="182.66666666666663" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="5A6-SF-ARS"/>
@@ -302,7 +302,7 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sheril@naver.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r1O-HN-tNe">
                                                 <rect key="frame" x="258.66666666666669" y="0.0" width="129.33333333333331" height="60"/>
-                                                <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="27"/>
+                                                <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="21"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -1133,6 +1133,14 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uaJ-FU-xOf">
+                                                <rect key="frame" x="50" y="169.66666666666669" width="57" height="28"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <state key="normal" title="자세히보기"/>
+                                                <connections>
+                                                    <segue destination="g0i-VW-WJD" kind="show" id="mZd-kg-7rE"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.079125873740000005" green="0.088769815860000004" blue="0.15294831989999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
@@ -1141,6 +1149,8 @@
                                             <constraint firstItem="E39-up-cUu" firstAttribute="leading" secondItem="INC-h7-5El" secondAttribute="leading" constant="30" id="Ypf-FG-5Dz"/>
                                             <constraint firstItem="MFE-hx-rvs" firstAttribute="centerY" secondItem="INC-h7-5El" secondAttribute="centerY" id="ZrU-ft-gqK"/>
                                             <constraint firstItem="MFE-hx-rvs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="E39-up-cUu" secondAttribute="trailing" constant="8" symbolic="YES" id="eeF-F3-WEr"/>
+                                            <constraint firstItem="uaJ-FU-xOf" firstAttribute="top" secondItem="E39-up-cUu" secondAttribute="bottom" id="hIh-63-QQT"/>
+                                            <constraint firstItem="uaJ-FU-xOf" firstAttribute="leading" secondItem="INC-h7-5El" secondAttribute="leading" constant="50" id="lrC-ia-r3w"/>
                                             <constraint firstItem="Y3c-iC-H3J" firstAttribute="top" secondItem="INC-h7-5El" secondAttribute="top" constant="30" id="sn5-I8-Zqo"/>
                                             <constraint firstItem="E39-up-cUu" firstAttribute="top" secondItem="Y3c-iC-H3J" secondAttribute="bottom" id="xkR-BN-Kzm"/>
                                         </constraints>
@@ -1193,6 +1203,44 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mrk-NA-zij" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3242.5233644859813" y="329.80561555075599"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="TGn-sX-pKe">
+            <objects>
+                <viewController id="g0i-VW-WJD" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1uX-93-ZKd">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="날씨 정보창" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxl-fX-g61">
+                                <rect key="frame" x="128.66666666666666" y="50" width="170.99999999999997" height="58.666666666666657"/>
+                                <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="날씨정보창" translatesAutoresizingMaskIntoConstraints="NO" id="8Q2-ek-91P">
+                                <rect key="frame" x="50" y="178.66666666666663" width="328" height="500"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="500" id="XnC-TR-f11"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="56g-2e-WF6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8Q2-ek-91P" firstAttribute="top" secondItem="gxl-fX-g61" secondAttribute="bottom" constant="70" id="8jG-uO-clo"/>
+                            <constraint firstItem="gxl-fX-g61" firstAttribute="centerX" secondItem="1uX-93-ZKd" secondAttribute="centerX" id="b0m-uq-K6t"/>
+                            <constraint firstItem="8Q2-ek-91P" firstAttribute="leading" secondItem="56g-2e-WF6" secondAttribute="leading" constant="50" id="cb4-a0-emP"/>
+                            <constraint firstItem="56g-2e-WF6" firstAttribute="trailing" secondItem="8Q2-ek-91P" secondAttribute="trailing" constant="50" id="oKF-8S-B6x"/>
+                            <constraint firstItem="gxl-fX-g61" firstAttribute="top" secondItem="56g-2e-WF6" secondAttribute="top" constant="50" id="wVe-Ej-jUy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="DwE-ml-ErX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J9E-wk-UWj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4097.663551401869" y="49.892008639308855"/>
         </scene>
         <!--여행지 검색-->
         <scene sceneID="e7U-T7-NTF">
@@ -3249,14 +3297,14 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 결제내용" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="geK-C4-L7q">
-                                                <rect key="frame" x="49.999999999999993" y="0.0" width="72.333333333333314" height="100"/>
-                                                <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="25"/>
+                                                <rect key="frame" x="49.999999999999993" y="0.0" width="65.333333333333314" height="100"/>
+                                                <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="22"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" red="0.13157480960000001" green="0.70749330519999998" blue="0.58822458980000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C2t-cI-VhX">
-                                                <rect key="frame" x="122.33333333333336" y="0.0" width="235.66666666666663" height="100"/>
+                                                <rect key="frame" x="115.33333333333336" y="0.0" width="242.66666666666663" height="100"/>
                                                 <fontDescription key="fontDescription" name="NanumBanJjagBanJjagByeor" family="나눔손글씨 반짝반짝 별" pointSize="30"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -3685,10 +3733,12 @@
         <image name="plusCost" width="488" height="502"/>
         <image name="pointer" width="14" height="14"/>
         <image name="결제한사람2" width="136" height="154"/>
+        <image name="날씨정보창" width="1514" height="1584"/>
         <image name="다운로드" width="70" height="84"/>
         <image name="드롭다운" width="678" height="510"/>
         <image name="로딩중" width="442" height="390"/>
         <image name="먹거리카테고리" width="480" height="622"/>
+        <image name="민영프로필" width="476" height="508"/>
         <image name="비용" width="168" height="146"/>
         <image name="산" width="1920" height="1200"/>
         <image name="설명" width="415" height="356"/>
@@ -3717,7 +3767,6 @@
         <image name="프로필메일" width="188" height="160"/>
         <image name="프로필여행" width="176" height="168"/>
         <image name="프로필이름" width="188" height="170"/>
-        <image name="프로필화면3" width="496" height="514"/>
         <image name="화면구성" width="536" height="902"/>
         <image name="화면구성3" width="262" height="330"/>
         <image name="화살표2" width="258" height="178"/>
