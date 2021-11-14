@@ -63,7 +63,18 @@
 <hr>
 
 # 개발 화면
+<img width="656" alt="스크린샷 2021-11-15 오전 3 31 48" src="https://user-images.githubusercontent.com/55241258/141693825-7672f1df-a596-4bc8-acaa-cc36c77b08a1.png">
+<img width="656" alt="스크린샷 2021-11-15 오전 3 31 58" src="https://user-images.githubusercontent.com/55241258/141693832-924eb8a4-41c4-460e-9333-dda4df73755b.png">
+<img width="656" alt="스크린샷 2021-11-15 오전 3 32 10" src="https://user-images.githubusercontent.com/55241258/141693848-5dae516b-6fa0-4703-9dfd-bbbb339a8815.png">
 
+<img width="656" alt="스크린샷 2021-11-15 오전 3 32 38" src="https://user-images.githubusercontent.com/55241258/141693867-9014704d-41ea-4b54-928a-cdf10e3deb5a.png">
+<img width="581" alt="스크린샷 2021-11-15 오전 3 33 10" src="https://user-images.githubusercontent.com/55241258/141693904-74a0bc97-3148-4c2d-8be1-3889211cdef3.png">
+
+<img width="586" alt="스크린샷 2021-11-15 오전 3 33 39" src="https://user-images.githubusercontent.com/55241258/141693929-2ffce56c-c91e-45eb-ab5e-184841d116a0.png">
+<img width="737" alt="스크린샷 2021-11-15 오전 3 37 05" src="https://user-images.githubusercontent.com/55241258/141694040-b6827a25-11d8-4f35-981f-efcd462fcedc.png">
+<img width="734" alt="스크린샷 2021-11-15 오전 3 37 24" src="https://user-images.githubusercontent.com/55241258/141694048-38c774e5-bb68-405f-92fb-ac40ee558fe7.png">
+<img width="753" alt="스크린샷 2021-11-15 오전 3 38 55" src="https://user-images.githubusercontent.com/55241258/141694096-1f9aa8e6-7837-4804-af4f-b643b4c5400b.png">
+<img width="549" alt="스크린샷 2021-11-15 오전 3 39 08" src="https://user-images.githubusercontent.com/55241258/141694103-f1efaae6-3816-4829-809c-e8f03e9533df.png">
 
 
 <hr>
@@ -137,11 +148,19 @@
 - **Firebase Storage**를 이용하여 사진 관리
     - 나의 사진을 업로드, 새로고침 기능
 
+### 마이페이지
+
+- 나의 정보 표시, 나의 여행 횟수, 로그아웃 기능
+
 ### 기타
 
-- 폰트 적용
+- 폰트 적용, 앱 아이콘 생성, 로딩화면 생성
 - Cell을 xib파일을 이용하여 관리
 - **Firebase**의 CRUD를 이용하여 유저 데이터 관리
+- AutoLayout 적용
+- AwesomeUI를 이용 : TabBarController, SegmentControl, collectionViewDelegate 적용
+- 리팩토링으로 코드 개선 및 중복제거
+- Git을 이용하여 버전관리
 
 <hr>
 
