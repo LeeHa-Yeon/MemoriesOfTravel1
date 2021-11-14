@@ -36,7 +36,7 @@
 - iOS Platform (macOS- Xcode), Swift, UIKit
 - Firebase(storage, authentication, realtime, realtime database), OAuth 2.0
 - NMapsMap, KakaoAPI, OpenWeatherAPI, PostMan, Alamofire, JSON
-- COCOAPODS, FSCalendar, Awesome UI 라이브러리 사용
+- COCOAPODS, FSCalendar
 - Singleton Pattern, MVC Pattern
 - Sketch, Lottie-ios, Github
 - AwesomeUI (DropDown, SSCustomTabbar, EASegments)
