@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9F0DD477272B1148006D7FC9 /* DetailDayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0DD476272B1148006D7FC9 /* DetailDayViewController.swift */; };
-		9F2FC5832732967700BA1880 /* 78118-loading-balance.json in Resources */ = {isa = PBXBuildFile; fileRef = 9F2FC5822732967700BA1880 /* 78118-loading-balance.json */; };
-		9F2FC5852732995500BA1880 /* 5783-loding.json in Resources */ = {isa = PBXBuildFile; fileRef = 9F2FC5842732995500BA1880 /* 5783-loding.json */; };
 		9F34987E27019C7D00226BEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F34987D27019C7D00226BEE /* AppDelegate.swift */; };
 		9F34988027019C7D00226BEE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F34987F27019C7D00226BEE /* SceneDelegate.swift */; };
 		9F34988227019C7D00226BEE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F34988127019C7D00226BEE /* LoginViewController.swift */; };
@@ -64,11 +62,12 @@
 		9FC0F741273219010073BDCB /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0F740273219010073BDCB /* InformationViewController.swift */; };
 		9FC0F744273273B50073BDCB /* CompanionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0F743273273B50073BDCB /* CompanionManager.swift */; };
 		9FD507CC272D681D007ED66A /* ScheduleInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD507CB272D681D007ED66A /* ScheduleInfo.swift */; };
+		9FE0087D275FD34F0014EE18 /* 5783-loding.json in Resources */ = {isa = PBXBuildFile; fileRef = 9FE0087C275FD34F0014EE18 /* 5783-loding.json */; };
+		9FE0087F275FD40A0014EE18 /* Dongle-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9FE0087E275FD4090014EE18 /* Dongle-Light.ttf */; };
 		9FF0FDFA2710EA4E00717411 /* TripListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF0FDF82710EA4E00717411 /* TripListCell.swift */; };
 		9FF0FDFB2710EA4E00717411 /* TripListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FF0FDF92710EA4E00717411 /* TripListCell.xib */; };
 		9FF0FDFF2710EEC400717411 /* MyTripCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF0FDFD2710EEC400717411 /* MyTripCell.swift */; };
 		9FF0FE002710EEC400717411 /* MyTripCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FF0FDFE2710EEC400717411 /* MyTripCell.xib */; };
-		9FF0FE062710FF2400717411 /* Dongle-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9FF0FE052710FF2400717411 /* Dongle-Light.ttf */; };
 		9FF7C5E1271113FD00E9501C /* RegisterTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF7C5E0271113FD00E9501C /* RegisterTripViewController.swift */; };
 		9FF7C5E4271119DC00E9501C /* TripInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF7C5E3271119DC00E9501C /* TripInformation.swift */; };
 		9FF7C5EA27111E1800E9501C /* PickDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF7C5E927111E1800E9501C /* PickDateViewController.swift */; };
@@ -88,8 +87,6 @@
 /* Begin PBXFileReference section */
 		6CA4AE4526DB6FC6E96773B3 /* Pods-MemoriesOfTravel1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemoriesOfTravel1.release.xcconfig"; path = "Target Support Files/Pods-MemoriesOfTravel1/Pods-MemoriesOfTravel1.release.xcconfig"; sourceTree = "<group>"; };
 		9F0DD476272B1148006D7FC9 /* DetailDayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDayViewController.swift; sourceTree = "<group>"; };
-		9F2FC5822732967700BA1880 /* 78118-loading-balance.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "78118-loading-balance.json"; path = "../../../../../../Downloads/78118-loading-balance.json"; sourceTree = "<group>"; };
-		9F2FC5842732995500BA1880 /* 5783-loding.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "5783-loding.json"; path = "../../../../../../Downloads/5783-loding.json"; sourceTree = "<group>"; };
 		9F34987A27019C7D00226BEE /* MemoriesOfTravel1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoriesOfTravel1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F34987D27019C7D00226BEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F34987F27019C7D00226BEE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -146,11 +143,12 @@
 		9FC0F740273219010073BDCB /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
 		9FC0F743273273B50073BDCB /* CompanionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanionManager.swift; sourceTree = "<group>"; };
 		9FD507CB272D681D007ED66A /* ScheduleInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleInfo.swift; sourceTree = "<group>"; };
+		9FE0087C275FD34F0014EE18 /* 5783-loding.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "5783-loding.json"; sourceTree = "<group>"; };
+		9FE0087E275FD4090014EE18 /* Dongle-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dongle-Light.ttf"; sourceTree = "<group>"; };
 		9FF0FDF82710EA4E00717411 /* TripListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListCell.swift; sourceTree = "<group>"; };
 		9FF0FDF92710EA4E00717411 /* TripListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TripListCell.xib; sourceTree = "<group>"; };
 		9FF0FDFD2710EEC400717411 /* MyTripCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTripCell.swift; sourceTree = "<group>"; };
 		9FF0FDFE2710EEC400717411 /* MyTripCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTripCell.xib; sourceTree = "<group>"; };
-		9FF0FE052710FF2400717411 /* Dongle-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Dongle-Light.ttf"; path = "../../../../../Downloads/Dongle-Light.ttf"; sourceTree = "<group>"; };
 		9FF7C5E0271113FD00E9501C /* RegisterTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTripViewController.swift; sourceTree = "<group>"; };
 		9FF7C5E3271119DC00E9501C /* TripInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripInformation.swift; sourceTree = "<group>"; };
 		9FF7C5E927111E1800E9501C /* PickDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickDateViewController.swift; sourceTree = "<group>"; };
@@ -354,8 +352,7 @@
 		9F51F73F27328A96004F698A /* Loding */ = {
 			isa = PBXGroup;
 			children = (
-				9F2FC5842732995500BA1880 /* 5783-loding.json */,
-				9F2FC5822732967700BA1880 /* 78118-loading-balance.json */,
+				9FE0087C275FD34F0014EE18 /* 5783-loding.json */,
 				9F51F74227328BF7004F698A /* LoadingViewController.swift */,
 				9F51F74427328C03004F698A /* Loading.storyboard */,
 			);
@@ -394,8 +391,8 @@
 		9F7FB63C270E69640064106B /* Font */ = {
 			isa = PBXGroup;
 			children = (
+				9FE0087E275FD4090014EE18 /* Dongle-Light.ttf */,
 				9F7FB63E270E69770064106B /* 나눔손글씨 반짝반짝 별.ttf */,
-				9FF0FE052710FF2400717411 /* Dongle-Light.ttf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -640,17 +637,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FE0087F275FD40A0014EE18 /* Dongle-Light.ttf in Resources */,
 				9FF0FDFB2710EA4E00717411 /* TripListCell.xib in Resources */,
-				9F2FC5852732995500BA1880 /* 5783-loding.json in Resources */,
+				9FE0087D275FD34F0014EE18 /* 5783-loding.json in Resources */,
 				9FF7C6002711966500E9501C /* ContentCell.xib in Resources */,
 				9FF7C5FC2711963F00E9501C /* DayCell.xib in Resources */,
-				9F2FC5832732967700BA1880 /* 78118-loading-balance.json in Resources */,
 				9F34988A27019C7F00226BEE /* LaunchScreen.storyboard in Resources */,
 				9F51F74527328C03004F698A /* Loading.storyboard in Resources */,
 				9F7FB63F270E69A00064106B /* 나눔손글씨 반짝반짝 별.ttf in Resources */,
 				9F7FB652270F67620064106B /* GoogleService-Info.plist in Resources */,
 				9FF0FE002710EEC400717411 /* MyTripCell.xib in Resources */,
-				9FF0FE062710FF2400717411 /* Dongle-Light.ttf in Resources */,
 				9FC0F7392731DB900073BDCB /* Weather.storyboard in Resources */,
 				9F34988727019C7F00226BEE /* Assets.xcassets in Resources */,
 				9F34988527019C7D00226BEE /* Main.storyboard in Resources */,
