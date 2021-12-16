@@ -1,7 +1,7 @@
 
 <hr>
 <!--프로젝트 처음-->
-
+🎥 <a href="https://www.youtube.com/watch?v=vR2c5IVgbhs"/> 유튜브로 시연영상 확인하기 </a>&nbsp
 
 # 여기선 🛫
 > 프로젝트 기간 : 2021.10.01 ~ 2021.10.30
